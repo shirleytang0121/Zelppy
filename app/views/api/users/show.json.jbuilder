@@ -1,1 +1,2 @@
-json.extract! @user :id, :email, :firstname, :lastname, :birthday
+
+json.extract! @user, :id, :email, :firstname, :lastname, :birthday
