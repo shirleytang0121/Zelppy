@@ -1,12 +1,11 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 
 class SessionForm extends React.Component{
     constructor(props){
         super(props)
         this.state= this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
-        console.log(this.props.errors)
+
     }
 
     handleSubmit(e){
