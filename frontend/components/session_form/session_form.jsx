@@ -34,7 +34,7 @@ class SessionForm extends React.Component{
       renderNames(){
           if(this.props.formType === 'signup'){
               return(
-                  <div>
+                  <div className='signup-names'>
                       <label>FirstName
                           <input type="text" value={this.state.firstname} onChange={this.update('firstname')}/>
                       </label>
@@ -50,9 +50,9 @@ class SessionForm extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='session-container'>
                 <header>{this.props.formType}</header>
-                {/* {this.renderErrors()} */}
+                {this.renderErrors()}
                 <div className='session-form'>
                     <form onSubmit={this.handleSubmit}>
                         <label>
