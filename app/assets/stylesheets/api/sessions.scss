@@ -52,9 +52,16 @@ input[type=text], select {
   }
   
 
-  .session-form > header{
+  .signup-intr > header{
       color: rgb(209, 39, 39);
       font-size: 40px;
       margin-top: 20px;
       margin-bottom: 40px;
   }
+
+  .login-intr > header{
+    color: rgb(209, 39, 39);
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

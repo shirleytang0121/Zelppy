@@ -31,17 +31,35 @@ class SessionForm extends React.Component{
         );
       }
 
-      renderNames(){
+      renderInstruction(){
           if(this.props.formType === 'Signup'){
               return(
-                  <div className='signup-names'>
-                        <input type="text" value={this.state.firstname} onChange={this.update('firstname')} placeholder='Firstname'/>
-                        <input type="text" value={this.state.lastname} onChange={this.update('lastname')} placeholder='Lastname'/>
+                  <div className='signup-intr'>
+                          <header>{this.props.formType} for Zelppy</header>
+                          <p>Already have an account {this.props.navLink}</p>
                   </div>
               )
           }else{
-              return null
+              return(
+                <div className='login-intr'>
+                    <header>{this.props.formType} into Zelppy</header>
+                    <p>New to Zelppy? {this.props.navLink}</p>
+                </div>
+              )
           }
+      }
+
+      renderNames(){
+        if(this.props.formType === 'Signup'){
+            return(
+                <div className='signup-names'>
+                      <input type="text" value={this.state.firstname} onChange={this.update('firstname')} placeholder='Firstname'/>
+                      <input type="text" value={this.state.lastname} onChange={this.update('lastname')} placeholder='Lastname'/>
+                </div>
+            )
+        }else{
+            return null
+        }
       }
 
     render(){
@@ -53,7 +71,7 @@ class SessionForm extends React.Component{
                 
                 {this.renderErrors()} 
                 <div className='session-form'>
-                    <header>{this.props.formType} into Zelppy</header>
+                    {this.renderInstruction()}
                     <form onSubmit={this.handleSubmit}>
                         {this.renderNames()}
                         <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email'/>
