@@ -11,7 +11,6 @@ class HomePage extends React.Component{
                 <GreetingContainer />  
             </header>
             <Link to='/'> <h1>Zelppy</h1> </Link>
-            <img />
           </div>
         )
     }

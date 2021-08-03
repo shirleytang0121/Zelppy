@@ -78,6 +78,7 @@ class SessionForm extends React.Component{
                         <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password'/>  
                         <input type="submit" value={this.props.formType} />
                     </form>
+                    <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"  />
                 </div>
                 <img></img>
             </div>
