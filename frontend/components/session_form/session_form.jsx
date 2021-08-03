@@ -31,7 +31,7 @@ class SessionForm extends React.Component{
       }
 
       renderNames(){
-          if(this.props.formType === 'signup'){
+          if(this.props.formType === 'Signup'){
               return(
                   <div className='signup-names'>
                       <label>FirstName
@@ -50,7 +50,7 @@ class SessionForm extends React.Component{
     render(){
         return(
             <div className='session-container'>
-                <header>{this.props.formType}</header>
+                <header>{this.props.formType} into Zelppy</header>
                 {this.renderErrors()}
                 <div className='session-form'>
                     <form onSubmit={this.handleSubmit}>
