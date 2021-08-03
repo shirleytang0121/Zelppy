@@ -2,12 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.app-header{
-    background-color: rgb(179, 52, 52);
-    padding: 21px;
-}
-
 .login-signup{
     display: flex;
     justify-content: flex-end;
@@ -15,16 +9,14 @@
 
 .login-signup > a{
     margin: 5px;
-    color: white;
     text-decoration: none;
     font-size: 18px;
+    border: 0.1rem solid black ;
+    border-radius: 2px;
+    padding: 3px;
 }
 
 .login-signup > a:hover {
     text-decoration: underline;
+  
   }
-
-.app > a{
-    color: black;
-    text-decoration: none;
-}
