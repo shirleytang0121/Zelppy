@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component{
     constructor(props){
@@ -50,9 +51,13 @@ class SessionForm extends React.Component{
     render(){
         return(
             <div className='session-container'>
-                <header>{this.props.formType} into Zelppy</header>
-                {this.renderErrors()}
+                <div className='session-header'>
+                <Link to='/' > Zelppy </Link>
+                </div>
+                
+                {this.renderErrors()} 
                 <div className='session-form'>
+                    <header>{this.props.formType} into Zelppy</header>
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             Email

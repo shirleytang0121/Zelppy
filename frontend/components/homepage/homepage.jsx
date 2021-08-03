@@ -6,12 +6,14 @@ import { Link } from "react-router-dom";
 class HomePage extends React.Component{
     render(){
         return(
-         <header >
-            <GreetingContainer />  
+        <div className="home-page">
+            <header >
+                <GreetingContainer />  
+            </header>
             <Link to='/'> <h1>Zelppy</h1> </Link>
-          </header>
+          </div>
         )
     }
 }
 
-export default HomePage
+export default HomePage;

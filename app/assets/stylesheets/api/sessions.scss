@@ -3,3 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.session-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-header{
+    background-color: rgb(177, 53, 53);
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.session-header > a{
+    text-decoration: none;
+    color: white;
+     font-size: 19px;
+}
+
+.login-signup > a:hover {
+    text-decoration: underline;
+  
+  }
