@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+      
 }
 
 .session-header{
@@ -20,10 +21,40 @@
 .session-header > a{
     text-decoration: none;
     color: white;
-     font-size: 19px;
+    font-size: 25px;
+
 }
 
-.login-signup > a:hover {
-    text-decoration: underline;
+input[type=text], select {
+    width: 90%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=password], select {
+    width: 90%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    display: inline;
+    background-color: #cf1f1f;
+    padding: 12px 20px;
+  }
   
+
+  .session-form > header{
+      color: rgb(209, 39, 39);
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 40px;
   }

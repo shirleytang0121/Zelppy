@@ -35,12 +35,8 @@ class SessionForm extends React.Component{
           if(this.props.formType === 'Signup'){
               return(
                   <div className='signup-names'>
-                      <label>FirstName
-                          <input type="text" value={this.state.firstname} onChange={this.update('firstname')}/>
-                      </label>
-                      <label>LastName
-                          <input type="text" value={this.state.lastname} onChange={this.update('lastname')}/>
-                      </label>
+                        <input type="text" value={this.state.firstname} onChange={this.update('firstname')} placeholder='Firstname'/>
+                        <input type="text" value={this.state.lastname} onChange={this.update('lastname')} placeholder='Lastname'/>
                   </div>
               )
           }else{
@@ -59,18 +55,13 @@ class SessionForm extends React.Component{
                 <div className='session-form'>
                     <header>{this.props.formType} into Zelppy</header>
                     <form onSubmit={this.handleSubmit}>
-                        <label>
-                            Email
-                            <input type="text" value={this.state.email} onChange={this.update('email')}/>
-                        </label>
-                        <label>
-                            Password
-                            <input type="password" value={this.state.password} onChange={this.update('password')}/>
-                        </label>
-                         {this.renderNames()}
+                        {this.renderNames()}
+                        <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email'/>
+                        <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password'/>  
                         <input type="submit" value={this.props.formType} />
                     </form>
                 </div>
+                <img></img>
             </div>
         )
 
