@@ -1,6 +1,7 @@
 import React from"react";
 import GreetingContainer from '../greeting/greeting_container'
 import { Link } from "react-router-dom";
+import HomePageFood from '../../../app/assets/images/homepageFood.jpg'
 
 
 class HomePage extends React.Component{
@@ -11,6 +12,7 @@ class HomePage extends React.Component{
                 <GreetingContainer />  
             </header>
             <Link to='/'> <h1>Zelppy</h1> </Link>
+            <img src={HomePageFood}  />
           </div>
         )
     }
