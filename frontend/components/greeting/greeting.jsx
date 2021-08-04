@@ -2,9 +2,8 @@ import React from "react";
 import { render } from "react-dom";
 import { Link } from "react-router-dom";
 
-class Greeting extends React.Component{
-    
-      sessionLinks(){
+class Greeting extends React.Component{ 
+    sessionLinks(){
         return(
          <nav className="login-signup">
              <Link to="/login">Login</Link>
@@ -22,7 +21,11 @@ class Greeting extends React.Component{
      }
 
      render(){
-      return this.props.currentUser ? this.personalGreeting() : this.sessionLinks();
+      return (
+        <div>
+            {this.props.currentUser ? this.personalGreeting() : this.sessionLinks()}
+        </div>
+      )
      }
     }
 
