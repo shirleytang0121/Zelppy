@@ -1,3 +1,30 @@
 // Place all the styles related to the api/businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.business-img{
+    width: 15%;
+    height: auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.business-index-item{
+    display: flex;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 13px;
+    width: 50%;
+    margin-top: 3%;
+}
+
+.business-index-item:hover{
+    box-shadow: 3px 3px 5px 5px grey;
+}
+
+.business-index-info{
+    margin-left: 5%;
+}
+

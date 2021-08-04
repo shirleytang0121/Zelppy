@@ -6433,3 +6433,986 @@ Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di
 Completed 302 Found in 21ms (ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2021-08-04 01:10:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1342ms (Views: 1335.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:10:35 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (21.0ms)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867/rosa_pizza1.jpg" for ::1 at 2021-08-04 01:10:36 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867", "filename"=>"rosa_pizza1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.1ms) [0m[34mGenerated URL for file at key: Y7QFNCX7z8VkpX7di7CWWCry (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T051036Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab2aeaa0f2e00712c72e85d4658d873a2c52b29734cd449e427bdf4fc0b25281)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T051036Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab2aeaa0f2e00712c72e85d4658d873a2c52b29734cd449e427bdf4fc0b25281
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:13:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 208ms (Views: 202.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:13:23 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.3ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (21.5ms)
+Completed 200 OK in 48ms (Views: 37.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:21:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 200ms (Views: 194.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:21:24 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.1ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.8ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (22.1ms)
+Completed 200 OK in 40ms (Views: 31.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867/rosa_pizza1.jpg" for ::1 at 2021-08-04 01:21:24 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867", "filename"=>"rosa_pizza1"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (3.8ms) [0m[34mGenerated URL for file at key: Y7QFNCX7z8VkpX7di7CWWCry (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T052124Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=87ca8ce68340727c60fe62071d8e4ac0e7b54c0723f609cfaa56f8d6dda97427)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T052124Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=87ca8ce68340727c60fe62071d8e4ac0e7b54c0723f609cfaa56f8d6dda97427
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:21:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 194ms (Views: 189.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:21:44 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (18.6ms)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:23:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1040ms (Views: 1034.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:23:56 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.2ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (22.5ms)
+Completed 200 OK in 35ms (Views: 28.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:25:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 216ms (Views: 207.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:25:55 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (2.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.6ms)
+Completed 200 OK in 38ms (Views: 29.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:27:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 205ms (Views: 198.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:27:12 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (18.1ms)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867/rosa_pizza1.jpg" for ::1 at 2021-08-04 01:27:12 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867", "filename"=>"rosa_pizza1"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: Y7QFNCX7z8VkpX7di7CWWCry (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T052712Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=761dfe4dab684dba1bbe598b71d676d8414440b418ef317df00731c7f36cd734)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T052712Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=761dfe4dab684dba1bbe598b71d676d8414440b418ef317df00731c7f36cd734
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:27:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 199ms (Views: 193.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:27:42 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (21.4ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:28:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 198ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:28:06 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (28.7ms)
+Completed 200 OK in 50ms (Views: 41.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:28:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2134ms (Views: 2127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:28:44 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.4ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (23.6ms)
+Completed 200 OK in 42ms (Views: 32.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:29:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 215ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:29:24 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.5ms)
+Completed 200 OK in 40ms (Views: 31.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:29:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 210ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:29:37 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.9ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.0ms)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:30:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 222ms (Views: 217.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:30:01 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (19.7ms)
+Completed 200 OK in 39ms (Views: 30.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:30:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 197ms (Views: 192.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:30:12 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (26.8ms)
+Completed 200 OK in 47ms (Views: 37.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:30:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 212ms (Views: 205.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:30:22 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (19.5ms)
+Completed 200 OK in 37ms (Views: 28.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:31:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1195ms (Views: 1189.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:31:18 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.8ms)
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:31:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 216ms (Views: 210.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:31:55 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (3.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.5ms)
+Completed 200 OK in 38ms (Views: 27.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:33:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 202ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:33:14 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.1ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (20.5ms)
+Completed 200 OK in 47ms (Views: 34.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867/rosa_pizza1.jpg" for ::1 at 2021-08-04 01:33:14 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f048866304fa34e3b1b36512b8c637c20083867", "filename"=>"rosa_pizza1"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.7ms) [0m[34mGenerated URL for file at key: Y7QFNCX7z8VkpX7di7CWWCry (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T053314Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1b953b2790adbdb19b16d56facc7a495d94aa7a3b86c05da4fe2755ba98516a0)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Y7QFNCX7z8VkpX7di7CWWCry?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T053314Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1b953b2790adbdb19b16d56facc7a495d94aa7a3b86c05da4fe2755ba98516a0
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:35:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 228ms (Views: 222.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:35:56 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.0ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (18.6ms)
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:36:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 219ms (Views: 213.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:36:08 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (21.8ms)
+Completed 200 OK in 38ms (Views: 31.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:36:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 240ms (Views: 234.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:36:35 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (19.8ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:36:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 206ms (Views: 201.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:36:57 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (22.4ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 01:37:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 208ms (Views: 200.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 01:37:26 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (18.5ms)
+Completed 200 OK in 37ms (Views: 30.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/api/session" for ::1 at 2021-08-04 01:38:27 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"shir@aa.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shir@aa.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shir@aa.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "bzrJRINXnW1eSSJm7w0Aug"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bzrJRINXnW1eSSJm7w0Aug"], ["updated_at", "2021-08-04 05:38:28.537248"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (4.6ms)
+Completed 200 OK in 949ms (Views: 19.5ms | ActiveRecord: 32.3ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBusiness Load (2.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mBusiness Destroy (2.2ms)[0m  [1m[31mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7] Performing ActiveStorage::PurgeJob (Job ID: a5e7471c-3fb3-4a2b-9414-09698102bdf7) from Inline(default) with arguments: #<GlobalID:0x00007fffbdadcfe0 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   [1m[36mActiveStorage::Attachment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   [1m[36mActiveStorage::Blob Destroy (2.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7] [36m  S3 Storage (353.1ms) [0m[31mDeleted file from key: Y7QFNCX7z8VkpX7di7CWWCry[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7] [36m  S3 Storage (40.2ms) [0m[31mDeleted files by key prefix: variants/Y7QFNCX7z8VkpX7di7CWWCry/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a5e7471c-3fb3-4a2b-9414-09698102bdf7] Performed ActiveStorage::PurgeJob (Job ID: a5e7471c-3fb3-4a2b-9414-09698102bdf7) from Inline(default) in 409.76ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: a5e7471c-3fb3-4a2b-9414-09698102bdf7) to Inline(default) with arguments: #<GlobalID:0x00007fffbd7a4210 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/3>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc] Performing ActiveStorage::PurgeJob (Job ID: 01ffaa35-9912-41c1-aac2-4d1377093ccc) from Inline(default) with arguments: #<GlobalID:0x00007fffbd6b0520 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   [1m[36mActiveStorage::Blob Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc] [36m  S3 Storage (44.1ms) [0m[31mDeleted file from key: 2QCKoPzUqDbLZsA3oHdFp4tS[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc] [36m  S3 Storage (36.7ms) [0m[31mDeleted files by key prefix: variants/2QCKoPzUqDbLZsA3oHdFp4tS/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [01ffaa35-9912-41c1-aac2-4d1377093ccc] Performed ActiveStorage::PurgeJob (Job ID: 01ffaa35-9912-41c1-aac2-4d1377093ccc) from Inline(default) in 87.11ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 01ffaa35-9912-41c1-aac2-4d1377093ccc) to Inline(default) with arguments: #<GlobalID:0x00007fffbc914c40 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/4>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306] Performing ActiveStorage::PurgeJob (Job ID: 5e1f91ab-9a18-46ae-bb6c-268c03848306) from Inline(default) with arguments: #<GlobalID:0x00007fffbc7a3050 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   [1m[36mActiveStorage::Blob Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306] [36m  S3 Storage (38.2ms) [0m[31mDeleted file from key: 7uyVkvGceKghZeTpk96QqRNr[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306] [36m  S3 Storage (35.0ms) [0m[31mDeleted files by key prefix: variants/7uyVkvGceKghZeTpk96QqRNr/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5e1f91ab-9a18-46ae-bb6c-268c03848306] Performed ActiveStorage::PurgeJob (Job ID: 5e1f91ab-9a18-46ae-bb6c-268c03848306) from Inline(default) in 78.01ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 5e1f91ab-9a18-46ae-bb6c-268c03848306) to Inline(default) with arguments: #<GlobalID:0x00007fffbfc1a950 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/5>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mBusiness Create (3.0ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "address", "city", "state", "zip_code", "website", "created_at", "updated_at", "lat", "lng", "delivery", "takeout", "outdoor", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Rosa's Pizza"], ["address", "43 Great Neck Rd"], ["city", "Great Neck"], ["state", "NY"], ["zip_code", 11021], ["website", "https://www.rosaspizzagn.com/"], ["created_at", "2021-08-04 16:23:17.327218"], ["updated_at", "2021-08-04 16:23:17.327218"], ["lat", 40.78624], ["lng", -73.72784], ["delivery", true], ["takeout", true], ["outdoor", true], ["phone_number", "(516) 466-7722"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+[36m  S3 Storage (423.5ms) [0m[32mUploaded file to key: RMATjbi3kL9VrEbHrLKuhQEK (checksum: ZM73L2y3EqwtZvoXSyi6XA==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Blob Create (3.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "RMATjbi3kL9VrEbHrLKuhQEK"], ["filename", "rosa_pizza1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 462046], ["checksum", "ZM73L2y3EqwtZvoXSyi6XA=="], ["created_at", "2021-08-04 16:23:18.872362"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Attachment Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 3], ["blob_id", 6], ["created_at", "2021-08-04 16:23:18.882726"]]
+  ↳ db/seeds.rb:32
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:18.885441"], ["id", 3]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e] Performing ActiveStorage::AnalyzeJob (Job ID: b0fdab37-5cd1-4a18-9ed8-f26bf901145e) from Inline(default) with arguments: #<GlobalID:0x00007fffbfa18580 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e] [36m  S3 Storage (291.2ms) [0m[34mDownloaded file from key: RMATjbi3kL9VrEbHrLKuhQEK[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   [1m[36mActiveStorage::Blob Update (2.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b0fdab37-5cd1-4a18-9ed8-f26bf901145e] Performed ActiveStorage::AnalyzeJob (Job ID: b0fdab37-5cd1-4a18-9ed8-f26bf901145e) from Inline(default) in 311.54ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b0fdab37-5cd1-4a18-9ed8-f26bf901145e) to Inline(default) with arguments: #<GlobalID:0x00007fffbf6b0b68 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/6>>
+[36m  S3 Storage (276.6ms) [0m[32mUploaded file to key: LVtXR39TG4V9GzQRJtyqU5me (checksum: C0CkmA5x1o8q+yAoUFkQ6g==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "LVtXR39TG4V9GzQRJtyqU5me"], ["filename", "rosa_pizza2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 291833], ["checksum", "C0CkmA5x1o8q+yAoUFkQ6g=="], ["created_at", "2021-08-04 16:23:19.507221"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Attachment Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 3], ["blob_id", 7], ["created_at", "2021-08-04 16:23:19.512143"]]
+  ↳ db/seeds.rb:33
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:19.514221"], ["id", 3]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142] Performing ActiveStorage::AnalyzeJob (Job ID: e3dfdd59-d34b-4aef-aad6-96b22ab17142) from Inline(default) with arguments: #<GlobalID:0x00007fffbcd22d00 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142] [36m  S3 Storage (194.2ms) [0m[34mDownloaded file from key: LVtXR39TG4V9GzQRJtyqU5me[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3dfdd59-d34b-4aef-aad6-96b22ab17142] Performed ActiveStorage::AnalyzeJob (Job ID: e3dfdd59-d34b-4aef-aad6-96b22ab17142) from Inline(default) in 219.43ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e3dfdd59-d34b-4aef-aad6-96b22ab17142) to Inline(default) with arguments: #<GlobalID:0x00007fffbf2bbc88 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/7>>
+[36m  S3 Storage (272.5ms) [0m[32mUploaded file to key: S8q5d1dTrETmnAyDyQKHfMXo (checksum: sTw8jmIeYSpge0SLhEZacA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "S8q5d1dTrETmnAyDyQKHfMXo"], ["filename", "rosa_pizza3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 264687], ["checksum", "sTw8jmIeYSpge0SLhEZacA=="], ["created_at", "2021-08-04 16:23:20.026010"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 3], ["blob_id", 8], ["created_at", "2021-08-04 16:23:20.033123"]]
+  ↳ db/seeds.rb:34
+  [1m[36mBusiness Update (0.4ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:20.034914"], ["id", 3]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141] Performing ActiveStorage::AnalyzeJob (Job ID: bc5a8a89-3f12-49fa-99f6-05d151295141) from Inline(default) with arguments: #<GlobalID:0x00007fffbf16d6b0 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141] [36m  S3 Storage (167.2ms) [0m[34mDownloaded file from key: S8q5d1dTrETmnAyDyQKHfMXo[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bc5a8a89-3f12-49fa-99f6-05d151295141] Performed ActiveStorage::AnalyzeJob (Job ID: bc5a8a89-3f12-49fa-99f6-05d151295141) from Inline(default) in 188.99ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bc5a8a89-3f12-49fa-99f6-05d151295141) to Inline(default) with arguments: #<GlobalID:0x00007fffbef1bb78 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/8>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mBusiness Create (0.2ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "address", "city", "state", "zip_code", "website", "created_at", "updated_at", "lat", "lng", "delivery", "takeout", "outdoor", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Bamboo Ya"], ["address", "69-12 Austin St"], ["city", "Forest Hills"], ["state", "NY"], ["zip_code", 11375], ["website", "https://www.bambooyafh.com/"], ["created_at", "2021-08-04 16:23:20.230950"], ["updated_at", "2021-08-04 16:23:20.230950"], ["lat", 40.72149], ["lng", -73.84906], ["delivery", true], ["takeout", true], ["outdoor", true], ["phone_number", "(929) 374-1432"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+[36m  S3 Storage (107.1ms) [0m[32mUploaded file to key: sXL74U2sbzEUoXy3SzP5F7u2 (checksum: lFLFAYfjFMvDZoVGosw2yg==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "sXL74U2sbzEUoXy3SzP5F7u2"], ["filename", "bambooya1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32897], ["checksum", "lFLFAYfjFMvDZoVGosw2yg=="], ["created_at", "2021-08-04 16:23:20.877707"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 4], ["blob_id", 9], ["created_at", "2021-08-04 16:23:20.883255"]]
+  ↳ db/seeds.rb:56
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:20.884142"], ["id", 4]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db] Performing ActiveStorage::AnalyzeJob (Job ID: 82465631-7dad-46b0-973f-4fc5599d73db) from Inline(default) with arguments: #<GlobalID:0x00007fffbedbd290 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db] [36m  S3 Storage (87.2ms) [0m[34mDownloaded file from key: sXL74U2sbzEUoXy3SzP5F7u2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [82465631-7dad-46b0-973f-4fc5599d73db] Performed ActiveStorage::AnalyzeJob (Job ID: 82465631-7dad-46b0-973f-4fc5599d73db) from Inline(default) in 112.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 82465631-7dad-46b0-973f-4fc5599d73db) to Inline(default) with arguments: #<GlobalID:0x00007fffbe940de8 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/9>>
+[36m  S3 Storage (99.5ms) [0m[32mUploaded file to key: zk18Yq33yEqByBTqsWiy1hUD (checksum: 46AfKP3SxogsTNOToF8E6w==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "zk18Yq33yEqByBTqsWiy1hUD"], ["filename", "bambooya2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32516], ["checksum", "46AfKP3SxogsTNOToF8E6w=="], ["created_at", "2021-08-04 16:23:21.104537"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 4], ["blob_id", 10], ["created_at", "2021-08-04 16:23:21.111552"]]
+  ↳ db/seeds.rb:57
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:21.113538"], ["id", 4]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:57
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead] Performing ActiveStorage::AnalyzeJob (Job ID: ea9d741c-9103-4548-ab07-bc0485324ead) from Inline(default) with arguments: #<GlobalID:0x00007fffbdb78eb8 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead] [36m  S3 Storage (97.5ms) [0m[34mDownloaded file from key: zk18Yq33yEqByBTqsWiy1hUD[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   ↳ db/seeds.rb:57
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   ↳ db/seeds.rb:57
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead]   ↳ db/seeds.rb:57
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ea9d741c-9103-4548-ab07-bc0485324ead] Performed ActiveStorage::AnalyzeJob (Job ID: ea9d741c-9103-4548-ab07-bc0485324ead) from Inline(default) in 120.89ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ea9d741c-9103-4548-ab07-bc0485324ead) to Inline(default) with arguments: #<GlobalID:0x00007fffbd9bf248 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/10>>
+[36m  S3 Storage (98.4ms) [0m[32mUploaded file to key: q3bK6hZ7YdKVTtN9dRsbsrj7 (checksum: DLgQfCKoSS/QnGutgbH2wQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "q3bK6hZ7YdKVTtN9dRsbsrj7"], ["filename", "bambooya3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 36450], ["checksum", "DLgQfCKoSS/QnGutgbH2wQ=="], ["created_at", "2021-08-04 16:23:21.341444"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 4], ["blob_id", 11], ["created_at", "2021-08-04 16:23:21.349289"]]
+  ↳ db/seeds.rb:58
+  [1m[36mBusiness Update (0.6ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-04 16:23:21.351744"], ["id", 4]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:58
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209] Performing ActiveStorage::AnalyzeJob (Job ID: 9077cdd9-59a5-41a5-a3f5-e5e1456cb209) from Inline(default) with arguments: #<GlobalID:0x00007fffbd6cae70 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209] [36m  S3 Storage (79.9ms) [0m[34mDownloaded file from key: q3bK6hZ7YdKVTtN9dRsbsrj7[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   ↳ db/seeds.rb:58
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   [1m[36mActiveStorage::Blob Update (3.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   ↳ db/seeds.rb:58
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209]   ↳ db/seeds.rb:58
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9077cdd9-59a5-41a5-a3f5-e5e1456cb209] Performed ActiveStorage::AnalyzeJob (Job ID: 9077cdd9-59a5-41a5-a3f5-e5e1456cb209) from Inline(default) in 109.01ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9077cdd9-59a5-41a5-a3f5-e5e1456cb209) to Inline(default) with arguments: #<GlobalID:0x00007fffbd4496b0 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/11>>
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+Started GET "/" for ::1 at 2021-08-04 12:24:43 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bzrJRINXnW1eSSJm7w0Aug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 1586ms (Views: 1579.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 12:24:52 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (2.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.6ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/_business.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (110.6ms)
+Completed 200 OK in 140ms (Views: 101.6ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c4ef26e91557f6e9efbd25c65e0920b96ffae346/rosa_pizza1.jpg" for ::1 at 2021-08-04 12:24:52 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--47d993ff812b4d1bdae74bf9651ccc371232d81a/bambooya1.jpg" for ::1 at 2021-08-04 12:24:52 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c4ef26e91557f6e9efbd25c65e0920b96ffae346", "filename"=>"rosa_pizza1"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--47d993ff812b4d1bdae74bf9651ccc371232d81a", "filename"=>"bambooya1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (8.6ms) [0m[34mGenerated URL for file at key: RMATjbi3kL9VrEbHrLKuhQEK (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/RMATjbi3kL9VrEbHrLKuhQEK?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T162452Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=eb7e7d3fbc3e309579806e926b675730cec096fe6e6b74e1cee53f1ed22a3d59)[0m
+[36m  S3 Storage (9.0ms) [0m[34mGenerated URL for file at key: sXL74U2sbzEUoXy3SzP5F7u2 (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/sXL74U2sbzEUoXy3SzP5F7u2?response-content-disposition=inline%3B%20filename%3D%22bambooya1.jpg%22%3B%20filename%2A%3DUTF-8%27%27bambooya1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T162452Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c270013e0497cf577f9055d6fe17d7294cc6a26984a57b05ecc6ba168f4ee2a2)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/RMATjbi3kL9VrEbHrLKuhQEK?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T162452Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=eb7e7d3fbc3e309579806e926b675730cec096fe6e6b74e1cee53f1ed22a3d59
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/sXL74U2sbzEUoXy3SzP5F7u2?response-content-disposition=inline%3B%20filename%3D%22bambooya1.jpg%22%3B%20filename%2A%3DUTF-8%27%27bambooya1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210804%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210804T162452Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c270013e0497cf577f9055d6fe17d7294cc6a26984a57b05ecc6ba168f4ee2a2
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms)
+
+
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-08-04 12:25:35 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bzrJRINXnW1eSSJm7w0Aug"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "shir@aa.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "6ZXHocyVkqCrieswU4FbqA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "6ZXHocyVkqCrieswU4FbqA"], ["updated_at", "2021-08-04 16:25:35.977025"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 3.1ms)
+
+
