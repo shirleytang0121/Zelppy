@@ -8,6 +8,9 @@
 
 require 'open-uri'
 
+Business.destroy_all
+Hour.destroy_all
+
 business1 = Business.create(
     name: "Rosa's Pizza",
     address: "43 Great Neck Rd",
@@ -54,3 +57,106 @@ file2_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.j
 business2.photos.attach(io: file2_1, filename: "bambooya1.jpg")
 business2.photos.attach(io: file2_2, filename: "bambooya2.jpg")
 business2.photos.attach(io: file2_3, filename: "bambooya3.jpg")
+
+
+hour1_1 = Hour.create(
+    date: 'Mon',
+    open: '10:00 AM',
+    close: '10:00 PM',
+    business_id: business1.id
+)
+
+hour1_2 = Hour.create(
+    date: 'Tue',
+    open: '10:00 AM',
+    close: '10:00 PM',
+    business_id: business1.id
+)
+
+
+hour1_3 = Hour.create(
+    date: 'Wed',
+    open: '10:00 AM',
+    close: '10:00 PM',
+    business_id: business1.id
+)
+
+hour1_4 = Hour.create(
+    date: 'Thu',
+    open: '10:00 AM',
+    close: '10:00 PM',
+    business_id: business1.id
+)
+
+hour1_5 = Hour.create(
+    date: 'Fri',
+    open: '10:00 AM',
+    close: '11:00 PM',
+    business_id: business1.id
+)
+
+hour1_6 = Hour.create(
+    date: 'Sat',
+    open: '10:00 AM',
+    close: '11:00 PM',
+    business_id: business1.id
+)
+
+hour1_7 = Hour.create(
+    date: 'Sun',
+    open: '10:00 AM',
+    close: '10:00 PM',
+    business_id: business1.id
+)
+
+
+hour2_1 = Hour.create(
+    date: 'Mon',
+    open: '11:00 AM',
+    close: '11:00 PM',
+    business_id: business2.id
+)
+
+hour2_2 = Hour.create(
+    date: 'Tue',
+    open: '11:00 AM',
+    close: '11:00 PM',
+    business_id: business2.id
+)
+
+
+hour2_3 = Hour.create(
+    date: 'Wed',
+    open: '11:00 AM',
+    close: '11:00 PM',
+    business_id: business2.id
+)
+
+hour2_4 = Hour.create(
+    date: 'Thu',
+    open: '11:00 AM',
+    close: '11:00 PM',
+    business_id: business2.id
+)
+
+hour2_5 = Hour.create(
+    date: 'Fri',
+    open: '11:00 AM',
+    close: '12:00 AM',
+    business_id: business2.id
+)
+
+hour2_6 = Hour.create(
+    date: 'Sat',
+    open: '12:00 PM',
+    close: '12:00 AM',
+    business_id: business2.id
+)
+
+hour2_7 = Hour.create(
+    date: 'Sun',
+    open: '12:00 PM',
+    close: '11:00 PM',
+    business_id: business2.id
+)
+

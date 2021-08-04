@@ -7,10 +7,14 @@ class BusinessDetail extends React.Component{
     }
 
     render(){
-        console.log(this.props)
+        if(this.props.business === undefined) return null;
         return(
             <div>
                {this.props.business.name}
+               {this.props.business.address}
+               {this.props.business.city}
+               {this.props.business.website}
+               {this.props.business.phoneNumber}
             </div>
         )
 
