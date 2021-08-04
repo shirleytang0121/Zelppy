@@ -8,9 +8,9 @@ const receiveAllBusinesses = (businesses) =>({
     businesses
 });
 
-const receiveBusiness = (business) =>({
+const receiveBusiness = (payload) =>({
     type: RECEIVE_BUSINESS,
-    business
+    payload
 })
 
 export const fetchAllBusinesses = () =>(dispatch) =>(

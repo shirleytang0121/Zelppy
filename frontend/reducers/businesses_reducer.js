@@ -7,7 +7,7 @@ const businessesReducer = (oldState={}, action) =>{
         case RECEIVE_ALL_BUSINESSES:
             return action.businesses;
         case RECEIVE_BUSINESS:
-            nextState[action.business.id] = action.business
+            nextState[action.payload.business.id] = action.payload.business
             return nextState;
         default:
             return oldState;
