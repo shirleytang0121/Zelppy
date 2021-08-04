@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 Business.destroy_all
 
@@ -16,10 +17,18 @@ business1 = Business.create(
     state: "NY",
     zip_code: 11021,
     phone_number: "(516) 466-7722",
-    website: 'https://www.rosaspizzagn.com/'
+    website: 'https://www.rosaspizzagn.com/',
     lat: 40.786240,
     lng: -73.727840,
     delivery: true,
     takeout: true,
     outdoor: true
 )
+
+file1_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/rosa_pizza1.jpg')
+file1_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/rosa_pizza2.jpg')
+file1_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/rosa_pizza3.jpg')
+
+business1.photos.attach(io: file1_1, filename: "rosa_pizza1.jpg")
+business1.photos.attach(io: file1_2, filename: "rosa_pizza2.jpg")
+business1.photos.attach(io: file1_3, filename: "rosa_pizza3.jpg")

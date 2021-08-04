@@ -5726,3 +5726,227 @@ Migrating to ChangeBusinesses (20210803225613)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBusiness Load (1.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mBusiness Create (2.3ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "address", "city", "state", "zip_code", "website", "created_at", "updated_at", "lat", "lng", "delivery", "takeout", "outdoor", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Rosa's Pizza"], ["address", "43 Great Neck Rd"], ["city", "Great Neck"], ["state", "NY"], ["zip_code", 11021], ["website", "https://www.rosaspizzagn.com/"], ["created_at", "2021-08-03 23:56:58.748390"], ["updated_at", "2021-08-03 23:56:58.748390"], ["lat", 40.78624], ["lng", -73.72784], ["delivery", true], ["takeout", true], ["outdoor", true], ["phone_number", "(516) 466-7722"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+[36m  S3 Storage (421.9ms) [0m[32mUploaded file to key: 5vENW7VLnUa666P5LysonoMn (checksum: ZM73L2y3EqwtZvoXSyi6XA==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Blob Create (2.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "5vENW7VLnUa666P5LysonoMn"], ["filename", "rosa_pizza1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 462046], ["checksum", "ZM73L2y3EqwtZvoXSyi6XA=="], ["created_at", "2021-08-03 23:57:00.397064"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Attachment Create (4.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-03 23:57:00.435005"]]
+  ↳ db/seeds.rb:32
+  [1m[36mBusiness Update (0.5ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-03 23:57:00.441424"], ["id", 1]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89] Performing ActiveStorage::AnalyzeJob (Job ID: 3a80faad-8081-4448-a912-fb5fc8ecbb89) from Inline(default) with arguments: #<GlobalID:0x00007fffde63d720 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89] [36m  S3 Storage (227.9ms) [0m[34mDownloaded file from key: 5vENW7VLnUa666P5LysonoMn[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a80faad-8081-4448-a912-fb5fc8ecbb89] Performed ActiveStorage::AnalyzeJob (Job ID: 3a80faad-8081-4448-a912-fb5fc8ecbb89) from Inline(default) in 261.9ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3a80faad-8081-4448-a912-fb5fc8ecbb89) to Inline(default) with arguments: #<GlobalID:0x00007fffde2149a0 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/1>>
+[36m  S3 Storage (240.4ms) [0m[32mUploaded file to key: C7idYCv62eWwEkgRMb4mfQgA (checksum: C0CkmA5x1o8q+yAoUFkQ6g==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "C7idYCv62eWwEkgRMb4mfQgA"], ["filename", "rosa_pizza2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 291833], ["checksum", "C0CkmA5x1o8q+yAoUFkQ6g=="], ["created_at", "2021-08-03 23:57:01.001258"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 1], ["blob_id", 2], ["created_at", "2021-08-03 23:57:01.006021"]]
+  ↳ db/seeds.rb:33
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-03 23:57:01.007887"], ["id", 1]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023] Performing ActiveStorage::AnalyzeJob (Job ID: 8720eafd-c77b-4edf-b9a1-bfca7ff7d023) from Inline(default) with arguments: #<GlobalID:0x00007fffdd5509d0 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023] [36m  S3 Storage (172.4ms) [0m[34mDownloaded file from key: C7idYCv62eWwEkgRMb4mfQgA[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8720eafd-c77b-4edf-b9a1-bfca7ff7d023] Performed ActiveStorage::AnalyzeJob (Job ID: 8720eafd-c77b-4edf-b9a1-bfca7ff7d023) from Inline(default) in 199.26ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8720eafd-c77b-4edf-b9a1-bfca7ff7d023) to Inline(default) with arguments: #<GlobalID:0x00007fffe0963ee8 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/2>>
+[36m  S3 Storage (309.0ms) [0m[32mUploaded file to key: xVH8FGv8RJB9E4x8fkX3bRww (checksum: 1B2M2Y8AsgTpgAmY7PhCfg==)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mBusiness Destroy (0.4ms)[0m  [1m[31mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Business"], ["name", "photos"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9] Performing ActiveStorage::PurgeJob (Job ID: 6ae0f2f6-c968-446e-b42a-709da4538dc9) from Inline(default) with arguments: #<GlobalID:0x00007fffbf18e310 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   [1m[36mActiveStorage::Blob Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9] [36m  S3 Storage (191.8ms) [0m[31mDeleted file from key: 5vENW7VLnUa666P5LysonoMn[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9] [36m  S3 Storage (35.3ms) [0m[31mDeleted files by key prefix: variants/5vENW7VLnUa666P5LysonoMn/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ae0f2f6-c968-446e-b42a-709da4538dc9] Performed ActiveStorage::PurgeJob (Job ID: 6ae0f2f6-c968-446e-b42a-709da4538dc9) from Inline(default) in 238.32ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 6ae0f2f6-c968-446e-b42a-709da4538dc9) to Inline(default) with arguments: #<GlobalID:0x00007fffbecd6d68 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Attachment Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149] Performing ActiveStorage::PurgeJob (Job ID: f52602ac-a13b-40b7-8600-a3f09296f149) from Inline(default) with arguments: #<GlobalID:0x00007fffbed0a4d8 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   [1m[36mActiveStorage::Blob Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149]   ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149] [36m  S3 Storage (41.1ms) [0m[31mDeleted file from key: C7idYCv62eWwEkgRMb4mfQgA[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149] [36m  S3 Storage (35.5ms) [0m[31mDeleted files by key prefix: variants/C7idYCv62eWwEkgRMb4mfQgA/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f52602ac-a13b-40b7-8600-a3f09296f149] Performed ActiveStorage::PurgeJob (Job ID: f52602ac-a13b-40b7-8600-a3f09296f149) from Inline(default) in 79.94ms
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: f52602ac-a13b-40b7-8600-a3f09296f149) to Inline(default) with arguments: #<GlobalID:0x00007fffbdfbd208 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/2>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mBusiness Create (0.4ms)[0m  [1m[32mINSERT INTO "businesses" ("name", "address", "city", "state", "zip_code", "website", "created_at", "updated_at", "lat", "lng", "delivery", "takeout", "outdoor", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Rosa's Pizza"], ["address", "43 Great Neck Rd"], ["city", "Great Neck"], ["state", "NY"], ["zip_code", 11021], ["website", "https://www.rosaspizzagn.com/"], ["created_at", "2021-08-03 23:57:47.916514"], ["updated_at", "2021-08-03 23:57:47.916514"], ["lat", 40.78624], ["lng", -73.72784], ["delivery", true], ["takeout", true], ["outdoor", true], ["phone_number", "(516) 466-7722"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+[36m  S3 Storage (324.8ms) [0m[32mUploaded file to key: Y7QFNCX7z8VkpX7di7CWWCry (checksum: ZM73L2y3EqwtZvoXSyi6XA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Y7QFNCX7z8VkpX7di7CWWCry"], ["filename", "rosa_pizza1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 462046], ["checksum", "ZM73L2y3EqwtZvoXSyi6XA=="], ["created_at", "2021-08-03 23:57:49.132173"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 2], ["blob_id", 3], ["created_at", "2021-08-03 23:57:49.137061"]]
+  ↳ db/seeds.rb:32
+  [1m[36mBusiness Update (0.3ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-03 23:57:49.139525"], ["id", 2]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044] Performing ActiveStorage::AnalyzeJob (Job ID: b05fa32f-9ced-489a-8862-a98472a74044) from Inline(default) with arguments: #<GlobalID:0x00007fffc1294118 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044] [36m  S3 Storage (230.5ms) [0m[34mDownloaded file from key: Y7QFNCX7z8VkpX7di7CWWCry[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044]   ↳ db/seeds.rb:32
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b05fa32f-9ced-489a-8862-a98472a74044] Performed ActiveStorage::AnalyzeJob (Job ID: b05fa32f-9ced-489a-8862-a98472a74044) from Inline(default) in 258.01ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b05fa32f-9ced-489a-8862-a98472a74044) to Inline(default) with arguments: #<GlobalID:0x00007fffc1086df8 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/3>>
+[36m  S3 Storage (194.4ms) [0m[32mUploaded file to key: 2QCKoPzUqDbLZsA3oHdFp4tS (checksum: C0CkmA5x1o8q+yAoUFkQ6g==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "2QCKoPzUqDbLZsA3oHdFp4tS"], ["filename", "rosa_pizza2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 291833], ["checksum", "C0CkmA5x1o8q+yAoUFkQ6g=="], ["created_at", "2021-08-03 23:57:49.616251"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 2], ["blob_id", 4], ["created_at", "2021-08-03 23:57:49.621585"]]
+  ↳ db/seeds.rb:33
+  [1m[36mBusiness Update (0.5ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-03 23:57:49.623700"], ["id", 2]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85] Performing ActiveStorage::AnalyzeJob (Job ID: 7103912c-c047-4c20-8a5f-c2f6c69aae85) from Inline(default) with arguments: #<GlobalID:0x00007fffc0e06948 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85] [36m  S3 Storage (138.3ms) [0m[34mDownloaded file from key: 2QCKoPzUqDbLZsA3oHdFp4tS[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85]   ↳ db/seeds.rb:33
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7103912c-c047-4c20-8a5f-c2f6c69aae85] Performed ActiveStorage::AnalyzeJob (Job ID: 7103912c-c047-4c20-8a5f-c2f6c69aae85) from Inline(default) in 162.62ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7103912c-c047-4c20-8a5f-c2f6c69aae85) to Inline(default) with arguments: #<GlobalID:0x00007fffbe3c8578 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/4>>
+[36m  S3 Storage (220.8ms) [0m[32mUploaded file to key: 7uyVkvGceKghZeTpk96QqRNr (checksum: sTw8jmIeYSpge0SLhEZacA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "7uyVkvGceKghZeTpk96QqRNr"], ["filename", "rosa_pizza3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 264687], ["checksum", "sTw8jmIeYSpge0SLhEZacA=="], ["created_at", "2021-08-03 23:57:50.019045"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Business"], ["record_id", 2], ["blob_id", 5], ["created_at", "2021-08-03 23:57:50.025695"]]
+  ↳ db/seeds.rb:34
+  [1m[36mBusiness Update (0.6ms)[0m  [1m[33mUPDATE "businesses" SET "updated_at" = $1 WHERE "businesses"."id" = $2[0m  [["updated_at", "2021-08-03 23:57:50.028185"], ["id", 2]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9] Performing ActiveStorage::AnalyzeJob (Job ID: bf3f214d-c1e6-4495-994c-9c009fd4eda9) from Inline(default) with arguments: #<GlobalID:0x00007fffc0a42b90 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9] [36m  S3 Storage (122.9ms) [0m[34mDownloaded file from key: 7uyVkvGceKghZeTpk96QqRNr[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9]   ↳ db/seeds.rb:34
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bf3f214d-c1e6-4495-994c-9c009fd4eda9] Performed ActiveStorage::AnalyzeJob (Job ID: bf3f214d-c1e6-4495-994c-9c009fd4eda9) from Inline(default) in 145.18ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bf3f214d-c1e6-4495-994c-9c009fd4eda9) to Inline(default) with arguments: #<GlobalID:0x00007fffc07dc630 @uri=#<URI::GID gid://zelppy/ActiveStorage::Blob/5>>
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" ORDER BY "businesses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"], ["LIMIT", 1]]
