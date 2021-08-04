@@ -1,4 +1,5 @@
 import React from 'react';
+import BusinessIndexItem from './business_index_item';
 
 class BusinessIndex extends React.Component{
     componentDidMount(){
@@ -9,7 +10,9 @@ class BusinessIndex extends React.Component{
         console.log(this.props)
         return(
             <div>
-                {this.props.businesses.map(business => business.name)}
+                <ul>
+                    {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business}/>)}
+                </ul>
             </div>
         )
     }
