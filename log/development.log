@@ -6174,3 +6174,127 @@ Processing by Api::BusinessesController#index as JSON
 Completed 200 OK in 56ms (Views: 45.5ms | ActiveRecord: 6.1ms)
 
 
+Started GET "/" for ::1 at 2021-08-04 00:22:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1164ms (Views: 1156.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:22:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1226ms (Views: 1218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:23:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1054ms (Views: 1049.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:23:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1057ms (Views: 1049.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:24:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1043ms (Views: 1035.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:26:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1232ms (Views: 1224.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:27:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1070ms (Views: 1064.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 00:27:38 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (3.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (23.5ms)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:28:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1008ms (Views: 1000.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 00:28:08 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (3.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (30.5ms)
+Completed 200 OK in 54ms (Views: 40.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:29:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1065ms (Views: 1059.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 00:30:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1077ms (Views: 1068.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-04 00:30:21 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (5.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.6ms)
+  [1m[36mActiveStorage::Attachment Load (2.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (28.0ms)
+Completed 200 OK in 44ms (Views: 28.4ms | ActiveRecord: 12.1ms)
+
+
