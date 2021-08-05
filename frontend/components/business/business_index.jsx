@@ -13,7 +13,7 @@ class BusinessIndex extends React.Component{
         return(
             <div>
                 <header className='business-header'>
-                    <Link to='/'>Zelppy</Link>
+                    <Link to='/' className='business-title'>Zelppy</Link>
                     <GreetingContainer />
                 </header>
                 <ul>

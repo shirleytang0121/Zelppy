@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container'
 
 class BusinessDetail extends React.Component{
 
@@ -10,6 +12,10 @@ class BusinessDetail extends React.Component{
         if(this.props.business === undefined) return null;
         return(
             <div >
+                <header className='business-header'>
+                    <Link to='/' className='business-title'>Zelppy</Link>
+                    <GreetingContainer />
+                </header>
                {this.props.business.name}
                {this.props.business.address}
                {this.props.business.city}

@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .business-img{
-    width: 130px;
-    height: 110px;
+    width: 150px;
+    height: 130px;
+    border-radius: 3px;
 }
 
 ul{
@@ -16,7 +17,7 @@ ul{
     border: 1px solid rgb(224, 224, 224);
     border-radius: 5px;
     width: 50%;
-    padding: 15px;
+    padding: 20px;
     margin-top: 3%;
 }
 
@@ -27,4 +28,5 @@ ul{
 .business-index-info{
     margin-left: 5%;
 }
+
 

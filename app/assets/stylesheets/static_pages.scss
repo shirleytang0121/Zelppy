@@ -12,11 +12,18 @@
 .business-header{
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.business-title{
+    text-decoration: none;
+    color: black;
+    margin-left: 7%;
+    font-size: 20px;
 }
 
 .login-signup > a{
-    margin: 7px;
     text-decoration: none;
     font-size: 18px;
     border: 0.1rem solid black ;
