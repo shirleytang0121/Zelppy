@@ -40,7 +40,7 @@ class BusinessDetail extends React.Component{
                    </div>
                    <div className='business-detail-info'>
                         <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
-                        <a href={business.website}> Website <MdLaunch /> </a>
+                        <p><a href={business.website}>Website <MdLaunch /> </a></p>
                         <p>{business.phoneNumber} <BiPhoneCall /></p>
                     </div>
                </div>
