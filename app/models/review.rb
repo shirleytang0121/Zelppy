@@ -1,7 +1,9 @@
 class Review < ApplicationRecord
     validates :user_id, :business_id, :rating, presence:true
 
-    belongs_to :user,
+    has_many_attached :photos
+
+    belongs_to :author,
       primary_key: :id,
       foreign_key: :user_id,
       class_name: :User

@@ -4,3 +4,4 @@
         json.photoUrls business.photos.map { |file| url_for(file) }
     end
 end
+
