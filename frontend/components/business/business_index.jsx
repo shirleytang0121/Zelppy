@@ -17,6 +17,7 @@ class BusinessIndex extends React.Component{
                     <GreetingContainer />
                 </header>
                 <ul>
+                    <p>All Results</p>
                     {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business}/>)}
                 </ul>
             </div>

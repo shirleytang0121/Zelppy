@@ -10,17 +10,21 @@ class BusinessDetail extends React.Component{
 
     render(){
         if(this.props.business === undefined) return null;
+        const {business} = this.props
         return(
             <div >
                 <header className='business-header'>
                     <Link to='/' className='business-title'>Zelppy</Link>
                     <GreetingContainer />
                 </header>
-               {this.props.business.name}
-               {this.props.business.address}
-               {this.props.business.city}
-               {this.props.business.website}
-               {this.props.business.phoneNumber}
+                <div>
+                    {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
+                </div>
+               {business.name}
+               {business.address}
+               {business.city}
+               {business.website}
+               {business.phoneNumber}
             </div>
         )
 

@@ -25,8 +25,32 @@ ul{
     box-shadow: 1px 1px 1px 1px grey;
 }
 
+.business-index-info > p{
+    color: black;
+}
+
 .business-index-info{
     margin-left: 5%;
+}
+
+.business-index-list > a{
+    text-decoration: none;
+}
+
+.business-index-title{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.business-index-takeout{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.business-detail-img{
+    width: 420px;
+    height: 345px;
 }
 
 
