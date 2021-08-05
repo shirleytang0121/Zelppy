@@ -1,0 +1,17 @@
+import { RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS } from "../actions/business_actions";
+
+const businessesReducer = (oldState={}, action) =>{
+    Object.freeze(oldState);
+    let nextState = Object.assign({},oldState);
+    switch(action.type){
+        case RECEIVE_ALL_BUSINESSES:
+            return action.businesses;
+        case RECEIVE_BUSINESS:
+            nextState[action.payload.business.id] = action.payload.business
+            return nextState;
+        default:
+            return oldState;
+    }
+}
+
+export default businessesReducer;
