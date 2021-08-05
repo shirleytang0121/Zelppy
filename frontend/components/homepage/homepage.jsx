@@ -8,7 +8,8 @@ class HomePage extends React.Component{
     render(){
         return(
         <div className="home-page">
-            <header >
+            <header className='homepage-header'>
+                <Link to='/businesses'>Write a review</Link>
                 <GreetingContainer />  
             </header>
             <Link to='/'> <h1>Zelppy</h1> </Link>

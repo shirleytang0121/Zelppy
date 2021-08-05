@@ -1,21 +1,32 @@
 import React from "react";
+import { render } from "react-dom";
 import { Link } from "react-router-dom";
 
-const Greeting =({currentUser, logout})=>{
-    
-      const sessionLinks = () =>(
+class Greeting extends React.Component{ 
+    sessionLinks(){
+        return(
          <nav className="login-signup">
              <Link to="/login">Login</Link>
              <Link to="/signup">SignUp</Link>
          </nav>
-     )
-     const personalGreeting = () =>(
-      <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.firstname}!</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
-     )
-      return currentUser ? personalGreeting() : sessionLinks();
+        )
+     }
+     personalGreeting(){
+       return(
+        <hgroup className="header-group">
+            <h2 className="header-name">Hi, {this.props.currentUser.firstname}!</h2>
+            <button className="header-button" onClick={this.props.logout}>Log Out</button>
+        </hgroup>
+       )
+     }
+
+     render(){
+      return (
+        <div>
+            {this.props.currentUser ? this.personalGreeting() : this.sessionLinks()}
+        </div>
+      )
+     }
     }
 
 
