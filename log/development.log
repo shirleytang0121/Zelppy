@@ -19946,3 +19946,64 @@ Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
 Completed 200 OK in 123ms (Views: 77.7ms | ActiveRecord: 19.6ms)
 
 
+Started GET "/" for ::1 at 2021-08-06 02:28:46 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dZWmBXA9A-3tosnG8LguaA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 2871ms (Views: 2854.7ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/api/businesses/11" for ::1 at 2021-08-06 02:28:49 -0400
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mBusiness Load (1.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Business"], ["name", "photos"], ["record_id", 11]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 30], ["id", 31], ["id", 32]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  Rendering api/businesses/show.json.jbuilder
+  Rendered api/businesses/_business.json.jbuilder (0.5ms)
+  [1m[36mHour Load (1.7ms)[0m  [1m[34mSELECT "hours".* FROM "hours" WHERE "hours"."business_id" = $1[0m  [["business_id", 11]]
+  ↳ app/views/api/businesses/show.json.jbuilder:5
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 11]]
+  ↳ app/views/api/businesses/show.json.jbuilder:11
+  Rendered api/businesses/show.json.jbuilder (73.5ms)
+Completed 200 OK in 296ms (Views: 79.1ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea25155d83f9f0407cf3f2a7cee9281fdcf89322/rosa_pizza1.jpg" for ::1 at 2021-08-06 02:28:50 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb2951247640913d722dfa83524d15324e15d91f/rosa_pizza2.jpg" for ::1 at 2021-08-06 02:28:50 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--35ff3fbe56d5563e59d7a8fc2d4547fa4aca2d1e/rosa_pizza3.jpg" for ::1 at 2021-08-06 02:28:50 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea25155d83f9f0407cf3f2a7cee9281fdcf89322", "filename"=>"rosa_pizza1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--35ff3fbe56d5563e59d7a8fc2d4547fa4aca2d1e", "filename"=>"rosa_pizza3"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb2951247640913d722dfa83524d15324e15d91f", "filename"=>"rosa_pizza2"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (3.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (3.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (31.3ms) [0m[34mGenerated URL for file at key: FCRKi1SsixikLSWi4Z3bPwVf (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/FCRKi1SsixikLSWi4Z3bPwVf?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza3.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8d7402c81a7639284a79c29f2da063ebc50c935ab05a7c90a865b45f43925ea2)[0m
+[36m  S3 Storage (37.1ms) [0m[34mGenerated URL for file at key: WqcRHVksJJQaNfBSKD2Riy7j (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/WqcRHVksJJQaNfBSKD2Riy7j?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5cfc14c299f4e3590cc323c230263a928aa834eabcd1f083c821c79c247d97e0)[0m
+[36m  S3 Storage (43.8ms) [0m[34mGenerated URL for file at key: fAkSF3x7PSbSAq8KZMRWTUq2 (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/fAkSF3x7PSbSAq8KZMRWTUq2?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza2.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0af75f110fc81af5b126b76cf00c7162e1a8616f7475ab709a9d4915c3b04216)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/FCRKi1SsixikLSWi4Z3bPwVf?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza3.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8d7402c81a7639284a79c29f2da063ebc50c935ab05a7c90a865b45f43925ea2
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/fAkSF3x7PSbSAq8KZMRWTUq2?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza2.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0af75f110fc81af5b126b76cf00c7162e1a8616f7475ab709a9d4915c3b04216
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/WqcRHVksJJQaNfBSKD2Riy7j?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T062850Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5cfc14c299f4e3590cc323c230263a928aa834eabcd1f083c821c79c247d97e0
+Completed 302 Found in 64ms (ActiveRecord: 0.6ms)
+
+
+Completed 302 Found in 62ms (ActiveRecord: 3.1ms)
+
+
+Completed 302 Found in 62ms (ActiveRecord: 4.2ms)
+
+
