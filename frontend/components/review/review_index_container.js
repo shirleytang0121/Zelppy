@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchAllReviews } from "../../actions/review_actions";
+import { fetchAllReviews} from "../../actions/review_actions";
 import ReviewIndex from "./review_index";
 
 const mapStateToProps = (state, {businessId}) =>({
