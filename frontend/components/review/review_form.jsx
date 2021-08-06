@@ -7,10 +7,10 @@ class ReviewForm extends React.Component{
 
 
     render(){
-        console.log(this.props.match.params.businessId)
+        console.log(this.props.review)
         return(
             <div>
-               this is form page 
+                <form></form>
             </div>
         )
     }
