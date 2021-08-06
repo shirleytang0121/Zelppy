@@ -32,6 +32,10 @@ class BusinessDetail extends React.Component{
                     {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
                 </div>
                <h1 className='business-detail-title'>{business.name}</h1>
+               <div className='business-detail-buttons'>
+                    <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
+                    
+               </div>
                <div className='business-detail-container'>
                    <div>
                        <p>Hours</p>

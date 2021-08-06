@@ -3,6 +3,7 @@ import { createReview } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 
 const mapStateToProps = (state, ownProps) => ({
+    business: state.entities.businesses[ownProps.match.params.businessId],
     formType: 'Create Review',
     review: {
         body:'',
