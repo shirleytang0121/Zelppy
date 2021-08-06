@@ -7,7 +7,6 @@ class ReviewIndex extends React.Component{
    }
 
     render(){
-        console.log(this.props.reviews)
         return(
             <div>
                 <ul>

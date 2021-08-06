@@ -24297,3 +24297,137 @@ Completed 200 OK in 53ms (Views: 31.7ms | ActiveRecord: 9.2ms)
 Completed 200 OK in 53ms (Views: 37.0ms | ActiveRecord: 8.1ms)
 
 
+Started GET "/" for ::1 at 2021-08-06 15:31:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dZWmBXA9A-3tosnG8LguaA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 1322ms (Views: 1319.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/businesses" for ::1 at 2021-08-06 15:31:59 -0400
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (2.3ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:1
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 13], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (3.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/_business.json.jbuilder (0.2ms)
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 14], ["record_type", "Business"], ["name", "photos"]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/index.json.jbuilder:4
+  Rendered api/businesses/index.json.jbuilder (41.0ms)
+Completed 200 OK in 56ms (Views: 36.5ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b546ccaae11350788a37ff070bd3c7be1924d452/rosa_pizza1.jpg" for ::1 at 2021-08-06 15:31:59 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96f056328b239cb31b835342ee549d6ecfb414e8/bambooya1.jpg" for ::1 at 2021-08-06 15:31:59 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b546ccaae11350788a37ff070bd3c7be1924d452", "filename"=>"rosa_pizza1"}
+  [1m[36mActiveStorage::Blob Load (5.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.0ms) [0m[34mGenerated URL for file at key: Ym87j4YcWHvxQX5XuXF2iY98 (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Ym87j4YcWHvxQX5XuXF2iY98?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193159Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0da8ba7e794fb8af62a0884a131384fb86e16c81ab640f8facd39f03db2bffc)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/Ym87j4YcWHvxQX5XuXF2iY98?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza1.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193159Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0da8ba7e794fb8af62a0884a131384fb86e16c81ab640f8facd39f03db2bffc
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96f056328b239cb31b835342ee549d6ecfb414e8", "filename"=>"bambooya1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: XgQnBkrm8A8pjXAM5zbcDuey (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/XgQnBkrm8A8pjXAM5zbcDuey?response-content-disposition=inline%3B%20filename%3D%22bambooya1.jpg%22%3B%20filename%2A%3DUTF-8%27%27bambooya1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193159Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb22c39b9713aff8eb0740c7390782b0fee1e992b2385fdd74bfc391c152400b)[0m
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/XgQnBkrm8A8pjXAM5zbcDuey?response-content-disposition=inline%3B%20filename%3D%22bambooya1.jpg%22%3B%20filename%2A%3DUTF-8%27%27bambooya1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193159Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb22c39b9713aff8eb0740c7390782b0fee1e992b2385fdd74bfc391c152400b
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/api/businesses/13/reviews" for ::1 at 2021-08-06 15:32:01 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"business_id"=>"13"}
+Started GET "/api/businesses/13" for ::1 at 2021-08-06 15:32:01 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d592026482ab6829432282be116bd87970347c2/rosa_pizza2.jpg" for ::1 at 2021-08-06 15:32:01 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c429ae85f522b2e433b700fd84ae474d12aeb13c/rosa_pizza3.jpg" for ::1 at 2021-08-06 15:32:01 -0400
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dZWmBXA9A-3tosnG8LguaA"], ["LIMIT", 1]]
+Processing by Api::BusinessesController#show as JSON
+  ↳ app/controllers/application_controller.rb:21
+  Parameters: {"id"=>"13"}
+  Rendering api/reviews/index.json.jbuilder
+  [1m[36mBusiness Load (1.5ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 13]]
+  ↳ app/views/api/reviews/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Business"], ["name", "photos"], ["record_id", 13]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/reviews/index.json.jbuilder:1
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" IN ($1, $2, $3)[0m  [["id", 36], ["id", 37], ["id", 38]]
+  ↳ app/controllers/api/businesses_controller.rb:8
+  Rendering api/businesses/show.json.jbuilder
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  Rendered api/businesses/_business.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (3.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Review"], ["name", "photos"]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+  ↳ app/views/api/reviews/index.json.jbuilder:4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d592026482ab6829432282be116bd87970347c2", "filename"=>"rosa_pizza2"}
+  [1m[36mHour Load (2.2ms)[0m  [1m[34mSELECT "hours".* FROM "hours" WHERE "hours"."business_id" = $1[0m  [["business_id", 13]]
+  ↳ app/views/api/businesses/show.json.jbuilder:5
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (2.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Review"], ["name", "photos"]]
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: VrLESZA1GaezH93s9J9mpHEb (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/VrLESZA1GaezH93s9J9mpHEb?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza2.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193201Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cab69db254bb8ba8ff7d09cc94786bfe0f40468bb95fa0e24af9b1dba80055b5)[0m
+Processing by ActiveStorage::BlobsController#show as JPEG
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/VrLESZA1GaezH93s9J9mpHEb?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza2.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193201Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cab69db254bb8ba8ff7d09cc94786bfe0f40468bb95fa0e24af9b1dba80055b5
+  [1m[36mReview Load (3.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 13]]
+  ↳ app/views/api/reviews/index.json.jbuilder:4
+  ↳ app/views/api/businesses/show.json.jbuilder:11
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c429ae85f522b2e433b700fd84ae474d12aeb13c", "filename"=>"rosa_pizza3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:11
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 10], ["record_type", "Review"], ["name", "photos"]]
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  ↳ app/views/api/reviews/index.json.jbuilder:4
+  ↳ /home/appacademyshir/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered api/reviews/index.json.jbuilder (55.1ms)
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: ZNz4ngr3abbbuQdGb2ZSiPpN (https://my-zelppy-dev.s3.us-east-2.amazonaws.com/ZNz4ngr3abbbuQdGb2ZSiPpN?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza3.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193201Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=569f59b2ccf7e87b4f8500879a04ce155a4e55b9ea6d286f07774dce117eff9d)[0m
+Completed 200 OK in 98ms (Views: 61.1ms | ActiveRecord: 12.1ms)
+
+
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+Redirected to https://my-zelppy-dev.s3.us-east-2.amazonaws.com/ZNz4ngr3abbbuQdGb2ZSiPpN?response-content-disposition=inline%3B%20filename%3D%22rosa_pizza3.jpg%22%3B%20filename%2A%3DUTF-8%27%27rosa_pizza3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZAFBDLSTD37G3IIR%2F20210806%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210806T193201Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=569f59b2ccf7e87b4f8500879a04ce155a4e55b9ea6d286f07774dce117eff9d
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms)
+
+
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  Rendered api/businesses/show.json.jbuilder (46.4ms)
+Completed 200 OK in 74ms (Views: 46.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-06 15:32:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dZWmBXA9A-3tosnG8LguaA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 737ms (Views: 734.2ms | ActiveRecord: 0.5ms)
+
+
