@@ -21,7 +21,7 @@ class ReviewForm extends React.Component{
     handleSubmit(e){
         e.preventDefault()
         this.props.createReview(this.state)
-        .then(res => {history.push(`/businesses/${this.props.match.params.businessId}`)})
+        .then(res => this.props.history.push(`/businesses/${this.props.match.params.businessId}`))
     }
 
     update(field){
