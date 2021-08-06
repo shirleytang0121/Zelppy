@@ -2,7 +2,7 @@ class Api::ReviewsController < ApplicationController
     before_action :require_logged_in
     
     def index
-        @reviews = Review.find_by(business_id: params[:business_id])
+        @reviews = Review.all.where(business_id: params[:business_id])
         render :index
     end
 
