@@ -33,8 +33,8 @@ export const fetchAllReviews=(businessId)=>(dispatch)=>(
 )
 
 
-export const createReview = (businessId, review) => dispatch =>(
-    ReviewsAPIUtil.createReview(businessId,review)
+export const createReview = (review) => dispatch =>(
+    ReviewsAPIUtil.createReview(review)
      .then(review => (dispatch(recieveReview(review))),
            err => (dispatch(revieveReviewErrors(err.responseJSON))))
 )

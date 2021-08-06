@@ -42,6 +42,7 @@ class BusinessDetail extends React.Component{
                        <ul>
                           {this.renderHours()}
                        </ul>
+                       <p>Reviews</p>
                        <ReviewIndexContainer businessId={business.id}/>
                    </div>
                    <div className='business-detail-info'>

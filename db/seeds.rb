@@ -8,10 +8,24 @@
 
 require 'open-uri'
 
+User.destroy_all
 Business.destroy_all
 Hour.destroy_all
 Review.destroy_all
 
+user1 = User.create(
+    email: 'shir@aa.io',
+    password: 'abc123',
+    firstname: 'shirley',
+    lastname: 'tang'
+)
+
+user2 = User.create(
+    email: 'tang@aa.io',
+    password: 'abc123',
+    firstname: 'tina',
+    lastname: 'tang'
+)
 
 business1 = Business.create(
     name: "Rosa's Pizza",
@@ -162,14 +176,12 @@ hour2_7 = Hour.create(
 )
 
 
-
-
 review1_1 = Review.create(
     rating: 5,
     price_range: '$$',
     body: 'We really enjoyed the food',
     business_id: business1.id,
-    user_id: 1
+    user_id: user1.id
 )
 
 review1_2 = Review.create(
@@ -177,7 +189,7 @@ review1_2 = Review.create(
     price_range: '$$',
     body: 'The food is okay',
     business_id: business1.id,
-    user_id: 1
+    user_id: user2.id
 )
 
 review2_1 = Review.create(
@@ -185,7 +197,7 @@ review2_1 = Review.create(
     price_range: '$$',
     body: 'Good food Good service',
     business_id: business2.id,
-    user_id: 1
+    user_id: user2.id
 )
 
 
@@ -194,6 +206,6 @@ review2_2 = Review.create(
     price_range: '$$',
     body: 'Nice food.',
     business_id: business2.id,
-    user_id: 2
+    user_id: user1.id
 )
 

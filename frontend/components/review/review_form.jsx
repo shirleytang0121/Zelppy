@@ -5,12 +5,13 @@ class ReviewForm extends React.Component{
         super(props)
         this.state = {
             rating: 0,
-            priceRange: '',
+            price_range: '',
             body: '',
-            userId: this.props.userId,
-            businessId: this.props.match.params.businessId
+            user_id: this.props.userId,
+            business_id: this.props.match.params.businessId
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        console.log(this.state)
     }
 
     componentDidMount(){
@@ -19,7 +20,8 @@ class ReviewForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        this.props.createReview(this.props.match.params.businessId, this.state)
+        this.props.createReview(this.state)
+        .then(res => {history.push(`/businesses/${this.props.match.params.businessId}`)})
     }
 
     update(field){
@@ -34,7 +36,7 @@ class ReviewForm extends React.Component{
                 <h1>{this.props.business.name}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.rating} onChange={this.update('rating')}/>
-                    <select onChange={this.update('priceRange')}>
+                    <select onChange={this.update('price_range')}>
                         <option value="$">$</option>
                         <option value="$$">$$</option>
                         <option value="$$$">$$$</option>
