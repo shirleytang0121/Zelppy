@@ -16,13 +16,13 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json: @reivew.errors.full_messages, status:422
+            render json: @review.errors.full_messages, status:422
         end
     end
 
     def update
         @review = Review.find(params[:id])
-        if @reivew.update(reviews_params)
+        if @review.update(reviews_params)
             render :show
         else
             render json: @review.errors.full_messages, status:422
@@ -37,6 +37,6 @@ class Api::ReviewsController < ApplicationController
 
     private
     def reviews_params
-        params.require(:reivew).permit(:body,:rating,:price_range, :user_id, :business_id)
+        params.require(:review).permit(:body,:rating,:price_range, :user_id, :business_id)
     end
 end

@@ -8,6 +8,7 @@ const reviewsReducr =(oldState={}, action)=>{
         case RECEIVE_REVIEW:
             return Object.assign({}, oldState, {[action.review.id]: action.review})
         case REMOVE_REVIEW:
+            debugger
             const nextState = Object.assign({}, oldState)
             delete nextState[action.review.id]
             return nextState
