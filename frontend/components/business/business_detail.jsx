@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
+import ReviewIndexContainer from '../review/review_index_container'; 
 
 class BusinessDetail extends React.Component{
 
@@ -37,6 +38,7 @@ class BusinessDetail extends React.Component{
                        <ul>
                           {this.renderHours()}
                        </ul>
+                       <ReviewIndexContainer businessId={business.id}/>
                    </div>
                    <div className='business-detail-info'>
                         <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
