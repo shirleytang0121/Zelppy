@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .review-container img{
-    width: 60%;
+    width: 57%;
     height: auto;
 }
 
@@ -11,14 +11,31 @@
     display: block;
     position: relative;
     overflow: hidden;
-    width: 200px;
-    height: 21px;
-    border: 1px solid black;
+    width: 190px;
+    height: 20px;
 }
 
 .review-index-stars .review-index-5stars{
     position: relative;
-    top: -111px;
-    bottom: -50px;
+    top: -100px;
    
+}
+.review-index-stars .review-index-4stars{
+    position: relative;
+    top: -80px;   
+}
+
+.review-index-stars .review-index-3stars{
+    position: relative;
+    top: -60px;   
+}
+
+.review-index-stars .review-index-2stars{
+    position: relative;
+    top: -40px;   
+}
+
+.review-index-stars .review-index-1stars{
+    position: relative;
+    top: -20px;   
 }
