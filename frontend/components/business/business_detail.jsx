@@ -25,7 +25,7 @@ class BusinessDetail extends React.Component{
         return(
             <div >
                 <header className='business-header'>
-                    <Link to='/' className='business-title'>Zelppy</Link>
+                    <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
                     <GreetingContainer />
                 </header>
                 <div>
