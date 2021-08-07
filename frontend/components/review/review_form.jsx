@@ -36,8 +36,6 @@ class ReviewForm extends React.Component{
             fileReader.readAsDataURL(files);
         }
 
-          console.log(fileReader)
-
     }
 
     handleSubmit(e){
@@ -50,11 +48,15 @@ class ReviewForm extends React.Component{
         return e => this.setState({[field]: e.currentTarget.value})
     }
 
+    renderStar(){
+        
+    }
+
 
     render(){
         if(this.props.business === undefined) return null;
         return(
-            <div>
+            <div >
                 <h1>{this.props.business.name}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.rating} onChange={this.update('rating')}/>

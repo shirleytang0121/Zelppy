@@ -65,11 +65,10 @@ ul{
 
 .business-detail-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .business-detail-info{
-    margin-right: 10%;
     font-size: 17px;
     border: 1px solid rgb(224, 224, 224);
     padding: 10px;
@@ -81,3 +80,16 @@ ul{
     border-bottom:1px solid rgb(224, 224, 224) ;
 }
 
+
+.hour-title{
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.review-title{
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}

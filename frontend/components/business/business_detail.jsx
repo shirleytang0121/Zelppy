@@ -32,23 +32,25 @@ class BusinessDetail extends React.Component{
                     {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
                 </div>
                <h1 className='business-detail-title'>{business.name}</h1>
-               <div className='business-detail-buttons'>
-                    <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                    
-               </div>
                <div className='business-detail-container'>
-                   <div>
-                       <p>Hours</p>
+                <div>
+                   <div className='business-detail-buttons'>
+                       <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
+                        <button>Photo</button>
+                   </div>
+                       <p className='hour-title'>{`Location & Hours`}</p>
                        <ul>
                           {this.renderHours()}
                        </ul>
-                       <p>Reviews</p>
+                       <p className='review-title'>Reviews</p>
                        <ReviewIndexContainer businessId={business.id}/>
                    </div>
-                   <div className='business-detail-info'>
-                        <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
-                        <p><a href={business.website}>Website <MdLaunch /> </a></p>
-                        <p>{business.phoneNumber} <BiPhoneCall /></p>
+                   <div>
+                    <div className='business-detail-info'>
+                            <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
+                            <p><a href={business.website}>Website <MdLaunch /> </a></p>
+                            <p>{business.phoneNumber} <BiPhoneCall /></p>
+                    </div>
                     </div>
                </div>
             </div>

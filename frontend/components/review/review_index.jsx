@@ -8,7 +8,7 @@ class ReviewIndex extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='review-index-container'>
                 <ul>
                     {this.props.reviews.map( review =><ReviewIndexItem key={review.id} review={review}/> )}
                 </ul>

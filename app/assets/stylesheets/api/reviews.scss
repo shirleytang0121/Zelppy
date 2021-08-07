@@ -1,3 +1,24 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-container img{
+    width: 60%;
+    height: auto;
+}
+
+.review-index-stars{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 21px;
+    border: 1px solid black;
+}
+
+.review-index-stars .review-index-5stars{
+    position: relative;
+    top: -111px;
+    bottom: -50px;
+   
+}
