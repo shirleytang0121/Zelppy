@@ -55,7 +55,7 @@
 }
 
 
-input[type="radio"] {
+input[type=radio] {
     -webkit-appearance: none;
     width: 33px;
     height: 30px;
@@ -63,28 +63,6 @@ input[type="radio"] {
     background-size: 180px 180px;
     margin-left: -1px;
 }
-
-// .star1-0{
-//     background-position: 180px 30px;
-// }
-
-// .star2-0{
-//     background-position: 143px 150px;
-// }
-
-// .star3-0{
-//     background-position: 106px 150px;
-// }
-
-// .star4-0{
-//     background-position: 70px 79px;
-// }
-
-// .star5-0{
-//     background-position: 33px 79px;
-// }
-
-
 
 
 .star1-1{
@@ -188,4 +166,28 @@ input[type="radio"] {
     background-position: 33px 30px;
 }
 
+.review-box{
+    // background-color: blue;
+    margin: 4% 25%;
+    padding: 30px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.review-box textarea{
+    padding-top: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 400px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.price-range{
+    width: 12%; 
+    padding: 5px 10px;
+}
 

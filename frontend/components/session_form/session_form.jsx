@@ -66,7 +66,7 @@ class SessionForm extends React.Component{
         return(
             <div className='session-container'>
                 <div className='session-header'>
-                <Link to='/' > Zelppy </Link>
+                <Link to='/' > <img src={window.logoURL} className='business-logo' /> </Link>
                 </div>
                 <div className='session-form-container'>
                 {this.renderErrors()} 
@@ -74,8 +74,8 @@ class SessionForm extends React.Component{
                     {this.renderInstruction()}
                     <form onSubmit={this.handleSubmit}>
                         {this.renderNames()}
-                        <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email'/>
-                        <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password'/>  
+                        <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='session-email'/>
+                        <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password' className='session-password'/>  
                         <input type="submit" value={this.props.formType} />
                     </form> 
                 </div>

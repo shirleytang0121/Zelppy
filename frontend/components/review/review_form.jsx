@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import GreetingContainer from '../greeting/greeting_container'
 
 class ReviewForm extends React.Component{
     constructor(props){
@@ -148,25 +150,35 @@ class ReviewForm extends React.Component{
         console.log(this.state)
         if(this.props.business === undefined) return null;
         return(
-            <div >
-                <h1>{this.props.business.name}</h1>
+            <div className='review-form-container'>
+                <header className='business-header'>
+                    <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
+                    <GreetingContainer />
+                </header>
+                <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
+              <div className='review-box'>
                 <form onSubmit={this.handleSubmit}>
-                   
-                    <input type="radio" value='1' onChange={this.update('rating')} name='rate' id="star1" onMouseEnter={()=>this.hoverStars(1)} onMouseLeave={this.hoverLeave} />
-                    <input type="radio" value='2' onChange={this.update('rating')} name='rate' id="star2" onMouseEnter={()=>this.hoverStars(2)} onMouseLeave={this.hoverLeave} />
-                    <input type="radio" value='3' onChange={this.update('rating')} name='rate' id="star3" onMouseEnter={()=>this.hoverStars(3)} onMouseLeave={this.hoverLeave} />
-                    <input type="radio" value='4' onChange={this.update('rating')} name='rate' id="star4" onMouseEnter={()=>this.hoverStars(4)} onMouseLeave={this.hoverLeave} />
-                    <input type="radio" value='5' onChange={this.update('rating')} name='rate' id="star5" onMouseEnter={()=>this.hoverStars(5)} onMouseLeave={this.hoverLeave} />
-                   
-                    <select onChange={this.update('price_range')}>
-                        <option value="$">$</option>
-                        <option value="$$">$$</option>
-                        <option value="$$$">$$$</option>
-                    </select>
-                    <input type="textarea" value={this.state.body} onChange={this.update('body')}/>
+                   <div className='rating-box'>
+                        <input type="radio" value='1' onChange={this.update('rating')} name='rate' id="star1" onMouseEnter={()=>this.hoverStars(1)} onMouseLeave={this.hoverLeave} />
+                        <input type="radio" value='2' onChange={this.update('rating')} name='rate' id="star2" onMouseEnter={()=>this.hoverStars(2)} onMouseLeave={this.hoverLeave} />
+                        <input type="radio" value='3' onChange={this.update('rating')} name='rate' id="star3" onMouseEnter={()=>this.hoverStars(3)} onMouseLeave={this.hoverLeave} />
+                        <input type="radio" value='4' onChange={this.update('rating')} name='rate' id="star4" onMouseEnter={()=>this.hoverStars(4)} onMouseLeave={this.hoverLeave} />
+                        <input type="radio" value='5' onChange={this.update('rating')} name='rate' id="star5" onMouseEnter={()=>this.hoverStars(5)} onMouseLeave={this.hoverLeave} />
+                    </div>
+                    <div>
+                        <select onChange={this.update('price_range')} className='price-range'>
+                            <option value="$">$</option>
+                            <option value="$$">$$</option>
+                            <option value="$$$">$$$</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea name='textarea' value={this.state.body} onChange={this.update('body')}/>
+                    </div>
                     {/* <input type="file" onChange={this.handleFile} multiple/> */}
-                    <input type="submit" value={this.props.formType} />
+                    <input type="submit" value={this.props.formType} className='review-btn'/>
                 </form>
+                </div>
             </div>
         )
     }
