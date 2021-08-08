@@ -9,11 +9,13 @@ class ReviewForm extends React.Component{
             body: '',
             user_id: this.props.userId,
             business_id: this.props.match.params.businessId,
-            photos: null,
-            photoUrls:null
+            // photos: null,
+            // photoUrls:null
         }
+
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleFile =this.handleFile.bind(this)
+        
+        // this.handleFile =this.handleFile.bind(this)
     }
 
     componentDidMount(){
@@ -24,19 +26,19 @@ class ReviewForm extends React.Component{
         this.props.history.push(`/businesses/${this.props.match.params.businessId}`)
     }
 
-    handleFile(e){
-        const file = e.currentTarget.files[0]
-        const fileReader =new FileReader()
-        const files_arr=Object.values(files)
-        fileReader.onloadend =()=>{
-            this.setState({photos: file, photoUrls: fileReader.result})
-        }
+    // handleFile(e){
+    //     const file = e.currentTarget.files[0]
+    //     const fileReader =new FileReader()
+    //     const files_arr=Object.values(files)
+    //     fileReader.onloadend =()=>{
+    //         this.setState({photos: file, photoUrls: fileReader.result})
+    //     }
 
-        if (files) {
-            fileReader.readAsDataURL(files);
-        }
+    //     if (files) {
+    //         fileReader.readAsDataURL(files);
+    //     }
 
-    }
+    // }
 
     handleSubmit(e){
         e.preventDefault()
@@ -47,9 +49,11 @@ class ReviewForm extends React.Component{
     update(field){
         return e => this.setState({[field]: e.currentTarget.value})
     }
+     
+    hoverStars(rating){
+        if(rating===1){
 
-    renderStar(){
-        
+        }
     }
 
 
@@ -59,14 +63,19 @@ class ReviewForm extends React.Component{
             <div >
                 <h1>{this.props.business.name}</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.rating} onChange={this.update('rating')}/>
+                    <input type="radio" value='1' onChange={this.update('rating')} name='rate' id="star1" onMouseEnter={()=>this.hoverStars(1)} onMouseLeave={()=>this.hoverStars(0)}/>
+                    <input type="radio" value='2' onChange={this.update('rating')} name='rate' id="star2" onMouseEnter={()=>this.hoverStars(2)} onMouseLeave={()=>this.hoverStars(0)}/>
+                    <input type="radio" value='3' onChange={this.update('rating')} name='rate' id="star3" onMouseEnter={()=>this.hoverStars(3)} onMouseLeave={()=>this.hoverStars(0)}/>
+                    <input type="radio" value='4' onChange={this.update('rating')} name='rate' id="star4" onMouseEnter={()=>this.hoverStars(4)} onMouseLeave={()=>this.hoverStars(0)}/>
+                    <input type="radio" value='5' onChange={this.update('rating')} name='rate' id="star5" onMouseEnter={()=>this.hoverStars(5)} onMouseLeave={()=>this.hoverStars(0)}/>
+                   
                     <select onChange={this.update('price_range')}>
                         <option value="$">$</option>
                         <option value="$$">$$</option>
                         <option value="$$$">$$$</option>
                     </select>
                     <input type="textarea" value={this.state.body} onChange={this.update('body')}/>
-                    <input type="file" onChange={this.handleFile} multiple/>
+                    {/* <input type="file" onChange={this.handleFile} multiple/> */}
                     <input type="submit" value={this.props.formType} />
                 </form>
             </div>

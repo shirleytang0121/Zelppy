@@ -6,13 +6,12 @@ class ReviewIndexItem extends React.Component{
         return(
             <li>
                 <div className='review-container'>
-                    <p>{review.author.firstname} {review.author.lastname}</p>
+                    <p className='reviewer'>{review.author.firstname} {review.author.lastname}</p>
                     <div className='review-index-stars'>
                         <img src={window.starURL} className={`review-index-${review.rating}stars`}/> 
                     </div>
-                       <p>{review.createdAt.slice(0,10)}</p>
-                        <p>{review.body}</p>
-                    
+                       <p className='review-date'>{review.createdAt.slice(0,10)}</p>
+                       <p>{review.body}</p>   
                 </div>
             </li>
         )
