@@ -797,8 +797,8 @@ business11 = Business.create(
 )
 
 file11_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
-file11_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
-file11_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
+file11_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek2.jpg')
+file11_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek3.jpg')
 
 business11.photos.attach(io: file11_1, filename: "sikgaek1.jpg")
 business11.photos.attach(io: file11_2, filename: "sikgaek2.jpg")
