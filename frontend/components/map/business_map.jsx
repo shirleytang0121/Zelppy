@@ -18,7 +18,7 @@ class BusinessMap extends React.Component{
        }
     
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map)
+        this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
         if(this.props.singleBusiness){
             this.MarkerManager.updateMarkers([this.props.business])
         }else{
@@ -27,11 +27,17 @@ class BusinessMap extends React.Component{
       }
 
       componentDidUpdate(){
+          window.scrollTo(0,0)
         if(this.props.singleBusiness){
             this.MarkerManager.updateMarkers([this.props.business])
         }else{
             this.MarkerManager.updateMarkers(this.props.businesses)
         }
+      }
+
+      handleMarkerClick(business) {
+        //   console.log(this.props.history)
+        this.props.history.push(`businesses/${business.id}`);
       }
     
       render() {

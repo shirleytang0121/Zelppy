@@ -1,6 +1,10 @@
 class Api::BusinessesController < ApplicationController
     def index
-        @businesses = Business.all
+        if(params[:value] || params[:position]){
+            @businesses = Business.search(params[:value],params[:position])
+        }else{
+             @businesses = Business.all
+        }   
         render :index
     end
 

@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import {fetchBusiness } from '../../actions/business_actions'
 import BusinessDetail from "./business_detail";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps)=>({
      business: state.entities.businesses[ownProps.match.params.businessId],
@@ -12,4 +13,4 @@ const mapDispatchToProps = (dispatch) =>({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(BusinessDetail)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BusinessDetail))
