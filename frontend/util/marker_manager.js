@@ -10,6 +10,9 @@ export default class MarkerManager {
         businesses.forEach(business => businessObj[business.id]=businesses)
         businesses.filter(business => !this.markers[business.id])
                   .forEach(newBusiness => this.createMarkerFromBusiness(newBusiness))
+
+        Object.keys(this.markers).filter(businessId => !businessObj[businessId])
+                                 .forEach(businessId => this.removeMarker(this.markers[businessId]))
     }
 
     createMarkerFromBusiness(business){

@@ -4,6 +4,8 @@ import GreetingContainer from '../greeting/greeting_container'
 import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
 import ReviewIndexContainer from '../review/review_index_container'; 
+import BusinessMap from '../map/business_map';
+
 
 class BusinessDetail extends React.Component{
 
@@ -38,10 +40,13 @@ class BusinessDetail extends React.Component{
                        <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
                         <button>Photo</button>
                    </div>
-                       <p className='hour-title'>{`Location & Hours`}</p>
-                       <ul>
-                          {this.renderHours()}
-                       </ul>
+                       <div>
+                            <p className='hour-title'>{`Location & Hours`}</p>
+                            <BusinessMap businesses='' singleBusiness={true} business={business}/>
+                            <ul>
+                                {this.renderHours()}
+                            </ul>
+                       </div>
                        <p className='review-title'>Reviews</p>
                        <ReviewIndexContainer businessId={business.id}/>
                    </div>

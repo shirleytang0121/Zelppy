@@ -15,7 +15,7 @@ class Search extends React.Component{
         <div className='business-map-container'>
             <BusinessIndex businesses={this.props.businesses} fetchAllBusinesses={this.props.fetchAllBusinesses}/>
             <div className='business-side'>
-                <BusinessMap businesses={this.props.businesses}/>
+                <BusinessMap businesses={this.props.businesses} singleBusiness={false} business=''/>
             </div>
         </div>
         </div>
