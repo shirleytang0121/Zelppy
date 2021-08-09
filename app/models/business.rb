@@ -13,5 +13,11 @@ class Business < ApplicationRecord
         foreign_key: :business_id,
         class_name: :Review
     
+    def average_rating
+    end
+
+    def self.search(value, position)
+        
+    end
     
 end
