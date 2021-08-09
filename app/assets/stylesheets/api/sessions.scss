@@ -28,7 +28,7 @@
 
 }
 
-input[type=text], select {
+.session-email, select {
     width: 70%;
     padding: 8px 12px;
     margin: 8px 0;
@@ -38,7 +38,7 @@ input[type=text], select {
     box-sizing: border-box;
   }
 
-  input[type=password], select {
+  .session-password, select {
     width: 70%;
     padding: 8px 12px;
     margin: 8px 0;

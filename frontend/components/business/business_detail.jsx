@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
+import ReviewIndexContainer from '../review/review_index_container'; 
 
 class BusinessDetail extends React.Component{
 
@@ -24,7 +25,7 @@ class BusinessDetail extends React.Component{
         return(
             <div >
                 <header className='business-header'>
-                    <Link to='/' className='business-title'>Zelppy</Link>
+                    <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
                     <GreetingContainer />
                 </header>
                 <div>
@@ -32,16 +33,24 @@ class BusinessDetail extends React.Component{
                 </div>
                <h1 className='business-detail-title'>{business.name}</h1>
                <div className='business-detail-container'>
-                   <div>
-                       <p>Hours</p>
+                <div>
+                   <div className='business-detail-buttons'>
+                       <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
+                        <button>Photo</button>
+                   </div>
+                       <p className='hour-title'>{`Location & Hours`}</p>
                        <ul>
                           {this.renderHours()}
                        </ul>
+                       <p className='review-title'>Reviews</p>
+                       <ReviewIndexContainer businessId={business.id}/>
                    </div>
-                   <div className='business-detail-info'>
-                        <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
-                        <p><a href={business.website}>Website <MdLaunch /> </a></p>
-                        <p>{business.phoneNumber} <BiPhoneCall /></p>
+                   <div>
+                    <div className='business-detail-info'>
+                            <p>{business.address} {business.city},{business.state} {business.zipCode}</p>
+                            <p><a href={business.website}>Website <MdLaunch /> </a></p>
+                            <p>{business.phoneNumber} <BiPhoneCall /></p>
+                    </div>
                     </div>
                </div>
             </div>

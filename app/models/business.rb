@@ -7,5 +7,11 @@ class Business < ApplicationRecord
         primary_key: :id,
         foreign_key: :business_id,
         class_name: :Hour
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :Review
+    
     
 end

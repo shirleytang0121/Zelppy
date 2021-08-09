@@ -1,0 +1,202 @@
+// Place all the styles related to the api/reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-container img{
+    width: 57%;
+    height: auto;
+}
+
+.review-index-stars{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 190px;
+    height: 20px;
+}
+
+.review-index-stars .review-index-5stars{
+    position: relative;
+    top: -100px;
+   
+}
+.review-index-stars .review-index-4stars{
+    position: relative;
+    top: -80px;   
+}
+
+.review-index-stars .review-index-3stars{
+    position: relative;
+    top: -60px;   
+}
+
+.review-index-stars .review-index-2stars{
+    position: relative;
+    top: -40px;   
+}
+
+.review-index-stars .review-index-1stars{
+    position: relative;
+    top: -20px;   
+}
+
+.reviewer{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-date{
+    font-size: 12px;
+    color: rgb(128, 125, 125);
+}
+
+.review-container{
+    padding: 5px;
+}
+
+
+input[type=radio] {
+    -webkit-appearance: none;
+    width: 33px;
+    height: 30px;
+    background-image: image-url('star.png');
+    background-size: 180px 180px;
+    margin-left: -1px;
+}
+
+
+.star1-1{
+    background-position: 180px 150px;
+}
+
+.star2-1{
+    background-position: 143px 150px;
+}
+
+.star3-1{
+    background-position: 106px 150px;
+}
+
+.star4-1{
+    background-position: 70px 150px;
+}
+
+.star5-1{
+    background-position: 33px 150px;
+}
+
+
+.star1-2{
+    background-position: 180px 120px;
+}
+
+.star2-2{
+    background-position: 143px 120px;
+}
+
+.star3-2{
+    background-position: 106px 120px;
+}
+
+.star4-2{
+    background-position: 70px 120px;
+}
+
+.star5-2{
+    background-position: 33px 120px;
+}
+
+.star1-3{
+    background-position: 180px 90px;
+}
+
+.star2-3{
+    background-position: 143px 90px;
+}
+
+.star3-3{
+    background-position: 106px 90px;
+}
+
+.star4-3{
+    background-position: 70px 90px;
+}
+
+.star5-3{
+    background-position: 33px 90px;
+}
+
+
+.star1-4{
+    background-position: 180px 60px;
+}
+
+.star2-4{
+    background-position: 143px 60px;
+}
+
+.star3-4{
+    background-position: 106px 60px;
+}
+
+.star4-4{
+    background-position: 70px 60px;
+}
+
+.star5-4{
+    background-position: 33px 60px;
+}
+.star1-5{
+    background-position: 180px 30px;
+}
+
+.star2-5{
+    background-position: 143px 30px;
+}
+
+.star3-5{
+    background-position: 106px 30px;
+}
+
+.star4-5{
+    background-position: 70px 30px;
+}
+
+.star5-5{
+    background-position: 33px 30px;
+}
+
+.review-box{
+    // background-color: blue;
+    margin: 4% 25%;
+    padding: 30px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.review-box textarea{
+    padding-top: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 400px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.price-range{
+    width: 12%; 
+    padding: 5px 10px;
+}
+
+.review-form-container a{
+    text-decoration: none;
+}
+
+.review-business-name{
+    color: black;
+    margin: 2% 25%;
+}
+
