@@ -7,7 +7,7 @@ class Search extends React.Component{
         return(
         <div>
             <BusinessIndex businesses={this.props.businesses} fetchAllBusinesses={this.props.fetchAllBusinesses}/>
-            <BusinessMap />
+            <BusinessMap businesses={this.props.businesses}/>
         </div>
         )
     }
