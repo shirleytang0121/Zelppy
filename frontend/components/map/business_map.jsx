@@ -5,7 +5,7 @@ import MarkerManager from "../../util/marker_manager";
 class BusinessMap extends React.Component{
     componentDidMount() {
         const mapOptions = {
-          center: { lat: 40.75231, lng:  -73.98563  }, 
+          center: { lat: 40.7981, lng:  -73.9152  }, 
           zoom: 10
         };
     
