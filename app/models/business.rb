@@ -13,11 +13,21 @@ class Business < ApplicationRecord
         foreign_key: :business_id,
         class_name: :Review
     
+    has_many :business_categories,
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :BusinessCategory
+    
+    has_many :categories,
+        through: :business_categories,
+        source: :category
+        
     def average_rating
+        reviews.average(:rating)
     end
 
     def self.search(value, position)
-        
+        Business.where("")
     end
     
 end
