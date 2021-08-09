@@ -561,113 +561,113 @@ hour7_7 = Hour.create(
 )
 
 business8 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Gino's Pizza",
+    address: "8635 Broadway",
+    city: "Elmhurst",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11373,
+    phone_number: "(718) 672-8515",
+    website: '',
+    lat: 40.74477,
+    lng: -73.885647,
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: false
 )
 
-file8_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file8_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file8_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file8_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/gino1.jpg')
+file8_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/gino2.jpg')
+file8_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/gino3.jpg')
 
-business8.photos.attach(io: file8_1, filename: "bambooya1.jpg")
-business8.photos.attach(io: file8_2, filename: "bambooya2.jpg")
-business8.photos.attach(io: file8_3, filename: "bambooya3.jpg")
+business8.photos.attach(io: file8_1, filename: "gino1.jpg")
+business8.photos.attach(io: file8_2, filename: "gino2.jpg")
+business8.photos.attach(io: file8_3, filename: "gino3.jpg")
 
 
 hour8_1 = Hour.create(
     date: 'Mon',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business8.id
 )
 
 hour8_2 = Hour.create(
     date: 'Tue',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business8.id
 )
 
 hour8_3 = Hour.create(
     date: 'Wed',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business8.id
 )
 
 hour8_4 = Hour.create(
     date: 'Thu',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business8.id
 )
 
 hour8_5 = Hour.create(
     date: 'Fri',
     open: '11:00 AM',
-    close: '12:00 AM',
+    close: '11:00 PM',
     business_id: business8.id
 )
 
 hour8_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '11:00 AM',
+    close: '11:00 PM',
     business_id: business8.id
 )
 
 hour8_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '11:00 AM',
+    close: '10:00 PM',
     business_id: business8.id
 )
 
 business9 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Shake Shack",
+    address: "90-15 Queens Blvd Space 1069",
+    city: "Elmhurst",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11373,
+    phone_number: "(347) 225-0190",
+    website: 'https://www.shakeshack.com/location/queens-center-ny',
+    lat: 40.735395,
+    lng: -73.876472,
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: false
 )
 
-file9_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file9_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file9_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file9_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/ss1.png')
+file9_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/ss2.jpg')
+file9_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/ss3.png')
 
-business9.photos.attach(io: file9_1, filename: "bambooya1.jpg")
-business9.photos.attach(io: file9_2, filename: "bambooya2.jpg")
-business9.photos.attach(io: file9_3, filename: "bambooya3.jpg")
+business9.photos.attach(io: file9_1, filename: "ss1.png")
+business9.photos.attach(io: file9_2, filename: "ss2.jpg")
+business9.photos.attach(io: file9_3, filename: "ss3.png")
 
 
 hour9_1 = Hour.create(
     date: 'Mon',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 hour9_2 = Hour.create(
     date: 'Tue',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
@@ -675,73 +675,73 @@ hour9_2 = Hour.create(
 hour9_3 = Hour.create(
     date: 'Wed',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 hour9_4 = Hour.create(
     date: 'Thu',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 hour9_5 = Hour.create(
     date: 'Fri',
     open: '11:00 AM',
-    close: '12:00 AM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 hour9_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '11:00 AM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 hour9_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '11:00 AM',
+    close: '10:00 PM',
     business_id: business9.id
 )
 
 business10 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Emoji Burger",
+    address: "80-07 37th Ave",
+    city: "Jackson Heights",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11372,
+    phone_number: "(917) 832-6427",
+    website: 'https://emojiburgerjacksonheights.bestcafes.online/',
+    lat: 40.749916,
+    lng: -73.88281,
     delivery: true,
     takeout: true,
     outdoor: true
 )
 
-file10_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file10_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file10_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file10_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/emoji_burger1.jpg')
+file10_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/emoji_burger2.jpg')
+file10_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/emoji_burger3.jpg')
 
-business10.photos.attach(io: file10_1, filename: "bambooya1.jpg")
-business10.photos.attach(io: file10_2, filename: "bambooya2.jpg")
-business10.photos.attach(io: file10_3, filename: "bambooya3.jpg")
+business10.photos.attach(io: file10_1, filename: "emoji_burger1.jpg")
+business10.photos.attach(io: file10_2, filename: "emoji_burger2.jpg")
+business10.photos.attach(io: file10_3, filename: "emoji_burger3.jpg")
 
 
 hour10_1 = Hour.create(
     date: 'Mon',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business10.id
 )
 
 hour10_2 = Hour.create(
     date: 'Tue',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business10.id
 )
 
@@ -749,405 +749,405 @@ hour10_2 = Hour.create(
 hour10_3 = Hour.create(
     date: 'Wed',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business10.id
 )
 
 hour10_4 = Hour.create(
     date: 'Thu',
     open: '11:00 AM',
-    close: '11:00 PM',
+    close: '10:00 PM',
     business_id: business10.id
 )
 
 hour10_5 = Hour.create(
     date: 'Fri',
     open: '11:00 AM',
-    close: '12:00 AM',
+    close: '11:00 PM',
     business_id: business10.id
 )
 
 hour10_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '11:00 AM',
+    close: '11:00 PM',
     business_id: business10.id
 )
 
 hour10_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '11:00 AM',
+    close: '10:00 PM',
     business_id: business10.id
 )
 
 business11 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Sik Gaek",
+    address: "49-11 Roosevelt Ave",
+    city: "Woodside",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11377,
+    phone_number: "(718) 205-4555",
+    website: 'http://sikgaekwoodside.com/',
+    lat: 40.745435,
+    lng: -73.905214,
     delivery: true,
     takeout: true,
     outdoor: true
 )
 
-file11_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file11_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file11_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file11_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
+file11_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
+file11_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/sikgaek1.jpg')
 
-business11.photos.attach(io: file11_1, filename: "bambooya1.jpg")
-business11.photos.attach(io: file11_2, filename: "bambooya2.jpg")
-business11.photos.attach(io: file11_3, filename: "bambooya3.jpg")
+business11.photos.attach(io: file11_1, filename: "sikgaek1.jpg")
+business11.photos.attach(io: file11_2, filename: "sikgaek2.jpg")
+business11.photos.attach(io: file11_3, filename: "sikgaek3.jpg")
 
 
 hour11_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '1:00 PM',
+    close: '12:00 AM',
     business_id: business11.id
 )
 
 hour11_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '1:00 PM',
+    close: '12:00 AM',
     business_id: business11.id
 )
 
 
 hour11_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '1:00 PM',
+    close: '12:00 AM',
     business_id: business11.id
 )
 
 hour11_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '1:00 PM',
+    close: '12:00 AM',
     business_id: business11.id
 )
 
 hour11_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
-    close: '12:00 AM',
+    open: '1:00 PM',
+    close: '1:00 AM',
     business_id: business11.id
 )
 
 hour11_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '1:00 PM',
+    close: '1:00 AM',
     business_id: business11.id
 )
 
 hour11_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '1:00 PM',
+    close: '12:00 AM',
     business_id: business11.id
 )
 
 business12 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Doma",
+    address: "43-43 41st St",
+    city: "Sunnyside",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11104,
+    phone_number: "(718) 707-0615",
+    website: '',
+    lat: 40.738853,
+    lng: -73.926662,
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: false
 )
 
-file12_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file12_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file12_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file12_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/doma1.jpg')
+file12_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/doma2.jpg')
+file12_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/doma3.jpg')
 
-business12.photos.attach(io: file12_1, filename: "bambooya1.jpg")
-business12.photos.attach(io: file12_2, filename: "bambooya2.jpg")
-business12.photos.attach(io: file12_3, filename: "bambooya3.jpg")
+business12.photos.attach(io: file12_1, filename: "doma1.jpg")
+business12.photos.attach(io: file12_2, filename: "doma2.jpg")
+business12.photos.attach(io: file12_3, filename: "doma3.jpg")
 
 
 hour12_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 hour12_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 
 hour12_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 hour12_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 hour12_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
-    close: '12:00 AM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 hour12_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 hour12_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '11:30 AM',
+    close: '10:30 PM',
     business_id: business12.id
 )
 
 business13 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Starbucks",
+    address: "86-51 Broadway",
+    city: "Elmhurst",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
-    delivery: true,
+    zip_code: 11373,
+    phone_number: "(718) 565-2021",
+    website: 'https://www.starbucks.com/',
+    lat: 40.740802,
+    lng: -73.879126,
+    delivery: false,
     takeout: true,
-    outdoor: true
+    outdoor: false
 )
 
-file13_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file13_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file13_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file13_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/starbucks1.jpg')
+file13_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/starbucks2.jpg')
+file13_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/starbucks3.jpg')
 
-business13.photos.attach(io: file13_1, filename: "bambooya1.jpg")
-business13.photos.attach(io: file13_2, filename: "bambooya2.jpg")
-business13.photos.attach(io: file13_3, filename: "bambooya3.jpg")
+business13.photos.attach(io: file13_1, filename: "starbucks1.jpg")
+business13.photos.attach(io: file13_2, filename: "starbucks2.jpg")
+business13.photos.attach(io: file13_3, filename: "starbucks3.jpg")
 
 
 hour13_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 hour13_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 
 hour13_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 hour13_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 hour13_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
-    close: '12:00 AM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 hour13_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 hour13_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '	6:00 AM',
+    close: '9:00 PM',
     business_id: business13.id
 )
 
 business14 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "MÖGE TEE",
+    address: "70-15A Austin St",
+    city: "Forest Hill",
     state: "NY",
     zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    phone_number: "(347) 644-1702",
+    website: 'https://mogeteeusa.com/',
+    lat: 40.720915,
+    lng: -73.8463,
     delivery: true,
     takeout: true,
     outdoor: true
 )
 
-file14_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file14_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file14_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file14_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/moge_tea1.jpg')
+file14_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/moge_tea2.jpg')
+file14_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/moge_tea3.jpg')
 
-business14.photos.attach(io: file14_1, filename: "bambooya1.jpg")
-business14.photos.attach(io: file14_2, filename: "bambooya2.jpg")
-business14.photos.attach(io: file14_3, filename: "bambooya3.jpg")
+business14.photos.attach(io: file14_1, filename: "moge_tea1.jpg")
+business14.photos.attach(io: file14_2, filename: "moge_tea2.jpg")
+business14.photos.attach(io: file14_3, filename: "moge_tea3.jpg")
 
 
 hour14_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '10:30 AM',
+    close: '9:30 PM',
     business_id: business14.id
 )
 
 hour14_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '10:30 AM',
+    close: '9:30 PM',
     business_id: business14.id
 )
 
 
 hour14_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '10:30 AM',
+    close: '9:30 PM',
     business_id: business14.id
 )
 
 hour14_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '10:30 AM',
+    close: '9:30 PM',
     business_id: business14.id
 )
 
 hour14_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
-    close: '12:00 AM',
+    open: '10:30 AM',
+    close: '10:00 PM',
     business_id: business14.id
 )
 
 hour14_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '10:30 AM',
+    close: '10:00 PM',
     business_id: business14.id
 )
 
 hour14_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '10:30 AM',
+    close: '9:30 PM',
     business_id: business14.id
 )
 
 business15 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Astoria Coffee",
+    address: "30-04 30th St",
+    city: "Astoria",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 11102,
+    phone_number: "(347) 619-3915",
+    website: 'https://www.astoriacoffeeny.com/',
+    lat: 40.768545,
+    lng: -73.920909,
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: false
 )
 
-file15_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file15_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file15_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file15_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/astoria1.jpg')
+file15_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/astoria2.jpg')
+file15_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/astoria3.jpg')
 
-business15.photos.attach(io: file15_1, filename: "bambooya1.jpg")
-business15.photos.attach(io: file15_2, filename: "bambooya2.jpg")
-business15.photos.attach(io: file15_3, filename: "bambooya3.jpg")
+business15.photos.attach(io: file15_1, filename: "astoria1.jpg")
+business15.photos.attach(io: file15_2, filename: "astoria2.jpg")
+business15.photos.attach(io: file15_3, filename: "astoria3.jpg")
 
 
 hour15_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 hour15_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 
 hour15_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 hour15_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 hour15_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
-    close: '12:00 AM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 hour15_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
-    close: '12:00 AM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
 hour15_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '7:00 AM',
+    close: '5:00 PM',
     business_id: business15.id
 )
 
