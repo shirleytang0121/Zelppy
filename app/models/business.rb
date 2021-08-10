@@ -27,7 +27,8 @@ class Business < ApplicationRecord
     end
 
     def self.search(value, position)
-        Business.left_outer_joins(:categories).where("lower(categories.category_name) LIKE :value OR lower(businesses.name) LIKE :value AND lower(businesses.city) LIKE :position OR lower(businesses.state) LIKE :position", value: "%#{value.downcase}%", position: "%#{position.downcase}%" ).pluck(:id,:name)
+        Business.left_outer_joins(:categories)
+        .where("(lower(categories.category_name) LIKE :value OR lower(businesses.name) LIKE :value) AND (lower(businesses.city) LIKE :position OR lower(businesses.state) LIKE :position)", value: "%#{value.downcase}%", position: "%#{position.downcase}%" )
     end
     
 end
