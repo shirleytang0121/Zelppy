@@ -2,7 +2,7 @@ export const fetchAllBusinesses = (search) =>(
     $.ajax({
         method: 'GET',
         url: 'api/businesses',
-        date:{search: search}
+        data:{search: search}
     })
 );
 

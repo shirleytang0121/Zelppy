@@ -9,6 +9,7 @@ import BusinessIndexContainer from './components/business/business_index_contain
 import BusinessDetailContainer from './components/business/business_detail_container'
 import CreateReviewContainer from './components/review/create_review_container'
 import SearchContainer from './components/search/search_container'
+import HomepageContainer from './components/homepage/homepage_container'
 
 const App = () => (
   <div className='app'>
@@ -18,7 +19,7 @@ const App = () => (
         <ProtectedRoute exact path="/businesses/:businessId/reviews/new" component={CreateReviewContainer}/>
         <Route exact path="/businesses/:businessId" component={BusinessDetailContainer}/>
         <Route exact path="/businesses" component={SearchContainer} />
-        <Route path="/" component={HomePage}/>
+        <Route path="/" component={HomepageContainer}/>
       </Switch>
       
   </div>
