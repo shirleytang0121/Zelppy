@@ -5,10 +5,16 @@ class Navigation extends React.Component{
     constructor(props){
         super(props)
         this.handlePizza =this.handlePizza.bind(this)
+        this.handleJapanese = this.handleJapanese.bind(this)
     }
 
     handlePizza(e){
         this.props.fetchAllBusinesses({value:'pizza',position:''})
+        this.navToBusinesses()
+    }
+
+    handleJapanese(e){
+        this.props.fetchAllBusinesses({value:'japanese',position:''})
         this.navToBusinesses()
     }
 
@@ -18,8 +24,11 @@ class Navigation extends React.Component{
 
     render(){
         return(
-            <div>
-                <button onClick={this.handlePizza}>pizza</button>
+            <div className='navigation-container'>
+                <button onClick={this.handlePizza}>Pizza</button>
+                <button onClick={this.handleJapanese}>Japanese</button>
+                <button>Chinese Food</button>
+                <button>Burger</button>
             </div>
         )
     }
