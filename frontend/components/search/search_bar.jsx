@@ -15,7 +15,7 @@ class SearchBar extends React.Component{
 
     handleSearch(e){
         e.preventDefault()
-        this.props.fetchAllBusinesses(this.state)
+        this.props.updateFilter('value',this.state.value)
         this.navToBusinesses()
     }
 

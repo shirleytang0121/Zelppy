@@ -13,7 +13,7 @@ class HomePage extends React.Component{
 }
 
 handleClick(e){
-    this.props.fetchAllBusinesses({value:'',position:''})
+    this.props.updateFilter('search',{value:'',position:''});
     this.navToBusinesses()
 }
 
@@ -29,7 +29,7 @@ navToBusinesses(){
                 <GreetingContainer />  
             </header>
             <Link to='/'> <img src={window.logoURL} className='logo'/> </Link>
-            <SearchBar fetchAllBusinesses={this.props.fetchAllBusinesses}/>
+            <SearchBar updateFilter={this.props.updateFilter}/>
             <NavigationContainer />
           
           </div>
