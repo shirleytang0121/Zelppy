@@ -16,7 +16,7 @@ ul{
     display: flex;
     border: 1px solid rgb(224, 224, 224);
     border-radius: 5px;
-    width: 50%;
+    width: 100%;
     padding: 20px;
     margin-top: 3%;
 }
@@ -94,13 +94,27 @@ ul{
 
 }
 
+.business-map-container{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    
+}
+
 
 // #map-container{
 //     position: sticky;
 //     top: 20px;
 // }
 
-// .business-side{
-//     margin-top: -272%;
-//     margin-left: 65%;
-// }
+.business-side{
+    margin-left: 40px;
+}
+
+
+.business-search-container{
+    margin-left: 40px;
+    padding-left: 10px;
+    padding-right: 270px;
+
+}

@@ -25,11 +25,11 @@ navToBusinesses(){
         <div className="home-page">
               <img src= {window.homePageFoodURL} className='home-background' />
             <header className='homepage-header'>
-                <button className='home-link' onClick={this.handleClick}>Write a Review</button>
+                <button className='home-link' onClick={this.handleClick} className='all-business'>Write a Review</button>
                 <GreetingContainer />  
             </header>
             <Link to='/'> <img src={window.logoURL} className='logo'/> </Link>
-            <SearchBar updateFilter={this.props.updateFilter}/>
+            <SearchBar updateFilter={this.props.updateFilter}  type='home-search'/>
             <Navigation updateFilter={this.props.updateFilter}/>
           
           </div>

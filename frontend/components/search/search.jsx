@@ -13,12 +13,16 @@ class Search extends React.Component{
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
                     <GreetingContainer />
              </header>
-        <div className='business-map-container'>
-            <BusinessIndex businesses={this.props.businesses} updateFilter={this.props.updateFilter} val={this.props.match.params.val} pos={this.props.match.params.pos}/>
-            <div className='business-side'>
-                <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} />
+             
+            <div className='business-map-container'>
+                <div className='business-search-container'>
+                    <BusinessIndex businesses={this.props.businesses} updateFilter={this.props.updateFilter} val={this.props.match.params.val} pos={this.props.match.params.pos}/> 
+                </div>
+                <div className='business-side'>
+                    <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} />
+               </div> 
             </div>
-        </div>
+            
         </div>
         )
     }
