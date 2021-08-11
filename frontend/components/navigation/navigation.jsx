@@ -45,13 +45,11 @@ class Navigation extends React.Component{
     render(){
         return(
             <div className='navigation-container'>
-                <button onClick={this.handlePizza}>Pizza</button>
-                <button onClick={this.handleJapanese}>Japanese Food</button>
-                <button onClick={this.handleChinese}>Chinese Food</button>
-                <button onClick={this.handleKorean}>Korean Food</button>
-                <button onClick={this.handleBurger}>Burger</button>
-                
-               
+                <button onClick={this.handlePizza}><img src={window.pizzaURL} className='nav-img'/> <br/><p>pizza</p></button>
+                <button onClick={this.handleJapanese}><img src={window.japaneseURL} className='nav-img'/> <br/><p>Japanese Food</p></button>
+                <button onClick={this.handleChinese}><img src={window.chineseURL} className='nav-img'/> <br/><p>Chinese Food</p></button>
+                <button onClick={this.handleKorean}><img src={window.koreanURL} className='nav-img'/> <br/><p>Korean Food</p></button>
+                <button onClick={this.handleBurger}><img src={window.burgerURL} className='nav-img'/> <br/><p>Burger</p></button>  
             </div>
         )
     }
