@@ -5,6 +5,7 @@ import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
 import ReviewIndexContainer from '../review/review_index_container'; 
 import BusinessMap from '../map/business_map';
+import SearchBar from '../search/search_bar'
 
 
 class BusinessDetail extends React.Component{
@@ -28,6 +29,7 @@ class BusinessDetail extends React.Component{
             <div >
                 <header className='business-header'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
+                    <SearchBar updateFilter={this.props.updateFilter} type='sub-search'/>
                     <GreetingContainer />
                 </header>
                 <div>

@@ -3,6 +3,7 @@ import BusinessIndex from '../business/business_index';
 import BusinessMap from '../map/business_map';
 import GreetingContainer from '../greeting/greeting_container'
 import { Link } from 'react-router-dom';
+import SearchBar from '../search/search_bar'
 
 class Search extends React.Component{
     render(){
@@ -11,6 +12,7 @@ class Search extends React.Component{
         <div>
              <header className='business-header'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
+                    <SearchBar updateFilter={this.props.updateFilter} type='sub-search'/>
                     <GreetingContainer />
              </header>
              
