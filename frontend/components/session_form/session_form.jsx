@@ -6,12 +6,23 @@ class SessionForm extends React.Component{
         super(props)
         this.state= this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemo = this.handleDemo.bind(this)
 
     }
 
     handleSubmit(e){
         e.preventDefault();
         const user = Object.assign({},this.state)
+        this.props.processForm(user)
+    }
+
+    handleDemo(e){
+        e.preventDefault();
+        const demouser ={
+            email: 'demo@aa.io',
+            password: '123456'
+        }
+        const user = Object.assign({},demouser)
         this.props.processForm(user)
     }
 
@@ -76,7 +87,8 @@ class SessionForm extends React.Component{
                         {this.renderNames()}
                         <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='session-email'/>
                         <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password' className='session-password'/>  
-                        <input type="submit" value={this.props.formType} />
+                        <input type="submit" value={this.props.formType} className='sign-btn'/>
+                        {this.props.formType==='Signup'? null:<button className='sign-btn' onClick={this.handleDemo}>Demo User</button>} 
                     </form> 
                 </div>
                    <div className='session-img'>

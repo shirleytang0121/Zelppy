@@ -30,7 +30,7 @@ user2 = User.create(
 user3 = User.create(
     email: 'demo@aa.io',
     password: '123456',
-    firstname: 'Jack',
+    firstname: 'William',
     lastname: 'Rice'
 )
 

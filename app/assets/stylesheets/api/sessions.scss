@@ -48,11 +48,12 @@
     box-sizing: border-box;
   }
 
-  input[type=submit] {
+  .sign-btn {
     width: 70%;
     display: inline-block;
     background-color: #cf1f1f;
     padding: 12px 20px;
+    margin-top: 5px;
   }
   
 
