@@ -27,8 +27,17 @@ class Business < ApplicationRecord
     end
 
     def self.search(value, position)
-        Business.left_outer_joins(:categories)
-        .where("(lower(categories.category_name) LIKE :value OR lower(businesses.name) LIKE :value) AND (lower(businesses.city) LIKE :position OR lower(businesses.state) LIKE :position)", value: "%#{value.downcase}%", position: "%#{position.downcase}%" )
+        if value==nil
+            Business.left_outer_joins(:categories)
+            .where("lower(businesses.city) LIKE :position OR lower(businesses.state) LIKE :position", position: "%#{position.downcase}%" )
+        elsif position==nil
+            Business.left_outer_joins(:categories)
+            .where("lower(categories.category_name) LIKE :value OR lower(businesses.name) LIKE :value", value: "%#{value.downcase}%" )
+        else
+            Business.left_outer_joins(:categories)
+            .where("(lower(categories.category_name) LIKE :value OR lower(businesses.name) LIKE :value) AND (lower(businesses.city) LIKE :position OR lower(businesses.state) LIKE :position)", value: "%#{value.downcase}%", position: "%#{position.downcase}%" )
+        end
+       
     end
     
 end

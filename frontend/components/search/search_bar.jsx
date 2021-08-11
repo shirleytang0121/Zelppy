@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { BiSearchAlt } from "react-icons/bi";
+
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -31,11 +33,15 @@ class SearchBar extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='search-bar'>
                 <form onSubmit={this.handleSearch}>
-                    <input type="text" value={this.state.value} onChange={this.update('value')}/>
+                    <label className='search-label'>Find
+                        <input type="text" value={this.state.value} onChange={this.update('value')} />
+                    </label >
+                    <label className='search-label'>Near
                     <input type="text" value={this.state.position} onChange={this.update('position')}/>
-                    <input type="submit" value='search'/>   
+                    </label>  
+                    <button type='submit' className='submit-icon'><BiSearchAlt /></button>
                 </form>
             </div>
         )

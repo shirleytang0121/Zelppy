@@ -1,7 +1,7 @@
 import React from"react";
 import GreetingContainer from '../greeting/greeting_container'
 import { Link } from "react-router-dom";
-import NavigationContainer from '../navigation/navigation_container'
+import Navigation from '../navigation/navigation'
 import SearchBar from "../search/search_bar";
 
 
@@ -30,7 +30,7 @@ navToBusinesses(){
             </header>
             <Link to='/'> <img src={window.logoURL} className='logo'/> </Link>
             <SearchBar updateFilter={this.props.updateFilter}/>
-            <NavigationContainer />
+            <Navigation updateFilter={this.props.updateFilter}/>
           
           </div>
         )

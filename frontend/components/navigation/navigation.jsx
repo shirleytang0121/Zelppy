@@ -9,17 +9,19 @@ class Navigation extends React.Component{
     }
 
     handlePizza(e){
-        this.props.fetchAllBusinesses({value:'pizza',position:''})
-        this.navToBusinesses()
+        e.preventDefault()
+        this.props.updateFilter('search',{value:'pizza',position:''})
+        this.navToBusinesses('pizza','')
     }
 
     handleJapanese(e){
-        this.props.fetchAllBusinesses({value:'japanese',position:''})
-        this.navToBusinesses()
+        e.preventDefault()
+        this.props.updateFilter('search',{value:'japanese',position:''})
+        this.navToBusinesses('japanese','')
     }
 
-    navToBusinesses(){
-        this.props.history.push('/businesses')
+    navToBusinesses(filter,pos){
+        this.props.history.push(`/search/${filter}/${pos}`)
     }
 
     render(){
