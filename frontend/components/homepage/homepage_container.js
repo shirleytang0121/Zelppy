@@ -5,7 +5,7 @@ import HomePage from "./homepage";
 
 const mapDispatchToProps = (dispatch) =>({
     fetchAllBusinesses: (search)=>dispatch(fetchAllBusinesses(search)),
-    updateFilter: (filter,value)=>updateFilter(filter,value)
+    updateFilter: (filter,value)=>dispatch(updateFilter(filter,value))
 })
 
 export default connect(null,mapDispatchToProps)(HomePage)

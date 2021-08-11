@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 class Search extends React.Component{
     render(){
+        console.log(this.props)
         return(
         <div>
              <header className='business-header'>
@@ -13,9 +14,9 @@ class Search extends React.Component{
                     <GreetingContainer />
              </header>
         <div className='business-map-container'>
-            <BusinessIndex businesses={this.props.businesses} fetchAllBusinesses={this.props.fetchAllBusinesses}/>
+            <BusinessIndex businesses={this.props.businesses} updateFilter={this.props.updateFilter} val={this.props.match.params.val} pos={this.props.match.params.pos}/>
             <div className='business-side'>
-                <BusinessMap businesses={this.props.businesses} singleBusiness={false} business=''/>
+                <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} />
             </div>
         </div>
         </div>

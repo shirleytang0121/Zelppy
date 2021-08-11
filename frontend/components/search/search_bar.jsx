@@ -15,12 +15,14 @@ class SearchBar extends React.Component{
 
     handleSearch(e){
         e.preventDefault()
-        this.props.updateFilter('value',this.state.value)
+        this.props.updateFilter('search',this.state)
         this.navToBusinesses()
     }
 
     navToBusinesses(){
-        this.props.history.push('/businesses')
+        let val = this.state.value.split(" ").join("+")
+        let pos = this.state.position.split(" ").join("+")
+        this.props.history.push(`/search/${val}/${pos}`)
       }
 
     update(field){

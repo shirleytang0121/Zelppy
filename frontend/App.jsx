@@ -19,6 +19,8 @@ const App = () => (
         <ProtectedRoute exact path="/businesses/:businessId/reviews/new" component={CreateReviewContainer}/>
         <Route exact path="/businesses/:businessId" component={BusinessDetailContainer}/>
         <Route exact path="/businesses" component={SearchContainer} />
+        <Route exact path="/search/:val/:pos" component={SearchContainer} />
+        <Route exact path="/search/:val" component={SearchContainer} />
         <Route path="/" component={HomepageContainer}/>
       </Switch>
       

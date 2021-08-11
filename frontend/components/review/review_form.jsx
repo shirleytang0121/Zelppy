@@ -147,7 +147,6 @@ class ReviewForm extends React.Component{
 
     
     render(){
-        console.log(this.state)
         if(this.props.business === undefined) return null;
         return(
             <div className='review-form-container'>
