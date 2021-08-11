@@ -5,6 +5,48 @@ import { IoClose } from "react-icons/io5";
 
 class BusinessIndexItem extends React.Component{
 
+    renderRate(){
+        const {business} = this.props;
+        const rate = business.averageRating
+        if(rate>4.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-5stars`}/> 
+                </div>
+            )
+        }else if(rate>3.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-4stars`}/> 
+                </div>
+            )
+        }else if(rate>2.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-3stars`}/> 
+                </div>
+            )
+        }else if(rate>1.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-2stars`}/> 
+                </div>
+            )
+        }else if(rate>0.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-1stars`}/> 
+                </div>
+            )
+        }else{
+            return(
+                <div className='review-index-stars'>
+                  <img src={window.starURL} className={`review-index-0stars`}/> 
+                </div>
+            )
+        }
+    }
+
     render(){
      const {business} = this.props
         return(
@@ -13,7 +55,8 @@ class BusinessIndexItem extends React.Component{
                 <div className='business-index-item'>
                     <img src={business.photoUrls[0]} className='business-img'  /> 
                     <div className='business-index-info'>
-                        <p className='business-index-title'>{business.name}</p> 
+                        <p className='business-index-title'>{business.name}</p>
+                        <div className='review-container'>{this.renderRate()} </div>
                         <p className='business-index-city'>{business.city}</p> 
                         <div className='business-index-takeout'>
                            {business.takeout? <p><FcCheckmark />takeout</p> : <p><IoClose />takeout</p>} 
