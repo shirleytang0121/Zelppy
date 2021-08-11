@@ -4,7 +4,15 @@ import BusinessIndexItem from './business_index_item';
 
 class BusinessIndex extends React.Component{
     componentDidMount(){
-        this.props.updateFilter('search',{value: this.props.val,position:this.props.pos})
+        let val =this.props.val;
+        let pos =this.props.pos;
+        if( val!== undefined ){
+            val =this.props.val.split('+').join(" ")
+        }
+        if( pos!== undefined ){
+            pos =this.props.pos.split('+').join(" ")
+        }
+        this.props.updateFilter('search',{value: val, position: pos})
     }
 
     render(){
