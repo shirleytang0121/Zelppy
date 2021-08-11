@@ -47,8 +47,15 @@ class BusinessIndexItem extends React.Component{
         }
     }
 
+    renderTag(){
+        const {business} = this.props;
+        const categories = business.categories;
+        return categories.map( (cate,idx) =>  <p key={idx}>{cate.category_name}</p> )
+    }
+
     render(){
      const {business} = this.props
+
         return(
             <li className='business-index-list'>
                 <Link to={`/businesses/${business.id}`}>
@@ -57,6 +64,7 @@ class BusinessIndexItem extends React.Component{
                     <div className='business-index-info'>
                         <p className='business-index-title'>{business.name}</p>
                         <div className='review-container'>{this.renderRate()} </div>
+                        <div>{this.renderTag()}</div>
                         <p className='business-index-city'>{business.city}</p> 
                         <div className='business-index-takeout'>
                            {business.takeout? <p><FcCheckmark />takeout</p> : <p><IoClose />takeout</p>} 
