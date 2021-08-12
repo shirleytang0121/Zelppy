@@ -43,6 +43,13 @@ user4 = User.create(
     lastname: 'Simons'
 )
 
+user5 = User.create(
+    email: 'user5@aa.io',
+    password: 'abc123',
+    firstname: 'Lia',
+    lastname: 'Cage'
+)
+
 category1= Category.create(category_name: 'pizza')
 category2= Category.create(category_name: 'American')
 category3= Category.create(category_name: 'Japanese')
@@ -1176,7 +1183,7 @@ review1_1 = Review.create(
 )
 
 review1_2 = Review.create(
-    rating: 4,
+    rating: 3,
     price_range: '$$',
     body: 'The food is okay',
     business_id: business1.id,
@@ -1198,6 +1205,46 @@ review2_2 = Review.create(
     body: 'Nice food.',
     business_id: business2.id,
     user_id: user1.id
+)
+
+review5_1 = Review.create(
+    rating: 4,
+    price_range: '$$',
+    body: 'I love the noodles here.',
+    business_id: business5.id,
+    user_id: user3.id
+)
+
+review5_2 = Review.create(
+    rating: 5,
+    price_range: '$$',
+    body: 'We went here for dinner last Friday. The waiters here were nice.',
+    business_id: business5.id,
+    user_id: user3.id
+)
+
+review10_1 = Review.create(
+    rating: 5,
+    price_range: '$',
+    body: 'The burger is noce and cute',
+    business_id: business10.id,
+    user_id: user5.id
+)
+
+review10_2 = Review.create(
+    rating: 3,
+    price_range: '$$',
+    body: 'We ordered cheeseburger. The burger was fine, but waiting for too long',
+    business_id: business10.id,
+    user_id: user2.id
+)
+
+review9_1 = Review.create(
+    rating: 5,
+    price_range: '$$',
+    body: 'I got the mushroom burger with fries and they were both yummy.',
+    business_id: business9.id,
+    user_id: user4.id
 )
 
 
