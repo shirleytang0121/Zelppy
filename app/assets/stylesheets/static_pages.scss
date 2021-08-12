@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     margin-left: 5%;
-    margin-top: -40%;
+    margin-top: -47%;
     
 }
 
@@ -26,6 +26,11 @@
 
 .login-signup{
     margin-top: 23%;
+    margin-left: -25%;
+}
+
+.header-group{
+    margin-top: 19%;
     margin-left: -25%;
 }
 
@@ -74,7 +79,7 @@
 
  .home-background{
      width: 100%;
-     height: 500px;
+     height: 600px;
      z-index: -1;
      
 
@@ -93,3 +98,38 @@
      margin-left: -2%;
  }
 
+ .search-bar{
+     margin-left: 30%;
+     margin-top: 3%;
+     background-color: white;
+ }
+
+ .search-label{
+     color: rgb(56, 56, 56);
+     font-size: 25px;
+     font-weight: bold;
+     margin: 2px;
+ }
+
+ .navigation-container{
+     margin-top: 23%;
+     margin-left: 7%;
+ }
+
+ .nav-img{
+     width: 170px;
+     height: 120px;
+ }
+
+ .navigation-container > button{
+     margin: 0 15px;
+ }
+
+
+ .all-business{
+     background: none;
+     border: none;
+     color: white;
+     font-size: 18px;
+     margin-top: 10px;
+ }

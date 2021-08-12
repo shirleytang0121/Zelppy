@@ -13,8 +13,8 @@ const receiveBusiness = (payload) =>({
     payload
 })
 
-export const fetchAllBusinesses = () =>(dispatch) =>(
-    BusinessAPIUtil.fetchAllBusinesses()
+export const fetchAllBusinesses = (search) =>(dispatch) =>(
+    BusinessAPIUtil.fetchAllBusinesses(search)
         .then(businesses => dispatch(receiveAllBusinesses(businesses)))
 )
 

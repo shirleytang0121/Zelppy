@@ -4,6 +4,7 @@ import configureStore from '../frontend/store/store.js'
 import {login, logout} from '../frontend/actions/session_actions'
 import { fetchAllBusinesses, fetchBusiness } from './actions/business_actions';
 import { fetchAllReviews, createReview, deleteReview } from './actions/review_actions';
+import { updateFilter } from './actions/filter_actions.js';
 import Root from './root'
 
 
@@ -24,8 +25,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     window.store =store;
     // window.login = login;
     // window.logout = logout;
-    // window.fetchAllBusinesses = fetchAllBusinesses;
+    window.fetchAllBusinesses = fetchAllBusinesses;
     // window.fetchBusiness = fetchBusiness;
+    window.updateFilter = updateFilter;
     window.fetchAllReviews=fetchAllReviews;
     window.createReview = createReview;
     window.deleteReview = deleteReview;

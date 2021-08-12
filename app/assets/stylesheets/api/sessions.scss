@@ -8,24 +8,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 60%;
     height: auto;
+    margin-left: -10px;
       
 }
+
+.session-img{
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.form-box{
+  margin-left: 130px;
+}
+
 
 .session-header{
     background-color: rgb(177, 53, 53);
     padding: 22px;
-    display: flex;
-    justify-content: center;
 }
 
-.session-header > a{
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
 
+#session-logo{
+  width: 12%;
+  height: 15%;
+  margin-left: 40%;
+ 
+}
+
+.session-name, select{
+  width: 35%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .session-email, select {
@@ -48,11 +67,12 @@
     box-sizing: border-box;
   }
 
-  input[type=submit] {
+  .sign-btn {
     width: 70%;
     display: inline-block;
     background-color: #cf1f1f;
     padding: 12px 20px;
+    margin-top: 5px;
   }
   
 
@@ -61,6 +81,17 @@
       font-size: 40px;
       margin-top: 20px;
       margin-bottom: 40px;
+      margin-left: -10%;
+  }
+
+  .signup-intr > p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  .login-intr > p{
+    margin: 10px 0;
   }
 
   .login-intr > header{
