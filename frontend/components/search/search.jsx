@@ -3,7 +3,8 @@ import BusinessIndex from '../business/business_index';
 import BusinessMap from '../map/business_map';
 import GreetingContainer from '../greeting/greeting_container'
 import { Link } from 'react-router-dom';
-import SearchBar from '../search/search_bar'
+import SearchBar from '../search/search_bar';
+import Footer from '../footer/footer';
 
 class Search extends React.Component{
     render(){
@@ -24,7 +25,7 @@ class Search extends React.Component{
                     <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} />
                </div> 
             </div>
-            
+            <Footer/>
         </div>
         )
     }

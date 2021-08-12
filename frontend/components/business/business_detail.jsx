@@ -5,7 +5,8 @@ import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
 import ReviewIndexContainer from '../review/review_index_container'; 
 import BusinessMap from '../map/business_map';
-import SearchBar from '../search/search_bar'
+import SearchBar from '../search/search_bar';
+import Footer from '../footer/footer';
 
 
 class BusinessDetail extends React.Component{
@@ -115,6 +116,7 @@ class BusinessDetail extends React.Component{
                     </div>
                     </div>
                </div>
+               <Footer/>
             </div>
         )
 
