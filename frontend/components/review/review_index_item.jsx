@@ -6,7 +6,7 @@ class ReviewIndexItem extends React.Component{
         const {review} = this.props
         return(
             <li>
-                <div className='review-container'>
+                <div className='review-index-container'>
                     <p className='reviewer'>{review.author.firstname} {review.author.lastname}</p>
                     <div className='review-index-stars'>
                         <img src={window.starURL} className={`review-index-${review.rating}stars`}/> 

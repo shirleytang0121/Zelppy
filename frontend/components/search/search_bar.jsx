@@ -48,8 +48,8 @@ class SearchBar extends React.Component{
                 </button> :
                 <div className='search-bar-header'>
                  <form onSubmit={this.handleSearch}>
-                    <input type="text" value={this.state.value} onChange={this.update('value')} />
-                    <input type="text" value={this.state.position} onChange={this.update('position')}/>
+                    <input type="text" value={this.state.value} onChange={this.update('value')} className='search-sub' placeholder='restaurants'/>
+                    <input type="text" value={this.state.position} onChange={this.update('position')}className='search-sub' placeholder='city or state'/>
                     <button type='submit' className='submit-icon'><BiSearchAlt /></button>
                    </form>
                 </div>

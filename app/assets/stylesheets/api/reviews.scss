@@ -6,6 +6,10 @@
     width: 57%;
     height: auto;
 }
+.review-index-container img{
+    width: 57%;
+    height: auto;
+}
 
 .review-index-stars{
     display: block;
@@ -53,7 +57,15 @@
 }
 
 .review-container{
+    margin-top: 2px;
     padding: 5px;
+}
+
+
+.review-index-container{
+    margin-top: 2px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 
@@ -210,8 +222,8 @@ input[type=radio] {
 }
 
 .review-photo-container img{
-    width: 110px;
-    height: 90px;
+    width: 140px;
+    height: 110px;
     margin: 5px;
 }
 

@@ -78,13 +78,13 @@
 
  .logo{
     margin-left: 34%;
-    margin-top: 5%; 
+    margin-top: 6%; 
     width: 27%;
     height: auto;
  }
 
  .business-logo{
-     width: 23%;
+     width: 44%;
      height: auto;
      margin-left: -2%;
  }
@@ -172,9 +172,21 @@
 
 
  .search-box{
-    
+    margin-top: 2%;
  }
 
 .title-box{
-    width: 18%;
+    width: 16%;
+}
+
+
+.search-sub{
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.search-bar-header button{
+    padding: 5px;
+    background-color: rgb(184, 18, 18);
 }

@@ -78,10 +78,12 @@ class BusinessDetail extends React.Component{
         return(
             <div >
                 <header className='business-header'>
+                 <div className='title-box'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
-                    <SearchBar updateFilter={this.props.updateFilter} type='sub-search'/>
-                    <GreetingContainer />
-                </header>
+                </div>
+                <div className='search-box'><SearchBar updateFilter={this.props.updateFilter} type='sub-search'/></div>
+                <div><GreetingContainer /></div>
+             </header>
                 <div>
                     {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
                 </div>
