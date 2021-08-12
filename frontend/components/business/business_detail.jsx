@@ -19,8 +19,56 @@ class BusinessDetail extends React.Component{
         if(this.props.business.hours === undefined){
             return null
         }else{
-            return this.props.business.hours.map( (hour,idx) => <li key={idx}>{hour.date}   {hour.open} - {hour.close}</li>)
+            return this.props.business.hours.map( (hour,idx) => <li key={idx}><div>{hour.date}</div> <div>{hour.open} - {hour.close}</div></li>)
         }
+    }
+
+    renderRate(){
+        const {business} = this.props;
+        const rate = business.averageRating
+        if(rate>4.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-5stars`}/> 
+                </div>
+            )
+        }else if(rate>3.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-4stars`}/> 
+                </div>
+            )
+        }else if(rate>2.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-3stars`}/> 
+                </div>
+            )
+        }else if(rate>1.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-2stars`}/> 
+                </div>
+            )
+        }else if(rate>0.5){
+            return(
+                <div className='review-index-stars'>
+                    <img src={window.starURL} className={`review-index-1stars`}/> 
+                </div>
+            )
+        }else{
+            return(
+                <div className='review-index-stars'>
+                  <img src={window.starURL} className={`review-index-0stars`}/> 
+                </div>
+            )
+        }
+    }
+
+    renderTag(){
+        const {business} = this.props;
+        const categories = business.categories;
+        return categories.map( (cate,idx) =>  <p key={idx}>{cate.category_name}</p> )
     }
 
     render(){
@@ -37,6 +85,10 @@ class BusinessDetail extends React.Component{
                     {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
                 </div>
                <h1 className='business-detail-title'>{business.name}</h1>
+                    <div className='business-detail-subtitle'>
+                        <div className='review-container'>{this.renderRate()} </div>
+                        <div className='business-index-tags'>{this.renderTag()}</div>
+                    </div>
                <div className='business-detail-container'>
                 <div>
                    <div className='business-detail-buttons'>
@@ -45,10 +97,12 @@ class BusinessDetail extends React.Component{
                    </div>
                        <div>
                             <p className='hour-title'>{`Location & Hours`}</p>
-                            <BusinessMap businesses='' singleBusiness={true} business={business}/>
-                            <ul>
-                                {this.renderHours()}
-                            </ul>
+                            <div className='business-detail-box'>
+                                <BusinessMap businesses='' singleBusiness={true} business={business}/>
+                                <ul className='hours'>
+                                    {this.renderHours()}
+                                </ul>
+                            </div>
                        </div>
                        <p className='review-title'>Reviews</p>
                        <ReviewIndexContainer businessId={business.id}/>
