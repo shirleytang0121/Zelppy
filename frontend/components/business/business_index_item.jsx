@@ -64,7 +64,7 @@ class BusinessIndexItem extends React.Component{
                     <div className='business-index-info'>
                         <p className='business-index-title'>{business.name}</p>
                         <div className='review-container'>{this.renderRate()} </div>
-                        <div>{this.renderTag()}</div>
+                        <div className='business-index-tags'>{this.renderTag()}</div>
                         <p className='business-index-city'>{business.city}</p> 
                         <div className='business-index-takeout'>
                            {business.takeout? <p><FcCheckmark />takeout</p> : <p><IoClose />takeout</p>} 

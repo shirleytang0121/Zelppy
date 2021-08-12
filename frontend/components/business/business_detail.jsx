@@ -40,8 +40,8 @@ class BusinessDetail extends React.Component{
                <div className='business-detail-container'>
                 <div>
                    <div className='business-detail-buttons'>
-                       <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        <button>Photo</button>
+                       <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
+                        {/* <button>Photo</button> */}
                    </div>
                        <div>
                             <p className='hour-title'>{`Location & Hours`}</p>

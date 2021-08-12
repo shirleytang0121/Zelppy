@@ -11,8 +11,8 @@ class ReviewForm extends React.Component{
             body: '',
             user_id: this.props.userId,
             business_id: this.props.match.params.businessId,
-            // photos: null,
-            // photoUrls:null
+            photos: null,
+            photoUrls:null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -29,21 +29,18 @@ class ReviewForm extends React.Component{
     }
 
     // handleFile(e){
-    //     const file = e.currentTarget.files[0]
+    //     const files = e.currentTarget.files
     //     const fileReader =new FileReader()
-    //     const files_arr=Object.values(files)
+    //     // const files_arr=Object.values(files)
     //     fileReader.onloadend =()=>{
-    //         this.setState({photos: file, photoUrls: fileReader.result})
-    //     }
-
-    //     if (files) {
-    //         fileReader.readAsDataURL(files);
+    //         this.setState({photos: files})
     //     }
 
     // }
 
     handleSubmit(e){
-        e.preventDefault()
+        e.preventDefault();
+        const formData = new FormData();
         this.props.createReview(this.state)
         this.navigateToBusiness()
     }
@@ -148,6 +145,7 @@ class ReviewForm extends React.Component{
     
     render(){
         if(this.props.business === undefined) return null;
+        console.log(this.state.photos)
         return(
             <div className='review-form-container'>
                 <header className='business-header'>

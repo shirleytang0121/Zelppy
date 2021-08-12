@@ -118,3 +118,37 @@ ul{
     padding-right: 270px;
 
 }
+
+.business-index-tags{
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+
+.business-index-tags p{
+    font-size: 13px;
+    display: inline;
+    background-color: rgb(199, 197, 197);
+    color:rgb(63, 62, 62);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.business-detail-buttons{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.review-btn{
+    background-color: rgb(177, 31, 31);
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.review-btn a{
+    text-decoration: none;
+    color: white;
+}
