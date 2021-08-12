@@ -3,6 +3,7 @@ import GreetingContainer from '../greeting/greeting_container'
 import { Link } from "react-router-dom";
 import Navigation from '../navigation/navigation'
 import SearchBar from "../search/search_bar";
+import Footer from "../footer/footer";
 
 
 class HomePage extends React.Component{
@@ -31,7 +32,7 @@ navToBusinesses(){
             <Link to='/'> <img src={window.logoURL} className='logo'/> </Link>
             <SearchBar updateFilter={this.props.updateFilter}  type='home-search'/>
             <Navigation updateFilter={this.props.updateFilter}/>
-          
+            <Footer/>
           </div>
         )
     }
