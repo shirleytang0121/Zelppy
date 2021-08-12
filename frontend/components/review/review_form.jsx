@@ -11,13 +11,12 @@ class ReviewForm extends React.Component{
             body: '',
             user_id: this.props.userId,
             business_id: this.props.match.params.businessId,
-            photos: null,
-            photoUrls:null
+            photos: null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.hoverLeave =this.hoverLeave.bind(this)
-        // this.handleFile =this.handleFile.bind(this)
+        this.handleFile =this.handleFile.bind(this)
     }
 
     componentDidMount(){
@@ -28,20 +27,34 @@ class ReviewForm extends React.Component{
         this.props.history.push(`/businesses/${this.props.match.params.businessId}`)
     }
 
-    // handleFile(e){
-    //     const files = e.currentTarget.files
-    //     const fileReader =new FileReader()
-    //     // const files_arr=Object.values(files)
-    //     fileReader.onloadend =()=>{
-    //         this.setState({photos: files})
-    //     }
+    handleFile(e){
+        const files = e.currentTarget.files
+        const fileReader =new FileReader()
+        // const files_arr=Object.values(files)
+        console.log(files)
+       
+        this.setState({photos: files})
+        
 
-    // }
+    }
 
     handleSubmit(e){
         e.preventDefault();
+        const { rating, body,price_range,user_id,business_id, photos } = this.state;
         const formData = new FormData();
-        this.props.createReview(this.state)
+        
+        formData.append("review[rating]", rating);
+        formData.append("review[body]", body);
+        formData.append("review[price_range]", price_range);
+        formData.append("review[user_id]", user_id);
+        formData.append("review[business_id]", business_id);
+        console.log(formData)
+        //debugger
+        for (let i = 0; i < photos.length; i++) {
+          formData.append("review[photos][]", photos[i]);
+        }
+        
+        this.props.createReview(formData)
         this.navigateToBusiness()
     }
 
@@ -145,7 +158,6 @@ class ReviewForm extends React.Component{
     
     render(){
         if(this.props.business === undefined) return null;
-        console.log(this.state.photos)
         return(
             <div className='review-form-container'>
                 <header className='business-header'>
@@ -172,7 +184,7 @@ class ReviewForm extends React.Component{
                     <div>
                         <textarea name='textarea' value={this.state.body} onChange={this.update('body')}/>
                     </div>
-                    {/* <input type="file" onChange={this.handleFile} multiple/> */}
+                    <input type="file" onChange={this.handleFile} multiple/>
                     <input type="submit" value={this.props.formType} className='review-btn'/>
                 </form>
                 </div>
