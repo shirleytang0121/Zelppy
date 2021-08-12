@@ -123,7 +123,7 @@
 
 
  .footer{
-     padding-top: 9%;
+     padding-top: 8%;
      padding-bottom: 9%;
      background-color: rgb(233, 231, 231);
      display: flex;
@@ -140,6 +140,11 @@
 
  .footer a:hover{
     text-decoration: underline;
+ }
+
+ .footer p{
+    font-weight: bold;
+    color: rgb(184, 18, 18); 
  }
 
 

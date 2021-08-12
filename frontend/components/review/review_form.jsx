@@ -166,8 +166,9 @@ class ReviewForm extends React.Component{
                     <GreetingContainer />
                 </header>
                 <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
-              <div className='review-box'>
+              <div className='create-review'>
                 <form onSubmit={this.handleSubmit}>
+                <div className='review-box'>
                    <div className='rating-box'>
                         <input type="radio" value='1' onChange={this.update('rating')} name='rate' id="star1" onMouseEnter={()=>this.hoverStars(1)} onMouseLeave={this.hoverLeave} />
                         <input type="radio" value='2' onChange={this.update('rating')} name='rate' id="star2" onMouseEnter={()=>this.hoverStars(2)} onMouseLeave={this.hoverLeave} />
@@ -175,7 +176,7 @@ class ReviewForm extends React.Component{
                         <input type="radio" value='4' onChange={this.update('rating')} name='rate' id="star4" onMouseEnter={()=>this.hoverStars(4)} onMouseLeave={this.hoverLeave} />
                         <input type="radio" value='5' onChange={this.update('rating')} name='rate' id="star5" onMouseEnter={()=>this.hoverStars(5)} onMouseLeave={this.hoverLeave} />
                     </div>
-                    <div>
+                    <div >
                         <select onChange={this.update('price_range')} className='price-range'>
                             <option value="$">$</option>
                             <option value="$$">$$</option>
@@ -184,13 +185,14 @@ class ReviewForm extends React.Component{
                     </div>
                     <div>
                         <textarea name='textarea' value={this.state.body} onChange={this.update('body')}/>
+                     </div>
                     </div>
-                    <div>
+                    <div className='create-review-photo'>
                         <p>Upload Photos</p>
                          <input type="file" onChange={this.handleFile} multiple /> 
                     </div>
                     <input type="submit" value={this.props.formType} className='review-btn'/>
-                </form>
+                  </form>
                 </div>
             </div>
         )
