@@ -161,10 +161,12 @@ class ReviewForm extends React.Component{
         if(this.props.business === undefined) return null;
         return(
             <div className='review-form-container'>
-                <header className='business-header'>
+                 <header className='business-header'>
+                 <div className='title-box'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
-                    <GreetingContainer />
-                </header>
+                </div>
+                <div><GreetingContainer /></div>
+             </header>
                 <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
               <div className='create-review'>
                 <form onSubmit={this.handleSubmit}>

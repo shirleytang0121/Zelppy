@@ -108,9 +108,9 @@ ul{
 }
 
 
-// #map-container{
+// .business-side #map-container{
 //     position: sticky;
-//     top: 20px;
+//     overflow: none;
 // }
 
 .business-side{
@@ -172,4 +172,8 @@ ul{
     margin-left: 40px;
     margin-top: 10px;
     font-weight: bold;
+}
+
+.hours li{
+    margin-top: 4px;
 }
