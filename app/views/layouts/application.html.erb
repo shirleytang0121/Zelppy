@@ -4,6 +4,8 @@
     <title>Zelppy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
+    
     <script type="text/javascript">
       window.homePageFoodURL = "<%= image_url('homepageFood.jpg') %>"
     </script>
@@ -15,8 +17,24 @@
       window.logoURL = "<%= image_url('logo.png') %>"
     </script>
 
+    <script type="text/javascript">
+      window.pizzaURL = "<%= image_url('pizza.jpg') %>"
+    </script>
+    <script type="text/javascript">
+      window.japaneseURL = "<%= image_url('japanese.jpg') %>"
+    </script>
+    <script type="text/javascript">
+      window.chineseURL = "<%= image_url('chinese.jpg') %>"
+    </script>
+    <script type="text/javascript">
+      window.koreanURL = "<%= image_url('korean.jpg') %>"
+    </script>
+    <script type="text/javascript">
+      window.burgerURL = "<%= image_url('burger.jpg') %>"
+    </script>
 
 
+    
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>

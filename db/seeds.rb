@@ -12,6 +12,8 @@ User.destroy_all
 Business.destroy_all
 Hour.destroy_all
 Review.destroy_all
+Category.destroy_all
+BusinessCategory.destroy_all
 
 user1 = User.create(
     email: 'shir@aa.io',
@@ -30,7 +32,7 @@ user2 = User.create(
 user3 = User.create(
     email: 'demo@aa.io',
     password: '123456',
-    firstname: 'Jack',
+    firstname: 'William',
     lastname: 'Rice'
 )
 
@@ -40,6 +42,20 @@ user4 = User.create(
     firstname: 'Jason',
     lastname: 'Simons'
 )
+
+category1= Category.create(category_name: 'pizza')
+category2= Category.create(category_name: 'American')
+category3= Category.create(category_name: 'Japanese')
+category4= Category.create(category_name: 'Korean')
+category5= Category.create(category_name: 'Chinese')
+category6= Category.create(category_name: 'burger')
+category7= Category.create(category_name: 'coffee and tea')
+category8= Category.create(category_name: 'BBQ')
+category9= Category.create(category_name: 'Sushi Bar')
+category10= Category.create(category_name: 'Desserts')
+category11= Category.create(category_name: 'Noodles')
+
+
 
 business1 = Business.create(
     name: "Rosa's Pizza",
@@ -116,39 +132,39 @@ hour1_7 = Hour.create(
 
 
 business2 = Business.create(
-    name: "Bamboo Ya",
-    address: "69-12 Austin St",
-    city: "Forest Hills",
+    name: "Kissaki",
+    address: "19 Bowery",
+    city: "New York",
     state: "NY",
-    zip_code: 11375,
-    phone_number: "(929) 374-1432",
-    website: 'https://www.bambooyafh.com/',
-    lat: 40.721490,
-    lng: -73.849060,
+    zip_code: 10003,
+    phone_number: "(212) 577-1150",
+    website: 'https://explorekissaki.com/',
+    lat: 40.725270,
+    lng: -73.991810,
     delivery: true,
     takeout: true,
     outdoor: true
 )
 
-file2_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya1.jpg')
-file2_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya2.jpg')
-file2_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/bambooya3.jpg')
+file2_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/kissaki1.jpg')
+file2_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/kissaki2.jpg')
+file2_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/kissaki3.jpg')
 
-business2.photos.attach(io: file2_1, filename: "bambooya1.jpg")
-business2.photos.attach(io: file2_2, filename: "bambooya2.jpg")
-business2.photos.attach(io: file2_3, filename: "bambooya3.jpg")
+business2.photos.attach(io: file2_1, filename: "kissaki1.jpg")
+business2.photos.attach(io: file2_2, filename: "kissaki2.jpg")
+business2.photos.attach(io: file2_3, filename: "kissaki3.jpg")
 
 
 hour2_1 = Hour.create(
     date: 'Mon',
-    open: '11:00 AM',
+    open: '6:00 PM',
     close: '11:00 PM',
     business_id: business2.id
 )
 
 hour2_2 = Hour.create(
     date: 'Tue',
-    open: '11:00 AM',
+    open: '6:00 PM',
     close: '11:00 PM',
     business_id: business2.id
 )
@@ -156,36 +172,36 @@ hour2_2 = Hour.create(
 
 hour2_3 = Hour.create(
     date: 'Wed',
-    open: '11:00 AM',
+    open: '6:00 PM',
     close: '11:00 PM',
     business_id: business2.id
 )
 
 hour2_4 = Hour.create(
     date: 'Thu',
-    open: '11:00 AM',
-    close: '11:00 PM',
+    open: '6:00 PM',
+    close: '11:30 PM',
     business_id: business2.id
 )
 
 hour2_5 = Hour.create(
     date: 'Fri',
-    open: '11:00 AM',
+    open: '4:00 PM',
     close: '12:00 AM',
     business_id: business2.id
 )
 
 hour2_6 = Hour.create(
     date: 'Sat',
-    open: '12:00 PM',
+    open: '4:00 PM',
     close: '12:00 AM',
     business_id: business2.id
 )
 
 hour2_7 = Hour.create(
     date: 'Sun',
-    open: '12:00 PM',
-    close: '11:00 PM',
+    open: '4:00 PM',
+    close: '10:00 PM',
     business_id: business2.id
 )
 
@@ -1183,4 +1199,32 @@ review2_2 = Review.create(
     business_id: business2.id,
     user_id: user1.id
 )
+
+
+tag1=BusinessCategory.create(business_id:business1.id, category_id:category1.id)
+tag2=BusinessCategory.create(business_id:business1.id, category_id:category2.id)
+tag3=BusinessCategory.create(business_id:business2.id, category_id:category3.id)
+tag4=BusinessCategory.create(business_id:business2.id, category_id:category9.id)
+tag5=BusinessCategory.create(business_id:business2.id, category_id:category10.id)
+tag6=BusinessCategory.create(business_id:business3.id, category_id:category3.id)
+tag7=BusinessCategory.create(business_id:business3.id, category_id:category9.id)
+tag8=BusinessCategory.create(business_id:business4.id, category_id:category3.id)
+tag9=BusinessCategory.create(business_id:business5.id, category_id:category5.id)
+tag10=BusinessCategory.create(business_id:business5.id, category_id:category11.id)
+tag11=BusinessCategory.create(business_id:business6.id, category_id:category5.id)
+tag12=BusinessCategory.create(business_id:business7.id, category_id:category5.id)
+tag13=BusinessCategory.create(business_id:business7.id, category_id:category11.id)
+tag14=BusinessCategory.create(business_id:business8.id, category_id:category2.id)
+tag15=BusinessCategory.create(business_id:business8.id, category_id:category1.id)
+tag16=BusinessCategory.create(business_id:business9.id, category_id:category6.id)
+tag17=BusinessCategory.create(business_id:business9.id, category_id:category2.id)
+tag18=BusinessCategory.create(business_id:business10.id, category_id:category6.id)
+tag19=BusinessCategory.create(business_id:business10.id, category_id:category2.id)
+tag20=BusinessCategory.create(business_id:business11.id, category_id:category4.id)
+tag21=BusinessCategory.create(business_id:business11.id, category_id:category8.id)
+tag22=BusinessCategory.create(business_id:business12.id, category_id:category4.id)
+tag23=BusinessCategory.create(business_id:business13.id, category_id:category7.id)
+tag24=BusinessCategory.create(business_id:business14.id, category_id:category7.id)
+tag25=BusinessCategory.create(business_id:business15.id, category_id:category7.id)
+
 

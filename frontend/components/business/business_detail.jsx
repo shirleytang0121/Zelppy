@@ -4,11 +4,15 @@ import GreetingContainer from '../greeting/greeting_container'
 import { MdLaunch } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
 import ReviewIndexContainer from '../review/review_index_container'; 
+import BusinessMap from '../map/business_map';
+import SearchBar from '../search/search_bar'
+
 
 class BusinessDetail extends React.Component{
 
     componentDidMount(){
         this.props.fetchBusiness(this.props.match.params.businessId)
+        this.props.fetchAllReviews(this.props.match.params.businessId)
     }
 
     renderHours(){
@@ -26,6 +30,7 @@ class BusinessDetail extends React.Component{
             <div >
                 <header className='business-header'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
+                    <SearchBar updateFilter={this.props.updateFilter} type='sub-search'/>
                     <GreetingContainer />
                 </header>
                 <div>
@@ -35,13 +40,16 @@ class BusinessDetail extends React.Component{
                <div className='business-detail-container'>
                 <div>
                    <div className='business-detail-buttons'>
-                       <button><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        <button>Photo</button>
+                       <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
+                        {/* <button>Photo</button> */}
                    </div>
-                       <p className='hour-title'>{`Location & Hours`}</p>
-                       <ul>
-                          {this.renderHours()}
-                       </ul>
+                       <div>
+                            <p className='hour-title'>{`Location & Hours`}</p>
+                            <BusinessMap businesses='' singleBusiness={true} business={business}/>
+                            <ul>
+                                {this.renderHours()}
+                            </ul>
+                       </div>
                        <p className='review-title'>Reviews</p>
                        <ReviewIndexContainer businessId={business.id}/>
                    </div>
