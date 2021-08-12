@@ -38,10 +38,10 @@ class SearchBar extends React.Component{
                 <button className='search-bar-home'>
                 <form onSubmit={this.handleSearch}>
                     <label className='search-label'>Find
-                        <input type="text" value={this.state.value} onChange={this.update('value')} className='search-main'/>
+                        <input type="text" value={this.state.value} onChange={this.update('value')} className='search-main' placeholder='restaurants'/>
                     </label >
                     <label className='search-label'>Near
-                    <input type="text" value={this.state.position} onChange={this.update('position')}className='search-main'/>
+                    <input type="text" value={this.state.position} onChange={this.update('position')}className='search-main' placeholder='city or state'/>
                     </label>  
                     <button type='submit' className='submit-icon'><BiSearchAlt /></button>
                 </form>

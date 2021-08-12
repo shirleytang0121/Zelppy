@@ -12,17 +12,11 @@
 
 .business-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     border-bottom: 1px solid rgb(224, 224, 224);
 }
 
-.business-title{
-    text-decoration: none;
-    color: black;
-    margin-left: 7%;
-    font-size: 20px;
-}
 
 .login-signup{
     margin-top: 23%;
@@ -168,3 +162,19 @@
  .search-bar-home .search-main:focus{
     outline: none
  }
+
+ .search-bar-home button{
+     background-color: rgb(184, 18, 18);
+     border: 0;
+     padding: 7px;
+     border-radius: 5px;
+ }
+
+
+ .search-box{
+    
+ }
+
+.title-box{
+    width: 18%;
+}
