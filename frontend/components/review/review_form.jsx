@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
+import {  } from "react-icons/ai";
 
 class ReviewForm extends React.Component{
     constructor(props){
@@ -184,7 +185,10 @@ class ReviewForm extends React.Component{
                     <div>
                         <textarea name='textarea' value={this.state.body} onChange={this.update('body')}/>
                     </div>
-                    <input type="file" onChange={this.handleFile} multiple/>
+                    <div>
+                        <p>Upload Photos</p>
+                         <input type="file" onChange={this.handleFile} multiple /> 
+                    </div>
                     <input type="submit" value={this.props.formType} className='review-btn'/>
                 </form>
                 </div>
