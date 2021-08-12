@@ -6,6 +6,10 @@
     width: 57%;
     height: auto;
 }
+.review-index-container img{
+    width: 57%;
+    height: auto;
+}
 
 .review-index-stars{
     display: block;
@@ -43,6 +47,8 @@
 .reviewer{
     font-size: 18px;
     font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 10px;
 }
 
 .review-date{
@@ -51,7 +57,15 @@
 }
 
 .review-container{
+    margin-top: 2px;
     padding: 5px;
+}
+
+
+.review-index-container{
+    margin-top: 2px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 
@@ -168,7 +182,7 @@ input[type=radio] {
 
 .review-box{
     // background-color: blue;
-    margin: 4% 25%;
+    margin: 3% 25%;
     padding: 30px 20px;
     border-radius: 5px;
     display: flex;
@@ -176,11 +190,13 @@ input[type=radio] {
     border: 1px solid rgb(224, 224, 224);
 }
 
+
+
 .review-box textarea{
     padding-top: 10px;
     font-size: 16px;
     width: 500px;
-    height: 400px;
+    height: 350px;
     resize: none;
     border: none;
     outline: none;
@@ -198,5 +214,33 @@ input[type=radio] {
 .review-business-name{
     color: black;
     margin: 2% 25%;
+    font-size: 30px;
+}
+
+.review-photo-container{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.review-photo-container img{
+    width: 140px;
+    height: 110px;
+    margin: 5px;
+}
+
+.review-body{
+    font-size: 16px;
+}
+
+.create-review-photo{
+    padding: 20px;
+    border: 1px solid rgb(224, 224, 224);
+    margin: 0% 25%;
+    border-radius: 5px;
+}
+
+.review-btn{
+    margin: 3% 25%;
 }
 

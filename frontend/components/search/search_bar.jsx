@@ -35,20 +35,24 @@ class SearchBar extends React.Component{
         return(
             <div className='search-bar'>
                 {this.props.type === 'home-search'? 
+                <button className='search-bar-home'>
                 <form onSubmit={this.handleSearch}>
                     <label className='search-label'>Find
-                        <input type="text" value={this.state.value} onChange={this.update('value')} />
+                        <input type="text" value={this.state.value} onChange={this.update('value')} className='search-main' placeholder='restaurants'/>
                     </label >
                     <label className='search-label'>Near
-                    <input type="text" value={this.state.position} onChange={this.update('position')}/>
+                    <input type="text" value={this.state.position} onChange={this.update('position')}className='search-main' placeholder='city or state'/>
                     </label>  
                     <button type='submit' className='submit-icon'><BiSearchAlt /></button>
-                </form> :
+                </form>
+                </button> :
+                <div className='search-bar-header'>
                  <form onSubmit={this.handleSearch}>
-                    <input type="text" value={this.state.value} onChange={this.update('value')} />
-                    <input type="text" value={this.state.position} onChange={this.update('position')}/>
+                    <input type="text" value={this.state.value} onChange={this.update('value')} className='search-sub' placeholder='restaurants'/>
+                    <input type="text" value={this.state.position} onChange={this.update('position')}className='search-sub' placeholder='city or state'/>
                     <button type='submit' className='submit-icon'><BiSearchAlt /></button>
-             </form>
+                   </form>
+                </div>
                      
                 }
                 

@@ -12,17 +12,11 @@
 
 .business-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     border-bottom: 1px solid rgb(224, 224, 224);
 }
 
-.business-title{
-    text-decoration: none;
-    color: black;
-    margin-left: 7%;
-    font-size: 20px;
-}
 
 .login-signup{
     margin-top: 23%;
@@ -80,28 +74,19 @@
  .home-background{
      width: 100%;
      height: 600px;
-     z-index: -1;
-     
-
  }
 
  .logo{
     margin-left: 34%;
-    margin-top: 5%; 
+    margin-top: 6%; 
     width: 27%;
     height: auto;
  }
 
  .business-logo{
-     width: 23%;
+     width: 44%;
      height: auto;
      margin-left: -2%;
- }
-
- .search-bar{
-     margin-left: 30%;
-     margin-top: 3%;
-     background-color: white;
  }
 
  .search-label{
@@ -114,6 +99,7 @@
  .navigation-container{
      margin-top: 23%;
      margin-left: 7%;
+     margin-bottom: 10%;
  }
 
  .nav-img{
@@ -133,3 +119,79 @@
      font-size: 18px;
      margin-top: 10px;
  }
+
+
+
+ .footer{
+     padding-top: 8%;
+     padding-bottom: 9%;
+     background-color: rgb(233, 231, 231);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .footer a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     margin-top: 10px;
+ }
+
+ .footer a:hover{
+    text-decoration: underline;
+ }
+
+ .footer p{
+    font-weight: bold;
+    color: rgb(184, 18, 18); 
+ }
+
+
+ .search-bar .search-bar-home{
+     margin-left: 30%;
+     margin-top: 3%;
+     border: none;
+     padding: 3px;
+     border-radius: 5px;
+     background-color: white;
+ }
+
+ .search-bar-home .search-main{
+        border: 0;
+        margin-top: -2px;
+        padding: 4px;
+        margin-left: 5px;
+        font-size: 16px;
+ }
+ .search-bar-home .search-main:focus{
+    outline: none
+ }
+
+ .search-bar-home button{
+     background-color: rgb(184, 18, 18);
+     border: 0;
+     padding: 7px;
+     border-radius: 5px;
+ }
+
+
+ .search-box{
+    margin-top: 2%;
+ }
+
+.title-box{
+    width: 16%;
+}
+
+
+.search-sub{
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.search-bar-header button{
+    padding: 5px;
+    background-color: rgb(184, 18, 18);
+}

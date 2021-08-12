@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
+import {  } from "react-icons/ai";
 
 class ReviewForm extends React.Component{
     constructor(props){
@@ -11,13 +12,12 @@ class ReviewForm extends React.Component{
             body: '',
             user_id: this.props.userId,
             business_id: this.props.match.params.businessId,
-            photos: null,
-            photoUrls:null
+            photos: null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.hoverLeave =this.hoverLeave.bind(this)
-        // this.handleFile =this.handleFile.bind(this)
+        this.handleFile =this.handleFile.bind(this)
     }
 
     componentDidMount(){
@@ -28,20 +28,34 @@ class ReviewForm extends React.Component{
         this.props.history.push(`/businesses/${this.props.match.params.businessId}`)
     }
 
-    // handleFile(e){
-    //     const files = e.currentTarget.files
-    //     const fileReader =new FileReader()
-    //     // const files_arr=Object.values(files)
-    //     fileReader.onloadend =()=>{
-    //         this.setState({photos: files})
-    //     }
+    handleFile(e){
+        const files = e.currentTarget.files
+        const fileReader =new FileReader()
+        // const files_arr=Object.values(files)
+        console.log(files)
+       
+        this.setState({photos: files})
+        
 
-    // }
+    }
 
     handleSubmit(e){
         e.preventDefault();
+        const { rating, body,price_range,user_id,business_id, photos } = this.state;
         const formData = new FormData();
-        this.props.createReview(this.state)
+        
+        formData.append("review[rating]", rating);
+        formData.append("review[body]", body);
+        formData.append("review[price_range]", price_range);
+        formData.append("review[user_id]", user_id);
+        formData.append("review[business_id]", business_id);
+        console.log(formData)
+        //debugger
+        for (let i = 0; i < photos.length; i++) {
+          formData.append("review[photos][]", photos[i]);
+        }
+        
+        this.props.createReview(formData)
         this.navigateToBusiness()
     }
 
@@ -145,16 +159,18 @@ class ReviewForm extends React.Component{
     
     render(){
         if(this.props.business === undefined) return null;
-        console.log(this.state.photos)
         return(
             <div className='review-form-container'>
-                <header className='business-header'>
+                 <header className='business-header'>
+                 <div className='title-box'>
                     <Link to='/' className='business-title'><img src={window.logoURL} className='business-logo' /></Link>
-                    <GreetingContainer />
-                </header>
+                </div>
+                <div><GreetingContainer /></div>
+             </header>
                 <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
-              <div className='review-box'>
+              <div className='create-review'>
                 <form onSubmit={this.handleSubmit}>
+                <div className='review-box'>
                    <div className='rating-box'>
                         <input type="radio" value='1' onChange={this.update('rating')} name='rate' id="star1" onMouseEnter={()=>this.hoverStars(1)} onMouseLeave={this.hoverLeave} />
                         <input type="radio" value='2' onChange={this.update('rating')} name='rate' id="star2" onMouseEnter={()=>this.hoverStars(2)} onMouseLeave={this.hoverLeave} />
@@ -162,7 +178,7 @@ class ReviewForm extends React.Component{
                         <input type="radio" value='4' onChange={this.update('rating')} name='rate' id="star4" onMouseEnter={()=>this.hoverStars(4)} onMouseLeave={this.hoverLeave} />
                         <input type="radio" value='5' onChange={this.update('rating')} name='rate' id="star5" onMouseEnter={()=>this.hoverStars(5)} onMouseLeave={this.hoverLeave} />
                     </div>
-                    <div>
+                    <div >
                         <select onChange={this.update('price_range')} className='price-range'>
                             <option value="$">$</option>
                             <option value="$$">$$</option>
@@ -171,10 +187,14 @@ class ReviewForm extends React.Component{
                     </div>
                     <div>
                         <textarea name='textarea' value={this.state.body} onChange={this.update('body')}/>
+                     </div>
                     </div>
-                    {/* <input type="file" onChange={this.handleFile} multiple/> */}
+                    <div className='create-review-photo'>
+                        <p>Upload Photos</p>
+                         <input type="file" onChange={this.handleFile} multiple /> 
+                    </div>
                     <input type="submit" value={this.props.formType} className='review-btn'/>
-                </form>
+                  </form>
                 </div>
             </div>
         )

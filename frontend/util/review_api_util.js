@@ -5,11 +5,13 @@ export const fetchAllReviews = (businessId)=>(
     })
 )
 
-export const createReview = (review) =>(
+export const createReview = (reviewForm) =>(
     $.ajax({
         method: 'POST',
         url:`api/reviews`,
-        data: {review: review}
+        data: reviewForm,
+        contentType: false,
+        processData: false
     })
 )
 
