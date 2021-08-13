@@ -23,4 +23,9 @@ export const fetchBusiness = (businessId) =>(dispatch) =>(
         .then(payload => dispatch(receiveBusiness(payload)))
 )
 
+export const updateBusiness = (business) => (dispatch) =>(
+    BusinessAPIUtil.updateBusiness(business)
+      .then(payload => dispatch(receiveBusiness(payload)))
+)
+
 

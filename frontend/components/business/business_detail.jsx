@@ -10,6 +10,18 @@ import Footer from '../footer/footer';
 
 
 class BusinessDetail extends React.Component{
+    constructor(props){
+        super(props)
+
+        this.state={
+            show: false,
+            photos: null
+        }
+       
+       
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleFile =this.handleFile.bind(this)
+    }
 
     componentDidMount(){
         this.props.fetchBusiness(this.props.match.params.businessId)
@@ -72,9 +84,63 @@ class BusinessDetail extends React.Component{
         return categories.map( (cate,idx) =>  <p key={idx}>{cate.category_name}</p> )
     }
 
+    handleFile(e){
+        const files = e.currentTarget.files
+        const fileReader =new FileReader()
+        this.setState({photos: files})
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        const {id, name,address,city,state,zip_code,phone_number,website,lat,lng,delivery,takeout, outdoor } = this.props.business;
+        const { photos } =this.state;
+        const formData = new FormData();
+        
+        // formData.append("business[id]",id)
+        // formData.append("business[name]", name);
+        // formData.append("business[address]", address);
+        // formData.append("business[city]", city);
+        // formData.append("business[state]", state);
+        // formData.append("business[zip_code]", zip_code);
+        // formData.append("business[phone_number]", phone_number);
+        // formData.append("business[website]", website);
+        // formData.append("business[lat]", lat);
+        // formData.append("business[lng]", lng);
+        // formData.append("business[delivery]", delivery);
+        // formData.append("business[takeout]", takeout);
+        // formData.append("business[outdoor]", outdoor);
+
+        for (let i = 0; i < photos.length; i++) {
+            formData.append("business[photos][]", photos[i]);
+          }
+      
+        this.props.updateBusiness(formData)
+        console.log(formData)
+    }
+
+    handleShow(){
+        this.setState({show: !this.state.show})
+    }
+
+    renderUpload(){
+        if(this.state.show){
+        return(
+            <div className='upload-photo'>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="file" onChange={this.handleFile} multiple /> 
+                    <button type='submit'>upload</button>
+                    <button onClick={()=>this.handleShow()}>cancel</button>
+                </form>
+            </div>
+        )}else{
+            return null
+        }
+    }
+
     render(){
         if(this.props.business === undefined) return null;
         const {business} = this.props
+        console.log(this.state)
         return(
             <div >
                 <header className='business-header'>
@@ -96,7 +162,8 @@ class BusinessDetail extends React.Component{
                 <div>
                    <div className='business-detail-buttons'>
                        <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        {/* <button>Photo</button> */}
+                        <button onClick={()=>this.handleShow()}>Photo</button>
+                        {this.renderUpload()}
                    </div>
                        <div>
                             <p className='hour-title'>{`Location & Hours`}</p>

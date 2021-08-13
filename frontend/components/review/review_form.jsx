@@ -31,12 +31,7 @@ class ReviewForm extends React.Component{
     handleFile(e){
         const files = e.currentTarget.files
         const fileReader =new FileReader()
-        // const files_arr=Object.values(files)
-        console.log(files)
-       
         this.setState({photos: files})
-        
-
     }
 
     handleSubmit(e){
@@ -49,7 +44,6 @@ class ReviewForm extends React.Component{
         formData.append("review[price_range]", price_range);
         formData.append("review[user_id]", user_id);
         formData.append("review[business_id]", business_id);
-        console.log(formData)
         //debugger
         for (let i = 0; i < photos.length; i++) {
           formData.append("review[photos][]", photos[i]);

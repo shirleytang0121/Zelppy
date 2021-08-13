@@ -20,6 +20,8 @@ const App = () => (
         <Route exact path="/businesses/:businessId" component={BusinessDetailContainer}/>
         <Route exact path="/businesses" component={SearchContainer} />
         <Route exact path="/search/:val/:pos" component={SearchContainer} />
+        <Route exact path="/search/:val/:pos/businesses/:businessId" component={BusinessDetailContainer} />
+        <Route exact path="/search/:val/businesses/:businessId" component={BusinessDetailContainer} />
         <Route exact path="/search/:val" component={SearchContainer} />
         <Route path="/" component={HomepageContainer}/>
       </Switch>

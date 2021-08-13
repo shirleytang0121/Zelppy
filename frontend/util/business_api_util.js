@@ -13,9 +13,12 @@ export const fetchBusiness = (businessId) => (
     })
 )
 
-export const updateBusiness = (businessId) => (
+export const updateBusiness = (businessForm) => (
     $.ajax({
         method: 'PATCH',
-        url: `api/businesses/${businessId}`
+        url: `api/businesses/${businessForm.id}`,
+        data: businessForm,
+        contentType: false,
+        processData: false
     })
 )
