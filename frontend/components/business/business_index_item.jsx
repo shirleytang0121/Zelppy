@@ -62,7 +62,7 @@ class BusinessIndexItem extends React.Component{
                 <div className='business-index-item'>
                     <img src={business.photoUrls[0]} className='business-img'  /> 
                     <div className='business-index-info'>
-                        <p className='business-index-title'>{business.name}</p>
+                        <p className='business-index-title'>{this.props.idx}.{business.name}</p>
                         <div className='review-container'>{this.renderRate()} </div>
                         <div className='business-index-tags'>{this.renderTag()}</div>
                         <p className='business-index-city'>{business.city}</p> 

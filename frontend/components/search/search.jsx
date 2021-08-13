@@ -24,7 +24,7 @@ class Search extends React.Component{
                     <BusinessIndex businesses={this.props.businesses} updateFilter={this.props.updateFilter} val={this.props.match.params.val} pos={this.props.match.params.pos}/> 
                 </div>
                 <div className='business-side'>
-                    <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} />
+                    <BusinessMap businesses={this.props.businesses} singleBusiness={false} business='' updateFilter={this.props.updateFilter} history={this.props.history} />
                </div> 
             </div>
             <Footer/>

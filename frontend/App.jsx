@@ -10,6 +10,7 @@ import BusinessDetailContainer from './components/business/business_detail_conta
 import CreateReviewContainer from './components/review/create_review_container'
 import SearchContainer from './components/search/search_container'
 import HomepageContainer from './components/homepage/homepage_container'
+import BusinessPhotosContainer from "./components/business/business_photos_container";
 
 const App = () => (
   <div className='app'>
@@ -20,6 +21,9 @@ const App = () => (
         <Route exact path="/businesses/:businessId" component={BusinessDetailContainer}/>
         <Route exact path="/businesses" component={SearchContainer} />
         <Route exact path="/search/:val/:pos" component={SearchContainer} />
+        <Route exact path="/search/:val/:pos/businesses/:businessId" component={BusinessDetailContainer} />
+        <Route exact path="/search/:val/businesses/:businessId" component={BusinessDetailContainer} />
+        <Route exact path="/businesses/:businessId/photos" component={BusinessPhotosContainer}/>
         <Route exact path="/search/:val" component={SearchContainer} />
         <Route path="/" component={HomepageContainer}/>
       </Switch>

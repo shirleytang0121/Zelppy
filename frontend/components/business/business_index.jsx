@@ -13,6 +13,7 @@ class BusinessIndex extends React.Component{
             pos =this.props.pos.split('+').join(" ")
         }
         this.props.updateFilter('search',{value: val, position: pos})
+        window.scrollTo(0, 0)
     }
 
     render(){
@@ -20,7 +21,7 @@ class BusinessIndex extends React.Component{
             <div>    
                 <ul>
                     <p>All Results</p>
-                    {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business}/>)}
+                    {this.props.businesses.map((business,idx) => <BusinessIndexItem key={business.id} business={business} idx={idx+1}/>)}
                 </ul>
             </div>
         )

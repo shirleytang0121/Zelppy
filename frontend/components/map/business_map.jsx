@@ -27,7 +27,6 @@ class BusinessMap extends React.Component{
       }
 
       componentDidUpdate(){
-          window.scrollTo(0,0)
         if(this.props.singleBusiness){
             this.MarkerManager.updateMarkers([this.props.business])
         }else{
