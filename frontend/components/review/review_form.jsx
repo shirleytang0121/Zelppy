@@ -45,9 +45,11 @@ class ReviewForm extends React.Component{
         formData.append("review[price_range]", price_range);
         formData.append("review[user_id]", user_id);
         formData.append("review[business_id]", business_id);
-        //debugger
-        for (let i = 0; i < photos.length; i++) {
-          formData.append("review[photos][]", photos[i]);
+        
+        if(photos!==null){
+            for (let i = 0; i < photos.length; i++) {
+                formData.append("review[photos][]", photos[i]);
+              }
         }
         
         this.props.createReview(formData)
