@@ -21,6 +21,7 @@ class BusinessDetail extends React.Component{
        
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFile =this.handleFile.bind(this)
+        this.handleAllPhotos=this.handleAllPhotos.bind(this)
     }
 
     componentDidMount(){
@@ -138,6 +139,10 @@ class BusinessDetail extends React.Component{
         }
     }
 
+    handleAllPhotos(){
+        this.props.history.push(`/businesses/${this.props.match.params.businessId}/photos`)
+    }
+
     render(){
         if(this.props.business === undefined) return null;
         const {business} = this.props
@@ -152,18 +157,22 @@ class BusinessDetail extends React.Component{
                 <div><GreetingContainer /></div>
              </header>
                 <div>
-                    {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)}
+                    {/* {business.photoUrls.map( (url,idx)=> <img src={url} key={idx} className='business-detail-img'/>)} */}
+                    <img src={business.photoUrls[0]}  className='business-detail-img'/>
+                    <img src={business.photoUrls[1]}  className='business-detail-img'/>
+                    <img src={business.photoUrls[2]}  className='business-detail-img'/>
                 </div>
                <h1 className='business-detail-title'>{business.name}</h1>
                     <div className='business-detail-subtitle'>
                         <div className='review-container'>{this.renderRate()} </div>
                         <div className='business-index-tags'>{this.renderTag()}</div>
+                        <button className='all-photo-btn' onClick={this.handleAllPhotos}>All Photos</button>
                     </div>
                <div className='business-detail-container'>
                 <div>
                    <div className='business-detail-buttons'>
                        <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        <button onClick={()=>this.handleShow()}>Photo</button>
+                        <button className='photo-btn'onClick={()=>this.handleShow()}>Add Photo</button>
                         {this.renderUpload()}
                    </div>
                        <div>
