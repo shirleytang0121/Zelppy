@@ -92,30 +92,31 @@ class BusinessDetail extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        const {id, name,address,city,state,zip_code,phone_number,website,lat,lng,delivery,takeout, outdoor } = this.props.business;
+        const { name,address,city,state,zip_code,phone_number,website,lat,lng,delivery,takeout, outdoor } = this.props.business;
         const { photos } =this.state;
         const formData = new FormData();
         
-        // formData.append("business[id]",id)
-        // formData.append("business[name]", name);
-        // formData.append("business[address]", address);
-        // formData.append("business[city]", city);
-        // formData.append("business[state]", state);
-        // formData.append("business[zip_code]", zip_code);
-        // formData.append("business[phone_number]", phone_number);
-        // formData.append("business[website]", website);
-        // formData.append("business[lat]", lat);
-        // formData.append("business[lng]", lng);
-        // formData.append("business[delivery]", delivery);
-        // formData.append("business[takeout]", takeout);
-        // formData.append("business[outdoor]", outdoor);
+      
+        formData.append("business[name]", name);
+        formData.append("business[address]", address);
+        formData.append("business[city]", city);
+        formData.append("business[state]", state);
+        formData.append("business[zip_code]", zip_code);
+        formData.append("business[phone_number]", phone_number);
+        formData.append("business[website]", website);
+        formData.append("business[lat]", lat);
+        formData.append("business[lng]", lng);
+        formData.append("business[delivery]", delivery);
+        formData.append("business[takeout]", takeout);
+        formData.append("business[outdoor]", outdoor);
 
         for (let i = 0; i < photos.length; i++) {
             formData.append("business[photos][]", photos[i]);
           }
       
-        this.props.updateBusiness(formData)
-        console.log(formData)
+        this.props.updateBusiness(formData,this.props.match.params.businessId)
+           .then( this.setState({show: !this.state.show}))
+        
     }
 
     handleShow(){

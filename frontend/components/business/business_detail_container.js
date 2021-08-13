@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) =>({
     fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId)),
     updateFilter: (filter,value)=>dispatch(updateFilter(filter,value)),
     fetchAllReviews: (businessId) =>dispatch(fetchAllReviews(businessId)),
-    updateBusiness: (businessId) => dispatch(updateBusiness(businessId))
+    updateBusiness: (business,businessId) => dispatch(updateBusiness(business,businessId))
 })
 
 
