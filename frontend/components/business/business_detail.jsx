@@ -21,7 +21,6 @@ class BusinessDetail extends React.Component{
        
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFile =this.handleFile.bind(this)
-        this.handleAllPhotos=this.handleAllPhotos.bind(this)
     }
 
     componentDidMount(){
@@ -139,9 +138,7 @@ class BusinessDetail extends React.Component{
         }
     }
 
-    handleAllPhotos(){
-        this.props.history.push(`/businesses/${this.props.match.params.businessId}/photos`)
-    }
+   
 
     render(){
         if(this.props.business === undefined) return null;
@@ -166,8 +163,8 @@ class BusinessDetail extends React.Component{
                     <div className='business-detail-subtitle'>
                         <div className='review-container'>{this.renderRate()} </div>
                         <div className='business-index-tags'>{this.renderTag()}</div>
-                        <button className='all-photo-btn' onClick={this.handleAllPhotos}>All Photos</button>
                     </div>
+                    <Link to={`/businesses/${this.props.match.params.businessId}/photos`} className='all-photo-link'>All Photos</Link>
                <div className='business-detail-container'>
                 <div>
                    <div className='business-detail-buttons'>
