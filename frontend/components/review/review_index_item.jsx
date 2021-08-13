@@ -12,8 +12,8 @@ class ReviewIndexItem extends React.Component{
                         <img src={window.starURL} className={`review-index-${review.rating}stars`}/> 
                     </div>
                        <p className='review-date'>{review.createdAt.slice(0,10)}</p>
-                       <div className='review-photo-container'>{review.photoUrls.map((photo,idx)=> <img src={photo} key={idx} className='review-photo'/>)}</div>
-                       <p className='review-body'>{review.body}</p>   
+                       <p className='review-body'>{review.body}</p>  
+                       <div className='review-photo-container'>{review.photoUrls.map((photo,idx)=> <img src={photo} key={idx} className='review-photo'/>)}</div> 
                 </div>
             </li>
         )
