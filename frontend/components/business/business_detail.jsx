@@ -26,6 +26,7 @@ class BusinessDetail extends React.Component{
     componentDidMount(){
         this.props.fetchBusiness(this.props.match.params.businessId)
         this.props.fetchAllReviews(this.props.match.params.businessId)
+        window.scrollTo(0, 0)
     }
 
     renderHours(){
