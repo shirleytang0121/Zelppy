@@ -170,8 +170,7 @@ class BusinessDetail extends React.Component{
                 <div>
                    <div className='business-detail-buttons'>
                        <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        <button className='photo-btn'onClick={()=>this.handleShow()}>Add Photo</button>
-                        {this.renderUpload()}
+                        <button className='photo-btn'onClick={()=>this.handleShow()}>Add Photo</button>s
                    </div>
                        <div>
                             <p className='hour-title'>{`Location & Hours`}</p>
