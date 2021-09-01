@@ -12,15 +12,9 @@ import Footer from '../footer/footer';
 class BusinessDetail extends React.Component{
     constructor(props){
         super(props)
-
-        this.state={
-            show: false,
-            photos: null
-        }
        
        
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleFile =this.handleFile.bind(this)
     }
 
     componentDidMount(){
@@ -116,28 +110,23 @@ class BusinessDetail extends React.Component{
           }
       
         this.props.updateBusiness(formData,this.props.match.params.businessId)
-           .then( this.setState({show: !this.state.show}))
         
     }
 
-    handleShow(){
-        this.setState({show: !this.state.show})
-    }
-
-    renderUpload(){
-        if(this.state.show){
-        return(
-            <div className='upload-photo'>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="file" onChange={this.handleFile} multiple /> 
-                    <button type='submit'>upload</button>
-                    <button onClick={()=>this.handleShow()}>cancel</button>
-                </form>
-            </div>
-        )}else{
-            return null
-        }
-    }
+    // renderUpload(){
+    //     if(this.state.show){
+    //     return(
+    //         <div className='upload-photo'>
+    //             <form onSubmit={this.handleSubmit}>
+    //                 <input type="file" onChange={this.handleFile} multiple /> 
+    //                 <button type='submit'>upload</button>
+    //                 <button onClick={()=>this.handleShow()}>cancel</button>
+    //             </form>
+    //         </div>
+    //     )}else{
+    //         return null
+    //     }
+    // }
 
    
 
@@ -170,7 +159,7 @@ class BusinessDetail extends React.Component{
                 <div>
                    <div className='business-detail-buttons'>
                        <button className='review-btn'><Link to={`/businesses/${business.id}/reviews/new`}>Write a Review</Link></button>
-                        <button className='photo-btn'onClick={()=>this.handleShow()}>Add Photo</button>s
+                        <button className='photo-btn'> <Link to={`/businesses/${business.id}/photos/new`}>Add Photo</Link></button>
                    </div>
                        <div>
                             <p className='hour-title'>{`Location & Hours`}</p>
