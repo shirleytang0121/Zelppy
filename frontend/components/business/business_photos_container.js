@@ -5,7 +5,7 @@ import { updateBusiness } from "../../actions/business_actions";
 import BusinessPhotos from "./business_photos";
 
 const mapStateToProps = (state, ownProps)=>({
-     business: state.entities.businesses[ownProps.match.params.businessId],
+     business: state.entities.businesses[ownProps.match.params.businessId]
 })
 
 
