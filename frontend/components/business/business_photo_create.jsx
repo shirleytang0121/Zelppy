@@ -9,7 +9,8 @@ class BusinessPhotoCreate extends React.Component{
         super(props);
 
         this.state={
-            photos: null
+            photos: [],
+            url:[]
         }
 
         this.handleFile = this.handleFile.bind(this);
@@ -24,9 +25,21 @@ class BusinessPhotoCreate extends React.Component{
 
 
     handleFile(e){
-        const files = e.currentTarget.files
-        const fileReader =new FileReader()
-        this.setState({photos: files})
+        
+        let files = e.currentTarget.files;
+
+        for(let i=0;i<files.length;i++){
+            let reader = new FileReader();
+            reader.onloadend = () => {
+                this.setState({    
+                    photos: [...this.state.photos, files[i]],
+                    url: [...this.state.url, reader.result]
+                });
+            }
+            reader.readAsDataURL(files[i]);
+        
+        }
+
     }
 
     handleSubmit(e){
@@ -53,15 +66,34 @@ class BusinessPhotoCreate extends React.Component{
             formData.append("business[photos][]", photos[i]);
           }
       
-        this.props.updateBusiness(formData,this.props.match.params.businessId)
+        this.props.updateBusiness(formData,this.props.match.params.businessId);
+        this.navigateBack()
         
     }
 
+
+    navigateBack(){
+        this.props.history.push(`/businesses/${this.props.match.params.businessId}`)
+    }
+
+
+    renderPreview(){
+        if(this.state.url){
+            return(
+                <div>
+                    {this.state.url.map((url,i)=> <img src={url} key={i}></img>)}
+                </div>
+            )
+        }else{
+            return null;
+        } 
+    }
     
 
 
     render(){
         if(this.props.business === undefined) return null;
+       
         return(
             <div>
             <header className='business-header'>
@@ -72,6 +104,7 @@ class BusinessPhotoCreate extends React.Component{
              </header>
              <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
              <div>
+                 {this.renderPreview()}
                   <form onSubmit={this.handleSubmit}>
                     <input type="file" onChange={this.handleFile} multiple /> 
                     <button type='submit'>upload</button>
