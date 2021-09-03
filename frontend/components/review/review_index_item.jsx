@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillDelete } from "react-icons/ai";
 
 class ReviewIndexItem extends React.Component{
 
@@ -19,7 +20,7 @@ class ReviewIndexItem extends React.Component{
                 <div className='review-index-container'>
                     <p className='reviewer'>{review.author.firstname} {review.author.lastname}</p>
                     {userId === review.userId ? 
-                    <button onClick={this.handleDelete}>delete</button> : null
+                        <button onClick={this.handleDelete} className='review-delete-btn'> <AiFillDelete/></button> : null
                      }
                     
                     <div className='review-index-stars'>
