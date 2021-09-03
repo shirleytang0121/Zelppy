@@ -195,3 +195,23 @@
     padding: 5px;
     background-color: rgb(184, 18, 18);
 }
+
+
+.nav-btn-div{
+    margin-left: 42%;
+    margin-top: 2%;
+}
+
+.nav-btn{
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: white;
+    margin-left: 2%;
+    font-weight: bold;
+}
+
+.nav-btn:hover{
+    text-decoration: underline;
+    color: white;
+}
