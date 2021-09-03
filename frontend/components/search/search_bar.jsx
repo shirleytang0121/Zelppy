@@ -22,9 +22,14 @@ class SearchBar extends React.Component{
     }
 
     navToBusinesses(){
-        let val = this.state.value.split(" ").join("+")
-        let pos = this.state.position.split(" ").join("+")
-        this.props.history.push(`/search/${val}/${pos}`)
+        if(this.state.value!==''){
+            let val = this.state.value.split(" ").join("+")
+            let pos = this.state.position.split(" ").join("+")
+            this.props.history.push(`/search/${val}/${pos}`)
+        }else{
+            let pos = this.state.position.split(" ").join("+")
+            this.props.history.push(`/search/val/${pos}`)
+        }
       }
 
     update(field){
