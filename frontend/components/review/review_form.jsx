@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import GreetingContainer from '../greeting/greeting_container'
 import {  } from "react-icons/ai";
+import Footer from '../footer/footer';
 
 class ReviewForm extends React.Component{
     constructor(props){
@@ -193,6 +194,7 @@ class ReviewForm extends React.Component{
                     <input type="submit" value={this.props.formType} className='review-btn'/>
                   </form>
                 </div>
+                <Footer/>
             </div>
         )
     }

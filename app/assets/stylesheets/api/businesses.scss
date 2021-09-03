@@ -230,3 +230,68 @@ ul{
     height: 200px;
     margin: 10px;
 }
+
+
+
+.preview{
+    padding: 90px;
+    border: 1px solid rgb(224, 224, 224);
+    margin: 0% 25%;
+    border-radius: 5px;
+}
+
+.camera-icon{
+    margin-left: 46%;
+}
+
+.photo-upload-btn{
+    display: none;
+    margin-left: 42%;
+}
+
+.photo-submit-btn{
+    width: 20%;
+    display: inline-block;
+    background-color: #cf1f1f;
+    padding: 12px 20px;
+    margin-top: 3%;
+    margin-left: 27%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.photo-cancel-btn{
+    width: 20%;
+    display: inline-block;
+    background-color: #cf1f1f;
+    padding: 12px 20px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+
+.preview-photo{
+    width: 35%;
+    height: auto;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.photo-upload-label{
+    font-size: 18px;
+    margin-top: 7%;
+    margin-left: 43%;
+}
+
+
+.photo-btn a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.photo-btn{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+

@@ -2,7 +2,8 @@ import React from "react";
 import GreetingContainer from '../greeting/greeting_container';
 import { Link } from "react-router-dom";
 
-
+import { AiFillCamera } from "react-icons/ai";
+import Footer from "../footer/footer";
 
 class BusinessPhotoCreate extends React.Component{
     constructor(props){
@@ -78,14 +79,18 @@ class BusinessPhotoCreate extends React.Component{
 
 
     renderPreview(){
-        if(this.state.url){
+        if(this.state.url.length!==0){
             return(
-                <div>
-                    {this.state.url.map((url,i)=> <img src={url} key={i}></img>)}
+                <div >
+                    {this.state.url.map((url,i)=> <img src={url} key={i} className='preview-photo'></img>)}
                 </div>
             )
         }else{
-            return null;
+            return (
+                <div className='camera-icon'>
+                    <AiFillCamera/>
+                </div>
+            )
         } 
     }
     
@@ -103,14 +108,20 @@ class BusinessPhotoCreate extends React.Component{
                 <div><GreetingContainer /></div>
              </header>
              <Link to={`/businesses/${this.props.business.id}`}> <h1 className='review-business-name'>{this.props.business.name}</h1></Link> 
-             <div>
-                 {this.renderPreview()}
+             <div className='photo-upload-div'>
                   <form onSubmit={this.handleSubmit}>
-                    <input type="file" onChange={this.handleFile} multiple /> 
-                    <button type='submit'>upload</button>
-                    <button>cancel</button>
+                    <div className='preview'>
+                  {this.renderPreview()}
+                    <label className='photo-upload-label'>
+                        Upload
+                        <input type="file" onChange={this.handleFile} className='photo-upload-btn' multiple /> 
+                    </label>
+                    </div>
+                    <button type='submit' className='photo-submit-btn'>submit</button>
+                    <button onClick={()=>this.navigateBack()} className='photo-cancel-btn'>cancel</button>
                 </form>
-            </div>
+                </div>
+                <Footer/>
             </div>
         )
     }
