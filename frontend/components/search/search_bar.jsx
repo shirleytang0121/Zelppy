@@ -28,7 +28,7 @@ class SearchBar extends React.Component{
             this.props.history.push(`/search/${val}/${pos}`)
         }else{
             let pos = this.state.position.split(" ").join("+")
-            this.props.history.push(`/search/val/${pos}`)
+            this.props.history.push(`/searchpos/${pos}`)
         }
       }
 

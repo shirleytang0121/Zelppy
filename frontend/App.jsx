@@ -27,8 +27,8 @@ const App = () => (
         <Route exact path="/businesses/:businessId/photos" component={BusinessPhotosContainer}/>
         <Route exact path="/businesses/:businessId/photos/new" component={BusinessPhotoCreateContainer}/>
         <Route exact path="/search/:val" component={SearchContainer} />
-        <Route exact path="/search/val/:pos" component={SearchContainer} />
-        <Route exact path="/search/val/:pos/businesses/:businessId" component={SearchContainer} />
+        <Route exact path="/searchpos/:pos" component={SearchContainer} />
+        <Route exact path="/searchpos/:pos/businesses/:businessId" component={SearchContainer} />
         <Route path="/" component={HomepageContainer}/>
       </Switch>
       
