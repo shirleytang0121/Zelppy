@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 class SessionForm extends React.Component{
     constructor(props){
         super(props)
-        this.state= this.props.user
+        this.state= {
+            email:'',
+            password: '',
+            firstname: '',
+            lastname: '',
+            show_error: false
+        }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleDemo = this.handleDemo.bind(this)
 
@@ -12,8 +18,24 @@ class SessionForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        const user = Object.assign({},this.state)
+        let user
+        if(this.props.formType === 'Signup'){
+            user = {
+                email: this.state.email,
+                password: this.state.password,
+                firstname: this.state.firstname,
+                lastname: this.state.lastname
+            }
+        }else{
+             user = {
+                email: this.state.email,
+                password: this.state.password,
+             }
+        }
         this.props.processForm(user)
+        if(this.props.errors.length>0){
+            this.setState({show_error: true})
+        }
     }
 
     handleDemo(e){
@@ -27,12 +49,12 @@ class SessionForm extends React.Component{
     }
 
     update(field){
-        return e => this.setState( {[field]: e.currentTarget.value})
+        return e => this.setState( {[field]: e.currentTarget.value, show_error:false})
     }
 
     renderErrors() {
         return(
-          <ul>
+          <ul className='session-error'>
             {this.props.errors.map((error, i) => (
               <li key={`error-${i}`}>
                 {error}
@@ -79,13 +101,13 @@ class SessionForm extends React.Component{
                 <div className='session-header'>
                     <Link to='/' ><img src={window.logoURL} id='session-logo' /> </Link>
                 </div>
-                <div className='session-form-container'>
-                {this.renderErrors()} 
+                <div className='session-form-container'> 
                 <div className='session-form'>
                     {this.renderInstruction()}
                     <div className='form-box'>
                         <form onSubmit={this.handleSubmit}>
                             {this.renderNames()}
+                            {this.state.show_error&&this.props.formType==='Login' ? this.renderErrors() : null} 
                             <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='session-email'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password' className='session-password'/>  
                             <input type="submit" value={this.props.formType} className='sign-btn'/>
