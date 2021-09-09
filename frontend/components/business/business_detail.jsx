@@ -133,7 +133,6 @@ class BusinessDetail extends React.Component{
     render(){
         if(this.props.business === undefined) return null;
         const {business} = this.props
-        console.log(this.state)
         return(
             <div >
                 <header className='business-header'>

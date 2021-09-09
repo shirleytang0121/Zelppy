@@ -35,7 +35,6 @@ class BusinessMap extends React.Component{
       }
 
       handleMarkerClick(business) {
-        //   console.log(this.props.history)
         this.props.history.push(`businesses/${business.id}`);
       }
     

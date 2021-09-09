@@ -8,7 +8,6 @@ import Footer from '../footer/footer';
 
 class Search extends React.Component{
     render(){
-        console.log(this.props)
         return(
         <div>
              <header className='business-header'>
