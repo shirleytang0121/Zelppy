@@ -9,7 +9,7 @@ class SessionForm extends React.Component{
             password: '',
             firstname: '',
             lastname: '',
-            show_error: true
+            show_error: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleDemo = this.handleDemo.bind(this)
@@ -55,7 +55,7 @@ class SessionForm extends React.Component{
             console.log(this.props.errors)
             if(this.props.errors[i].includes(field)){
                 return (
-                <div>
+                <div className='session-error'>
                     {this.props.errors[i]}
                 </div>)
             }
@@ -93,10 +93,14 @@ class SessionForm extends React.Component{
         if(this.props.formType === 'Signup'){
             return(
                 <div className='signup-names'>
-                     {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Firstname') : null} 
+                    <div>
+                    <label> {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Firstname') : <p className='error-placeholder'>firstname</p>} </label>   
                       <input type="text" value={this.state.firstname} onChange={this.update('firstname')} placeholder='Firstname' className='session-name'/>
-                      {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Lastname') : null} 
-                      <input type="text" value={this.state.lastname} onChange={this.update('lastname')} placeholder='Lastname' className='session-name'/>
+                      </div>
+                      <div>
+                        <label>{this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Lastname') : <p className='error-placeholder'>lastname</p>} </label>                   
+                        <input type="text" value={this.state.lastname} onChange={this.update('lastname')} placeholder='Lastname' className='session-name'/>
+                      </div>
                 </div>
             )
         }else{
@@ -116,12 +120,15 @@ class SessionForm extends React.Component{
                     <div className='form-box'>
                         <form onSubmit={this.handleSubmit}>
                             {this.renderNames()}
-                            {this.state.show_error&&this.props.formType==='Login' ? this.renderErrors('email') : null} 
-                            {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Email') : null} 
-                            <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='session-email'/>
-                            {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Password') : null} 
+                            <label>
+                                {this.state.show_error ? this.renderErrors('email') : <p className='error-placeholder'>email</p>} 
+                                {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Email') : <p className='error-placeholder'>email</p>} 
+                                <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='session-email'/>
+                            </label>
+                            {this.state.show_error&&this.props.formType==='Signup' ? this.renderErrors('Password') : <p className='error-placeholder'>password</p>} 
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='password' className='session-password'/>  
                             <input type="submit" value={this.props.formType} className='sign-btn'/>
+                            <br/>
                             {this.props.formType==='Signup'? null:<button className='sign-btn' onClick={this.handleDemo}>Demo User</button>} 
                         </form> 
                     </div>
