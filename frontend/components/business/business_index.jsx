@@ -20,8 +20,13 @@ class BusinessIndex extends React.Component{
         return(
             <div>    
                 <ul>
-                    <p>All Results</p>
-                    {this.props.businesses.map((business,idx) => <BusinessIndexItem key={business.id} business={business} idx={idx+1}/>)}
+                    {this.props.businesses.length===0 ? <div className='businesses-no-result'><p>No Results Found</p></div> :
+                      <div>
+                       <p>All Results</p>
+                       {this.props.businesses.map((business,idx) => <BusinessIndexItem key={business.id} business={business} idx={idx+1}/>)}
+                       </div>
+                    }
+                    
                 </ul>
             </div>
         )

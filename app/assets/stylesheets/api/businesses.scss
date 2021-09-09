@@ -17,7 +17,7 @@ ul{
     border: 1px solid rgb(224, 224, 224);
     border-radius: 5px;
     width: 100%;
-    padding: 20px;
+    padding: 4%;
     margin-top: 3%;
 }
 
@@ -101,10 +101,11 @@ ul{
 }
 
 .business-map-container{
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-bottom: 4%;
     display: flex;
-    
+    justify-content: space-evenly;
 }
 
 
@@ -293,5 +294,15 @@ ul{
 .photo-btn{
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.businesses-no-result{
+   margin-top: 20%;
+  
+}
+
+.businesses-no-result p{
+    font-weight: bold;
+    font-size: 20px;
 }
 
