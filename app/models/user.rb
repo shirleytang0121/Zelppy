@@ -1,7 +1,9 @@
 class User < ApplicationRecord
     validates :email, :firstname, :lastname, :password_digest, :session_token, presence:true
     validates :email, :session_token, uniqueness:true
+    validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
     validates :password, length:{ minimum: 6, allow_nil:true }
+    
 
     after_initialize :ensure_session_token
 
