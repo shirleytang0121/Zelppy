@@ -91,7 +91,7 @@
 
  .search-label{
      color: rgb(56, 56, 56);
-     font-size: 25px;
+     font-size: 20px;
      font-weight: bold;
      margin: 2px;
  }
@@ -161,9 +161,10 @@
         border: 0;
         margin-top: -2px;
         padding: 4px;
-        margin-left: -30px;
+        margin-left: 4px;
         font-size: 16px;
  }
+
  .search-bar-home .search-main:focus{
     outline: none
  }
