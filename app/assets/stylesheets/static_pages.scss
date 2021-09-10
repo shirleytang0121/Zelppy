@@ -5,8 +5,8 @@
 .homepage-header{
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-top: -47%;
+    margin-left: 55px;
+    margin-top: -580px;
     
 }
 
@@ -19,8 +19,8 @@
 
 
 .login-signup{
-    margin-top: 23%;
-    margin-left: -25%;
+    margin-top: 35px;
+    margin-left: -170px;
 }
 
 .header-group{
@@ -35,7 +35,7 @@
     border: 0.1rem solid white ;
     border-radius: 5px;
     padding: 4px;
-    margin: 4%;
+    margin: 5px;
 }
 
 
@@ -97,9 +97,9 @@
  }
 
  .navigation-container{
-     margin-top: 23%;
-     margin-left: 7%;
-     margin-bottom: 10%;
+     margin-top: 170px;
+     margin-left: 80px;
+     margin-bottom: 40px;
  }
 
  .nav-img{
@@ -149,8 +149,8 @@
 
 
  .search-bar .search-bar-home{
-     margin-left: 30%;
-     margin-top: 3%;
+     margin-left: 380px;
+     margin-top: 50px;
      border: none;
      padding: 3px;
      border-radius: 5px;
@@ -161,7 +161,7 @@
         border: 0;
         margin-top: -2px;
         padding: 4px;
-        margin-left: 5px;
+        margin-left: -30px;
         font-size: 16px;
  }
  .search-bar-home .search-main:focus{
@@ -189,6 +189,10 @@
     padding: 5px;
     font-size: 14px;
     margin-right: 5px;
+}
+
+.search-bar-header{
+    margin-left: -150px;
 }
 
 .search-bar-header button{

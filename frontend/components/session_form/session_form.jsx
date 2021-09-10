@@ -52,7 +52,6 @@ class SessionForm extends React.Component{
 
     renderErrors(field) {
         for(let i=0; i <this.props.errors.length;i++){
-            console.log(this.props.errors)
             if(this.props.errors[i].includes(field)){
                 return (
                 <div className='session-error'>
