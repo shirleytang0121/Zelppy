@@ -67,18 +67,6 @@ user7 = User.create(
 
 
 
-category1= Category.create(category_name: 'pizza')
-category2= Category.create(category_name: 'American')
-category3= Category.create(category_name: 'Japanese')
-category4= Category.create(category_name: 'Korean')
-category5= Category.create(category_name: 'Chinese')
-category6= Category.create(category_name: 'burger')
-category7= Category.create(category_name: 'coffee and tea')
-category8= Category.create(category_name: 'BBQ')
-category9= Category.create(category_name: 'Sushi Bar')
-category10= Category.create(category_name: 'Desserts')
-category11= Category.create(category_name: 'Noodles')
-
 
 
 business1 = Business.create(
@@ -1191,6 +1179,80 @@ hour15_7 = Hour.create(
     business_id: business15.id
 )
 
+business16 = Business.create(
+    name: "East Village Pizza",
+    address: "145 1st Ave",
+    city: "New York",
+    state: "NY",
+    zip_code: 10003,
+    phone_number: "(929) 269-8612",
+    website: 'https://www.eastvillagepizza.net/',
+    lat: 40.733966,
+    lng: -73.9867,
+    delivery: true,
+    takeout: true,
+    outdoor: true
+)
+
+file16_1= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/evpizza1.jpg')
+file16_2= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/evpizza2.jpg')
+file16_3= URI.open('https://my-zelppy-seed.s3.us-east-2.amazonaws.com/evpizza3.jpg')
+
+business16.photos.attach(io: file16_1, filename: "evpizza1.jpg")
+business16.photos.attach(io: file16_2, filename: "evpizza2.jpg")
+business16.photos.attach(io: file16_3, filename: "evpizza3.jpg")
+
+
+hour16_1 = Hour.create(
+    date: 'Mon',
+    open: '11:00 AM',
+    close: '3:00 AM',
+    business_id: business16.id
+)
+
+hour16_2 = Hour.create(
+    date: 'Tue',
+    open: '11:00 AM',
+    close: '3:00 AM',
+    business_id: business16.id
+)
+
+
+hour16_3 = Hour.create(
+    date: 'Wed',
+    open: '11:00 AM',
+    close: '3:00 AM',
+    business_id: business16.id
+)
+
+hour16_4 = Hour.create(
+    date: 'Thu',
+    open: '11:00 AM',
+    close: '3:00 AM',
+    business_id: business16.id
+)
+
+hour16_5 = Hour.create(
+    date: 'Fri',
+    open: '11:00 AM',
+    close: '4:00 AM',
+    business_id: business16.id
+)
+
+hour16_6 = Hour.create(
+    date: 'Sat',
+    open: '11:00 AM',
+    close: '4:00 AM',
+    business_id: business16.id
+)
+
+hour16_7 = Hour.create(
+    date: 'Sun',
+    open: '11:00 AM',
+    close: '3:00 AM',
+    business_id: business16.id
+)
+
 review1_1 = Review.create(
     rating: 5,
     price_range: '$$',
@@ -1290,6 +1352,19 @@ review14_1 = Review.create(
 
 
 
+category1= Category.create(category_name: 'pizza')
+category2= Category.create(category_name: 'American')
+category3= Category.create(category_name: 'Japanese')
+category4= Category.create(category_name: 'Korean')
+category5= Category.create(category_name: 'Chinese')
+category6= Category.create(category_name: 'burger')
+category7= Category.create(category_name: 'coffee and tea')
+category8= Category.create(category_name: 'BBQ')
+category9= Category.create(category_name: 'Sushi Bar')
+category10= Category.create(category_name: 'Desserts')
+category11= Category.create(category_name: 'Noodles')
+
+
 
 tag1=BusinessCategory.create(business_id:business1.id, category_id:category1.id)
 tag2=BusinessCategory.create(business_id:business1.id, category_id:category2.id)
@@ -1316,5 +1391,7 @@ tag22=BusinessCategory.create(business_id:business12.id, category_id:category4.i
 tag23=BusinessCategory.create(business_id:business13.id, category_id:category7.id)
 tag24=BusinessCategory.create(business_id:business14.id, category_id:category7.id)
 tag25=BusinessCategory.create(business_id:business15.id, category_id:category7.id)
+tag26=BusinessCategory.create(business_id:business16.id, category_id:category1.id)
+tag27=BusinessCategory.create(business_id:business16.id, category_id:category2.id)
 
 
