@@ -58,6 +58,13 @@ user6 = User.create(
     lastname: 'Potter'
 )
 
+user7 = User.create(
+    email: 'user7@aa.io',
+    password: 'abc123',
+    firstname: 'Vivian',
+    lastname: 'Black'
+)
+
 
 
 category1= Category.create(category_name: 'pizza')
@@ -1271,6 +1278,15 @@ review7_2 = Review.create(
     business_id: business7.id,
     user_id: user2.id
 )
+
+review14_1 = Review.create(
+    rating: 5,
+    price_range: '$$',
+    body: 'Best bubble milk tea',
+    business_id: business14.id,
+    user_id: user3.id
+)
+
 
 
 
