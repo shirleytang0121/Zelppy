@@ -1349,6 +1349,17 @@ review14_1 = Review.create(
     user_id: user3.id
 )
 
+review16_1 = Review.create(
+    rating: 4,
+    price_range: '$',
+    body: 'Good choice for quick lunch',
+    business_id: business16.id,
+    user_id: user7.id
+)
+
+
+
+
 
 
 
