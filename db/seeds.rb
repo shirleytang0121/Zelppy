@@ -50,6 +50,16 @@ user5 = User.create(
     lastname: 'Cage'
 )
 
+
+user6 = User.create(
+    email: 'user6@aa.io',
+    password: 'abc123',
+    firstname: 'Mary',
+    lastname: 'Potter'
+)
+
+
+
 category1= Category.create(category_name: 'pizza')
 category2= Category.create(category_name: 'American')
 category3= Category.create(category_name: 'Japanese')
@@ -1246,6 +1256,23 @@ review9_1 = Review.create(
     business_id: business9.id,
     user_id: user4.id
 )
+
+review7_1 = Review.create(
+    rating: 4,
+    price_range: '$$',
+    body: 'I like the beef noodle soup here',
+    business_id: business7.id,
+    user_id: user6.id
+)
+review7_2 = Review.create(
+    rating: 3,
+    price_range: '$$',
+    body: 'Cash only. Not very convient',
+    business_id: business7.id,
+    user_id: user2.id
+)
+
+
 
 
 tag1=BusinessCategory.create(business_id:business1.id, category_id:category1.id)
