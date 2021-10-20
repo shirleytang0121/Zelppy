@@ -1360,9 +1360,6 @@ review16_1 = Review.create(
 
 
 
-
-
-
 category1= Category.create(category_name: 'pizza')
 category2= Category.create(category_name: 'American')
 category3= Category.create(category_name: 'Japanese')
