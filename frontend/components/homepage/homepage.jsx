@@ -31,7 +31,7 @@ navToBusinesses(){
     render(){
         return(
         <div className="home-page">
-              <img src= {window.homePageFoodURL} className='home-background' />
+              <img src= {window.homePageURL} className='home-background' />
             <header className='homepage-header'>
                 <button className='home-link' onClick={this.handleClick} className='all-business'>Write a Review</button>
                 <GreetingContainer />  
